@@ -1,8 +1,9 @@
 //  chartAt ()  trim()  //split() charCodeAt()   indexof()
 
 function davidGoggins() {
+
   //    <--------CharAt------>
-  // Returns chracter at a specified index
+  // Returns character at a specified index
   // let i ="javascript world";
   // document.write(i.charAt(5));
 
@@ -14,7 +15,7 @@ function davidGoggins() {
   //    <--------SPLIT------>
   //Split a string into an array
   // let k ="splitting";
-  // document.write(k.split(""))
+  // document.write(k.split(" "))
 
   //    <--------CharCodeAt------>
   // returns unicode value of character at specified index
@@ -26,3 +27,7 @@ function davidGoggins() {
   let n = "indexOf";
   document.write(n.indexOf("x"));
 }
+
+// replace split slice
+// g global
+// gi   global insensitive
