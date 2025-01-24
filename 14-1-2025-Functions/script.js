@@ -68,7 +68,7 @@ function mul() {
   // Hoisting
   //  console.log(a);
   //  var a=56;
-}
+//}
 go();
 // okk();
 

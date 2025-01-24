@@ -2,8 +2,8 @@ function Faraz() {
   let a = "what's up buddy"; // STring
   let b = "hello world";
   let c = "see ya mate";
-  document.write(a.concat(b, c)); // combines two or more strings in one
   document.write(a.length);       //returns the length of the string
+  document.write(a.concat(b, c)); // combines two or more strings in one
 }
 
 // Replace
@@ -22,8 +22,8 @@ function Slice2() {
 }
 
 function upper() {
-  let d = "hello worldtoUpper";
-  let f = "HELLO WORLD1TOLOWER";
+  let d = "hello worldtoUpper";//
+  let f = "HELLO WORLD1TOLOWER"; //
 
   document.write(d.toUpperCase());
   document.write(f.toLowerCase());

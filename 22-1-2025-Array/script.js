@@ -1,41 +1,77 @@
-// string reverse oakindrome in cPP
+// string reverse oakindrome in CPP
 
 // <---------------- Add from End------------------->
 
 function add() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
   console.log(fruits.push("Watermelon"));
-  console.log(fruits);
+  document.write(fruits);
 }
 
 // <----------------Remove from End------------------->
 function del() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
   console.log(fruits.pop());
-  console.log(fruits);
+  document.write(fruits);
 }
 // <----------------Remove from Start------------------->
 function sift() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
   console.log(fruits.shift());
-  console.log(fruits);
+  document.write(fruits);
 }
 // <----------------Add from Start------------------->
 function unShift() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
   console.log(fruits.unshift("Pineapple"));
-  console.log(fruits);
+  document.write(fruits);
 }
 
-// <-----------------LENGTH & ACCESS--------------------->
+// <----------------- LENGTH --------------------->
 
 function len() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
-  console.log(fruits.length);
+  document.write(fruits.length);
 }
 
+
+// <-----------------ACCESS--------------------->
 function access() {
   let fruits = ["Apple", "Orange", "Mango", "banana"];
   console.log((fruits[2] = "Pomegranate"));
-  console.log(fruits);
+  document.write(fruits);
+}
+
+
+// DAY-2
+// <-----------------SLice & Splice--------------------->
+
+function spliceSlice() {
+  let fruits=["Apple","Orange","Mango","banana"];
+  // last value don't count
+  // document.write(fruits.slice(1,3));  //1,2
+  
+  // push pop spilce shift unshift 
+  
+  document.write(fruits.splice(1,1,"Papaya")); //from where to add,how many to delete, what to add
+}
+
+// <--------- REVERSE--------->
+
+function reverse(){
+  let fruits=["Apple","Orange","Mango","banana"];
+  document.write(fruits.reverse());
+  
+}
+
+// <--------- Ascending --------->
+function sort() {
+  let fruits = [7,9,8,2,3,4,5,];
+  document.write(fruits.sort().reverse());
+}
+
+// <--------- DESCENDING --------->
+function ascending() {
+  let fruits = [7,9,8,2,3,4,5,];
+  document.write(fruits.sort());
 }
