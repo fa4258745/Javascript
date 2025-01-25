@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1,
+        .box2,
+        .box3 {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+
+        .container-box {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="container-btn">
+        <button class="btn" onclick="btnChange()">Click here to change</button>
+    </div>
+    <script>
+
+        function btnChange() {
+            let box1 = document.querySelector(".box1");
+            let box2 = document.querySelector(".box2");
+            let box3 = document.querySelector(".box3");
+
+            box1.style.backgroundColor = 'red';
+            box2.style.backgroundColor = 'black';
+            box3.style.backgroundColor = 'blue';
+
+            // if (box1.style.display == 'box1') {
+            //     box1.style.display = 'block';
+            //     box2.style.display = 'block';
+            //     box3.style.display = 'block';
+            // }
+
+            // else {
+            //     box1.style.display = 'none';
+            //     box2.style.display = 'none';
+            //     box3.style.display = 'none';
+            // }
+
+
+            if(box1.style.display==='none'){
+                box1.style.backgroundColor='black';
+                box2.style.backgroundColor='blue';
+                box3.style.backgroundColor='red';
+            }
+
+            else 
+            
+            
+            
+            {
+                box1.style.backgroundColor='red';
+                box2.style.backgroundColor='black';
+                box3.style.backgroundColor='blue';
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

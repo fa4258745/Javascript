@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #main {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
- <button onclick="DOM()">CLick</button>   
+    <button onclick="DOM()">CLick</button>
     <p class="para"></p>
     <p id="params"></p>
-    <p id="parameter"  class="parameter"></p>
+    <p id="parameter" class="parameter"></p>
 
 
-    <script src="script.js"></script>
+
+
+    <div id="main">
+    </div>
+    <button onclick="BGcolor()">BGChange</button>
+    <button onclick="FGcolor()">FGChange</button>
+    <button onclick="Reset()">reset</button>
+
+
+
     
+    <script src="script.js"></script>
+
 
 </body>
+
 </html>
