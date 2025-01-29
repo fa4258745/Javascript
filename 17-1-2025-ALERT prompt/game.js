@@ -10,17 +10,26 @@
 //   alert("Game over");
 // }
 
+
+
+
 // <----------------------------------->
-let gamenum = 10;
-let EnterNum = parseFloat(prompt("Enter the num"));
-if (EnterNum === gamenum) {
-  prompt("Congrats You Won");
-} else if (EnterNum !== gamenum) {
-  prompt("enter again");
-  if (EnterNum !== gamenum) {
-    prompt("try again");
-    if (EnterNum !== gamenum) {
-      alert("Game Over");
-    }
-  }
-}
+// let gamenum = 10;
+// let EnterNum = parseFloat(prompt("Enter the num"));
+// if (EnterNum === gamenum) {
+//   prompt("Congrats You Won");
+// } else if (EnterNum !== gamenum) {
+//   prompt("enter again");
+//   if (EnterNum !== gamenum) {
+//     prompt("try again");
+//     if (EnterNum !== gamenum) {
+//       alert("Game Over");
+//     }
+//   }
+// }
+
+
+// <----------------------------------->
+
+
+

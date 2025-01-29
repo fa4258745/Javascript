@@ -5,7 +5,7 @@ function davidGoggins() {
   //    <--------CharAt------>
   // Returns character at a specified index
   // let i ="javascript world";
-  // document.write(i.charAt(5));
+  // document.write(i.charAt(4));
 
   //    <--------TRIM------>
   // Remove the trailing white space  between the two index form the string
@@ -13,19 +13,19 @@ function davidGoggins() {
   // document.write(j.trim());
 
   //    <--------SPLIT------>
-  //Split a string into an array
-  // let k ="splitting";
-  // document.write(k.split(" "))
+  // Split a string into an array
+  let k ="splitting";
+  document.write(k.split(" "))
 
   //    <--------CharCodeAt------>
   // returns unicode value of character at specified index
-  // let m="characterCode";
-  // document.write(m.charCodeAt(1));
+  // let m="ABCcharacterCode";
+  // document.write(m.charCodeAt(0));
 
   //    <--------indexOf------>
   // finds the first occurence of a string
-  let n = "indexOf";
-  document.write(n.indexOf("x"));
+  // let n = "indexOf";
+  // document.write(n.indexOf("e"));
 }
 
 // replace split slice

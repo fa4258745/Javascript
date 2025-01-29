@@ -47,13 +47,13 @@ function access() {
 // <-----------------SLice & Splice--------------------->
 
 function spliceSlice() {
-  let fruits=["Apple","Orange","Mango","banana"];
+  let fruits=["Apple","Orange","Mango","banana","grapes","kiwi","Strawberry"];
   // last value don't count
-  // document.write(fruits.slice(1,3));  //1,2
+  document.write(fruits.slice(1,5));  //1,2
   
   // push pop spilce shift unshift 
   
-  document.write(fruits.splice(1,1,"Papaya")); //from where to add,how many to delete, what to add
+  // document.write(fruits.splice(1,1,"Papaya")); //from where to add,how many to delete, what to add
 }
 
 // <--------- REVERSE--------->
@@ -64,13 +64,13 @@ function reverse(){
   
 }
 
-// <--------- Ascending --------->
+// <--------- DESCENDING --------->
 function sort() {
   let fruits = [7,9,8,2,3,4,5,];
   document.write(fruits.sort().reverse());
 }
 
-// <--------- DESCENDING --------->
+// <--------- Ascending --------->
 function ascending() {
   let fruits = [7,9,8,2,3,4,5,];
   document.write(fruits.sort());

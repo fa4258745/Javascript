@@ -185,7 +185,7 @@ function days3() {
     default: {
       alert("Invalid num")
     }
-
   }
+  
 
 }

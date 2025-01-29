@@ -32,9 +32,9 @@
 <body>
 
     <div class="container-box">
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
     </div>
     <div class="container-btn">
         <button class="btn" onclick="btnChange()">Click here to change</button>
@@ -46,39 +46,23 @@
             let box2 = document.querySelector(".box2");
             let box3 = document.querySelector(".box3");
 
-            box1.style.backgroundColor = 'red';
+            box1.style.backgroundColor = "red";
             box2.style.backgroundColor = 'black';
             box3.style.backgroundColor = 'blue';
 
-            // if (box1.style.display == 'box1') {
-            //     box1.style.display = 'block';
-            //     box2.style.display = 'block';
-            //     box3.style.display = 'block';
-            // }
-
-            // else {
-            //     box1.style.display = 'none';
-            //     box2.style.display = 'none';
-            //     box3.style.display = 'none';
-            // }
-
-
-            if(box1.style.display==='none'){
-                box1.style.backgroundColor='black';
-                box2.style.backgroundColor='blue';
-                box3.style.backgroundColor='red';
+         
+            let box= document.querySelector(".box");
+            if(box.style.backgroundColor=="none") {
+                box.style.display = "block";
             }
-
-            else 
-            
-            
-            
-            {
-                box1.style.backgroundColor='red';
-                box2.style.backgroundColor='black';
-                box3.style.backgroundColor='blue';
+            else {
+                box.style.display = "none";
             }
         }
+
+     
+
+
 
 
     </script>

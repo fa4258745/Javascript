@@ -44,9 +44,11 @@ function mul() {
   // let a
   // let  const
   // Declare
+
   // var a=5;
   // var a=7;
   // console.log(a);
+  
   // let a=5
   // let a=6
   // reassign

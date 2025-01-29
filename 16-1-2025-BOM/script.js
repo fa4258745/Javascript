@@ -17,7 +17,7 @@
 //     alert("thank you")
 // }
 // else {
-//     alert("get let")
+//     alert("get out")
 // }
 
 
