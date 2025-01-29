@@ -33,7 +33,7 @@ function P45() {
   let abc2 = "Thi-s is-St-ring";
   document.write(abc2.split("-"));
 }
-// <----------Template Litrels----------->
+// <----------Template Literals----------->
 function temp() {
   // backtick  (``)  Template literals
   //supports single quotes and single quotes
@@ -47,6 +47,7 @@ function temp() {
   let age = 25;
   let text1 = `my name is ${name} and I am ${age} year sold`;
   console.log(text1);
+
 }
 // abbr
 //mark
