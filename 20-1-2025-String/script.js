@@ -48,6 +48,8 @@ function temp() {
   let text1 = `my name is ${name} and I am ${age} year sold`;
   console.log(text1);
 
+
 }
+
 // abbr
 //mark
