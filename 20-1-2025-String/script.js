@@ -36,19 +36,18 @@ function P45() {
 // <----------Template Literals----------->
 function temp() {
   // backtick  (``)  Template literals
-  //supports single quotes and single quotes
-  //supports html tags
+//supports single quotes and single quotes
+//supports html tags
+
   let text = `hello <em>world</em> "my name          
  is<h1> faraz"</h1> 'ahmed'`; //suport multi line text
 
   document.write(text);
-  // supports dynamic variable
+   // supports dynamic variable
   let name = "Faraz";
   let age = 25;
   let text1 = `my name is ${name} and I am ${age} year sold`;
   console.log(text1);
-
-
 }
 
 // abbr

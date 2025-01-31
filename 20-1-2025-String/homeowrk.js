@@ -5,7 +5,7 @@ function davidGoggins() {
   //    <--------CharAt------>
   // Returns character at a specified index
   // let i ="javascript world";
-  // document.write(i.charAt(4));
+  // document.write(i.charAt(5));
 
   //    <--------TRIM------>
   // Remove the trailing white space  between the two index form the string
@@ -14,8 +14,8 @@ function davidGoggins() {
 
   //    <--------SPLIT------>
   // Split a string into an array
-  let k ="splitting";
-  document.write(k.split(" "))
+  // let k ="splitting";
+  // document.write(k.split(" "))
 
   //    <--------CharCodeAt------>
   // returns unicode value of character at specified index
