@@ -52,6 +52,10 @@ function spr() {
   console.log(mergedStudent);
 }
 
+
+
+
+
 // Anonymouse fucntion
 let go = function () {
   console.log("Anonymouse fucntion");
