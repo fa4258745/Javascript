@@ -36,16 +36,16 @@ function question3() {
 
 // 4 .Write a program that asks the user to enter a number and calculates the sum of
 //    all numbers from 1 to that number using a while loop.
-function question4() {
-  let user = prompt("Enter a number");
-  let i = 1;
-  let sum = 0;
-  while (i <= user) {
-    sum += i;
-    i++;
-  }
-  window.alert(sum);
-}
+// function question4() {
+//   let user = prompt("Enter a number");
+//   let i = 1;
+//   let sum = 0;
+//   while (i <= user) {
+//     sum += i;
+//     i++;
+//   }
+//   window.alert(sum);
+// }
 
 // 5 .Write a program that takes a full name from the user and:
 //    Converts it to uppercase.

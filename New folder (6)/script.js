@@ -111,16 +111,16 @@
 //    i++;
 // }
 // alert("number of sum is"+sum);
+// <--------------------------------------->
 
+// let upper= prompt("enter anything");
 
-let upper= prompt("enter anything");
+// if(upper) {
 
-if(upper) {
-
-console.log(upper.toUpperCase());
-console.log(upper.length);
-console.log(upper.split(" ")[0])
-}
+// console.log(upper.toUpperCase());
+// console.log(upper.length);
+// console.log(upper.split(" ")[0])
+// }
 
 
 

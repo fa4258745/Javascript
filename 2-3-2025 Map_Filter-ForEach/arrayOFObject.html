@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <style>
+        /* * {
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        } */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .design {
+            display: flex;
+            font-family: sans-serif;
+            text-shadow: 0px 0px 15px;
+        }
+        
+        .col {
+            background-color: rgb(109, 6, 193);
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #eaeaea;
+            border: 5px solid rgb(227, 206, 218);
+            font-family: sans-serif;
+            text-shadow: 0px 0px 2px #eaeaea, 0px 0px 2px #eaeaea;
+            font-style: italic;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgb(7, 59, 85);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="display">
+        <table border="1px solid" cellpadding="15px" cellspacing="10px" id="display" class="col">
+            <thead align="center">
+
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>City</td>
+                    <td>Grades</td>
+                    <td>Marks</td>
+                    <td>Address</td>
+                </tr>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+
+            </thead>
+        </table>
+    </div>
+
+    <h1 id="display"></h1>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>

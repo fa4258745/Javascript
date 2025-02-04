@@ -4,7 +4,6 @@ function add() {
   console.log(a + b);
 }
 
-
 function sub() {
   var a = 22;
   var b = 10;
@@ -51,16 +50,20 @@ function mul() {
   
   // let a=5
   // let a=6
+
   // reassign
-  // var a=15;
-  //   a=20; // reassign
-  // console.log(a);
+  var a=15;
+    a=20; // reassign
+  console.log(a);
+
   // let a=18;
   // a=20
   // console.log(a);
+
   // const a=13;
   // a=15;
   // console.log(a);
+
   //  let a=20;
   //  {
   //    let a=25
