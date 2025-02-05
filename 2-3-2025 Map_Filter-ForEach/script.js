@@ -21,9 +21,6 @@
 // console.log(arrOf[2].name)
 // console.log(arrOf[1].age)
 
-
-
-
 // <---------Map Filter ForEach----------------->
 // map method iterates over all the elements in the map and returns a new
 // array containing  all the elements that match the filter. It does not modify the original array.
@@ -33,12 +30,6 @@
 //  return e*2;
 // })
 // console.log(ans);
-
-
-
-
-
-
 
 // MAP doesn't change the original array
 // THis arrow function used to calculate short calculation or to perform short operations
@@ -60,12 +51,9 @@
 
 // let arr2 = [1, 2, 3, 4, 5,6];
 // let fil = arr2.filter((e) => {
-  //    return e%2==0;
-  // });
-  // console.log(fil);
-  
- 
-
+//    return e%2==0;
+// });
+// console.log(fil);
 
 // <------------odd--------------->
 
@@ -84,7 +72,6 @@
 //   console.log(e * 2);
 // });
 
-
 // const users = [
 //   { name: "Alice", age: 25 },
 //   { name: "Bob", age: 30 }
@@ -93,8 +80,6 @@
 // users.forEach(user => {
 //   console.log(`${user.name} is ${user.age} years old.`);
 // });
-
-
 
 
 // <------------REDUCE METHOD--------------->
@@ -113,30 +98,7 @@
 
 // let arr5 = [1, 10, 2, 5, 3];
 
-// arr5.sort((a, b) => {
-//   return a - b;
-// });
-
-// console.log(arr5);
-
-// <------------JOIN METHOD--------------->
-
-// .join() method joins all elements of an array into a string, separated by commas or a specified separator string.
-
-// let arr6 = [1, 2, 3, 4, 5];
-
-// let str = arr6.join("-");
-
-// console.log(str);
-
-// <------------CONCAT METHOD--------------->
-
-// .concat() method is used to merge two or more arrays. It does not modify the original arrays, but returns a new array.
-// let arr7 = [1, 2, 3];
-// let arr8 = [4, 5, 6];
-// let Mergearray = arr7.concat(arr8);
-
-// console.log(Mergearray);
+// arr5.sort((a, b) => {A
 
 let students = [
   {
@@ -144,48 +106,48 @@ let students = [
     age: 25,
     city: "bhopal",
     grade: "A",
-    marks: 85,
-    address:"201 avenue Street",
+    marks: 80,
+    address: "201 avenue Street",
   },
   {
     name: "Faraz",
     age: 25,
     city: "indore",
     grade: "A",
-    marks: 85,
-    address:"201 avenue Street",
+    marks: 100,
+    address: "201 avenue Street",
   },
   {
     name: "SId",
-    age: 25,
+    age: 30,
     city: "bhopal",
-    grade: "A",
-    marks: 85,    address:"201 avenue Street",
-
+    grade: "C",
+    marks: 40,
+    address: "201 avenue Street",
   },
   {
     name: "John",
-    age: 25,
+    age: 45,
     city: "bhopal",
-    grade: "A",
-    marks: 85,    address:"201 avenue Street",
-
+    grade: "B",
+    marks: 60,
+    address: "201 avenue Street",
   },
   {
     name: "Sana",
-    age: 25,
+    age: 26,
     city: "indore",
     grade: "A",
-    marks: 85,    address:"201 avenue Street",
-
+    marks: 85,
+    address: "201 avenue Street",
   },
   {
-    name: "Alice",
-    age: 25,
+    name: "Shriya",
+    age: 28,
     city: "bhopal",
     grade: "A",
-    marks: 85,    address:"201 avenue Street",
-
+    marks: 95,
+    address: "201 avenue Street",
   },
 ];
 
@@ -198,13 +160,14 @@ let display = document.querySelector("#display");
 //   <h3 id="design"> City=  ${e.city}</h3>
 //   </div>`;
 // });
+
 students.map((e) => {
   display.innerHTML += `<table>
-  <th id="design">Name = ${e.name}  </th> 
-  <td id="design">Age = ${e.age}</td>
-  <td id="design"> City =  ${e.city}</td>
-  <td id="design"> Grade = ${e.grade} </td>
-  <td id="design"> Marks = ${e.marks} </td>
-  <td id="design"> Address = ${e.address} </td>
+  <td id="design">${e.name}  </td> 
+  <td id="design"> ${e.age}</td>
+  <td id="design">  ${e.city}</td>
+  <td id="design" > ${e.grade} </td>
+  <td id="design">  ${e.marks} </td>
+  <td id="design">  ${e.address} </td>
   </table>`;
 });
