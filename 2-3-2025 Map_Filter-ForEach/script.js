@@ -64,7 +64,8 @@
 // console.log(fil);
 
 // <------------FOR EACH---------------->
-// .forEach() method is used to iterate over an array and execute a function for each element. However, unlike .map() or .filter(), it does not return a new array—it just executes the callback function on each item.
+// .forEach() method is used to iterate over an array and execute a function for each element. However, unlike .map() or .filter(), 
+// it does not return a new array—it just executes the callback function on each item.
 // Can change original array
 
 // let arr3 = [1, 2, 3, 4, 5];

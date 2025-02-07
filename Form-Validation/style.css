@@ -2,16 +2,21 @@
   margin: 0;
   padding: 0;
 }
-
+.flex {
+  display: flex;align-items: center;justify-content: center;
+}
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: blueviolet;
-  background-image: linear-gradient(to right rgb(133, 22, 237));
+
+  background-color: #934fe5;
   font-family: sans-serif;
   /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
+
 }
 
 .box {
@@ -71,7 +76,7 @@ form #errname,
 
 form input[type="text"] {
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   width: 200px;
   background-color: blueviolet;
   background-color: #eaeaea;
@@ -82,10 +87,13 @@ form input[type="text"] {
 }
 form input[type="text"]:focus {
   outline: none;
-  background-color: darkblue;
+  background-color: rgb(54, 54, 144);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5),
+    inset 0px 0px 1px rgba(0, 0, 0, 0.7);
 }
 form {
-  color: blueviolet;
   color: #eaeaea;
   font-size: 18px;
 }
+
+

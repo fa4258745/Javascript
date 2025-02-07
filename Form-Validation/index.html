@@ -9,24 +9,25 @@
 <body>
     <div class="box">
         
-    <form class="form-validation" onsubmit="return sub()">
+    <form class="form-validation">
         <p id="errname"></p>
-        Enter Name : <input type="text" id="name"> <br> <br>
-    
-        <p id="erremail"></p>
-        Enter Email: <input type="text" id="email"> <br> <br>
-    
+
+            Enter Name : <input type="text" class="name" id="name"> <br> <br>
+        
+            <p id="erremail"></p>
+            Enter Email: <input type="text" class="email" id="email"> <br> <br>
+        
         <p id="errnum"></p>
-        Enter Number: <input type="text" id="number"> <br> <br>
-    
+            
+            Enter Number: <input type="text" class="number" id="number"> <br> <br>
+        
         <p id="errpass"></p>
-        Enter Pass: <input type="text" id="pass"> <br> <br>
+            Enter Pass: <input type="text" class="password" id="pass"> <br> <br>
     
         <p id="errcpass"></p>
-        Enter Cpass: <input type="text" id="cpass"> <br> <br>
+        Enter Cpass: <input type="text" class="confpass" id="cpass"> <br> <br>
      <div class="center">
-         <input type="submit" value="Signup" >
-
+         <input type="submit" value="Signup" onclick="return sub()" >
      </div>
     
     </form>
