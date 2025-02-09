@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- What is a Closure in JavaScript?
+    A closure in JavaScript is a function that remembers the variables from its outer scope even after the outer function has finished executing.
+    
+    Closures allow functions to have private variables and maintain state.
+     -->
+
+    <script>
+
+
+        // function outerFunction() {
+        //     let count = 0; // Private variable
+
+        //     return function innerFunction() {
+        //         count++; // Inner function can access count
+        //         console.log(count);
+        //     };
+        // }
+
+        // const counter = outerFunction();
+        // counter(); // Output: 1
+        // counter(); // Output: 2
+        // counter(); // Output: 3
+
+        //         innerFunction remembers the count variable from outerFunction even though outerFunction has already finished executing.
+        // This is possible because of closure.
+
+
+        // <------------------------EXAMPLE_2-------------------------->
+        // function greet(name) {
+        //     return function () {
+        //         console.log("Hello, " + name);
+        //     };
+        // }
+
+        // const greetJohn = greet("John"); // greet() returns a function
+        // greetJohn(); // Output: Hello, John
+
+
+        //         How It Works?
+        // greet("John") returns an inner function.
+        // The returned function remembers the name variable ("John") even after greet() has finished.
+        // Calling greetJohn() still has access to name, thanks to closure.
+
+
+        function greeting(a)  {
+         return function () {
+            console.log("greeting"+a)
+         }
+        }
+        const greet=greeting("John");
+        greet();
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+    <style>
+        #parent {
+            border: 2px solid black;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .child-btn {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: lightblue;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <button class="child-btn">Button 1</button>
+        <button class="child-btn">Button 2</button>
+        <button class="child-btn">Button 3</button>
+    </div>
+
+
+
+
+    
+
+  <script>
+// How Event Delegation Works
+//* Attach an event listener to a parent element.
+//* When an event occurs on a child element, it bubbles up to the parent.
+//* The parent identifies which child triggered the event using event.target.
+
+// Example: Without Event Delegation
+// Imagine you have multiple buttons inside a div, and you want to handle clicks on each button.
+
+
+
+const buttons = document.querySelectorAll(".child-btn");
+// buttons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     console.log("Button clicked: " + this.textContent);
+//   });
+// });
+
+// Problems with this approach:
+// If new buttons are added dynamically, they won’t have event listeners.
+// Each button has its own event listener, increasing memory usage.
+
+// Example: Using Event Delegation
+// Instead of adding event listeners to each button, attach a single listener to the parent.
+
+document.getElementById("parent").addEventListener("click", function (event) {
+  if (event.target.classList.contains("child-btn")) {
+    console.log("Button clicked: " + event.target.textContent);
+  }
+});
+
+
+// Why This Is Better?
+// ✅ Efficient: Only one event listener is used.
+// ✅ Works for dynamically added elements: No need to rebind listeners when new buttons are added.
+// ✅ Simplifies Code: No need for looping over elements.
+
+
+
+
+  </script>
+
+</body>
+</html>

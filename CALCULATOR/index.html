@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <div class="cal"></div>
+<table border="1px" align="center" cellspacing="20px" cellpadding="20px">
+
+    <tr >
+   <td  id="display" colspan="4"  >0</td>
+    </tr>
+
+    <tr>
+        <td onclick="delAll('')" class="dark-grey">AC</td>
+        <td onclick="del('')" class="dark-grey">Del</td>
+        <td onclick="dis('%')" class="dark-grey">%</td>
+        <td onclick="dis('/')" class="orange">/</td>
+    </tr>
+    <tr>
+        <td onclick="dis('7')">7</td>
+        <td onclick="dis('8')">8</td>
+        <td onclick="dis('9')">9</td>
+        <td onclick="dis('*')" class="orange">x</td>
+    </tr>
+    <tr>
+        <td onclick="dis('4')">4</td>
+        <td onclick="dis('5')">5</td>
+        <td onclick="dis('6')">6</td>
+        <td onclick="dis('-')" class="orange">-</td>
+    </tr>
+    <tr>
+        <td onclick="dis('1')">1</td>
+        <td onclick="dis('2')">2</td>
+        <td onclick="dis('3')">3</td>
+        <td onclick="dis('+')" class="orange">+</td>
+    </tr>
+    <tr>
+        <td onclick="dis('0')" >0</td>
+        <td onclick="dis('00')">00</td>
+        <!-- <td onclick="res()" colspan="2" align="center" class="orange">=</td> -->
+        <td onclick="res()" colspan="2" align="center" class="orange">=</td>
+
+    </tr>
+
+
+</table>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
