@@ -3,13 +3,21 @@
     margin: 0;
   }
   body {
-      display: flex;
+    display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       background-color: #000000e3;
       font-family: sans-serif;
       overflow: hidden;
+  }
+
+  
+  #display {
+    background-color: #5050504a;
+    background-color:#020202 ;
+    color: rgb(0, 140, 254);
+
   }
   
   table {
@@ -18,7 +26,7 @@
       box-shadow: 0px 0px 10px #030000, 0px 0px 20px black;
       color: #fff;
   }
-  
+
   table tr {
       height: 50px;
       cursor: pointer;
@@ -38,3 +46,12 @@
       background-color: #505050;
   }
   
+
+  td:hover {
+    background-color: rgb(255, 255, 255);
+    color:#000;
+    transition: 0.2s ease-in ;
+    box-shadow: inset 0px 0px 10px #eaeaea , 0px 0px 5px #eaeaea;
+
+    }
+

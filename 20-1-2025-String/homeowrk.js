@@ -25,7 +25,7 @@ function davidGoggins() {
   //    <--------indexOf------>
   // finds the first occurence of a string
   // let n = "indexOf";
-  // document.write(n.indexOf("e"));
+  // document.write(n.indexOf("O"));
 }
 
 // replace split slice

@@ -61,7 +61,6 @@ function spliceSlice() {
 function reverse(){
   let fruits=["Apple","Orange","Mango","banana"];
   document.write(fruits.reverse());
-  
 }
 
 // <--------- DESCENDING --------->

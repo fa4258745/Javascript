@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Bubbling</title>
 </head>
 <body>
     
-    <!-- <div id="grandparent">
+    <div id="grandparent">
         Grandparent
         <div id="parent">
             Parent
             <div id="child">Child</div>
         </div>
-    </div> -->
+    </div>
 
 
     
@@ -31,17 +31,17 @@
 
 
 
-        // document.getElementById("grandparent").addEventListener("click", function() {
-        //     console.log("Grandparent Clicked!");
-        // });
+        document.getElementById("grandparent").addEventListener("click", function() {
+            console.log("Grandparent Clicked!");
+        });
     
-        // document.getElementById("parent").addEventListener("click", function() {
-        //     console.log("Parent Clicked!");
-        // });
+        document.getElementById("parent").addEventListener("click", function() {
+            console.log("Parent Clicked!");
+        });
     
-        // document.getElementById("child").addEventListener("click", function() {
-        //     console.log("Child Clicked!");
-        // });
+        document.getElementById("child").addEventListener("click", function() {
+            console.log("Child Clicked!");
+        });
     </script>
 
 
