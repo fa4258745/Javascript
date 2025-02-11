@@ -1,24 +1,24 @@
 // The variable arrOf is an array of objects in JavaScript.
 
 // An array of objects is a data structure in JavaScript (and many other programming languages) where an array holds multiple objects. Each object can have properties (key-value pairs) and methods.
-// let arrOf = [
-//   {
-//     name: "Siddharth",
-//     age: 26,
-//   },
-//   {
-//     name: "Faraz",
-//     age: 25,
-//   },
-//   {
-//     name: "Chloe",
-//     age: 10,
-//   },
-// ];
+let arrOf = [
+  {
+    name: "Siddharth",
+    age: 26,
+  },
+  {
+    name: "Faraz",
+    age: 25,
+  },
+  {
+    name: "Chloe",
+    age: 10,
+  },
+];
 
 // console.log(arrOf);
 // console.log(arrOf.length)
-// console.log(arrOf[2].name)
+// console.log(arrOf[0].name)
 // console.log(arrOf[1].age)
 
 // <---------Map Filter ForEach----------------->
@@ -162,13 +162,32 @@ let display = document.querySelector("#display");
 //   </div>`;
 // });
 
-students.map((e) => {
+
+students.map((e)=> {
   display.innerHTML += `<table>
+  <tr>
   <td id="design">${e.name}  </td> 
-  <td id="design"> ${e.age}</td>
-  <td id="design">  ${e.city}</td>
-  <td id="design" > ${e.grade} </td>
-  <td id="design">  ${e.marks} </td>
-  <td id="design">  ${e.address} </td>
-  </table>`;
-});
+  <td id="design">${e.age}</td>
+  <td id="design">${e.city}</td>
+  <td id="design">${e.grade}</td>
+  <td id="design">${e.marks}</td>
+  <td id="design">${e.address}</td>
+  </tr>
+  </table>`
+ 
+
+
+})
+
+
+
+// students.map((e) => {
+//   display.innerHTML += `<table>
+//   <td id="design">${e.name}  </td> 
+//   <td id="design"> ${e.age}</td>
+//   <td id="design">  ${e.city}</td>
+//   <td id="design" > ${e.grade} </td>
+//   <td id="design">  ${e.marks} </td>
+//   <td id="design">  ${e.address} </td>
+//   </table>`;
+// });

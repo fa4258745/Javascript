@@ -61,6 +61,7 @@ document.addEventListener("keydown", (event) => {
 
 
 
-
-
-
+// 1 se zyada ho wo pure virtual func
+// abstract ka object nhi bna sakte
+// general interface
+// necessary ko show kerna
