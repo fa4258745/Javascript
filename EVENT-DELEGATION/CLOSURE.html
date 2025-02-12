@@ -18,19 +18,19 @@
     <script>
 
 
-        // function outerFunction() {
-        //     let count = 0; // Private variable
+        function outerFunction() {
+            let count = 0; // Private variable
 
-        //     return function innerFunction() {
-        //         count++; // Inner function can access count
-        //         console.log(count);
-        //     };
-        // }
+            return function innerFunction() {
+                count++; // Inner function can access count
+                console.log(count);
+            };
+        }
 
-        // const counter = outerFunction();
-        // counter(); // Output: 1
-        // counter(); // Output: 2
-        // counter(); // Output: 3
+        const counter = outerFunction();
+        counter(); // Output: 1
+        counter(); // Output: 2
+        counter(); // Output: 3
 
         //         innerFunction remembers the count variable from outerFunction even though outerFunction has already finished executing.
         // This is possible because of closure.

@@ -4,16 +4,16 @@
 // console.log(ok[0]);
 
 // // object key name cant be the same as key value
-// let obj = {
-//   name: "Sid",
-//   age: 23,
-//   country: "India",
-//   hobbies: ["reading", "coding", "gaming"],
-//   greeting: function () {
-//     console.log(` hello im ${this.name} and I'm ${this.age} years old`);
-//   },
-// };
-// obj.greeting();
+let obj = {
+  name: "Sid",
+  age: 23,
+  country: "India",
+  hobbies: ["reading", "coding", "gaming"],
+  greeting: function () {
+    console.log(` hello im ${this.name} and I'm ${this.age} years old`);
+  },
+};
+obj.greeting();
 // // It will override the age if it is written down the function call
 
 // obj.age=25;
@@ -42,15 +42,19 @@ function destruct() {
   console.log(age);
 
 }
+
+
+
+
 // <--------------SPread------------>
 // The spread operator (...) is used to expand elements of an array or object into individual elements. It is commonly used for copying, merging, and passing values in functions.
-function spr() {
-  const student1 = { name: "David", age: 25 };
-  const student2 = { city: "New york", country: "USA" };
+// function spr() {
+//   const student1 = { name: "David", age: 25 };
+//   const student2 = { city: "New york", country: "USA" };
 
-  const mergedStudent = { ...student1, ...student2 };
-  console.log(mergedStudent);
-}
+//   const mergedStudent = { ...student1, ...student2 };
+//   console.log(mergedStudent);
+// }
 
 
 

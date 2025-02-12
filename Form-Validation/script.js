@@ -68,7 +68,9 @@ let sub = () => {
     border.style.border = "2px solid red";
     errpass.style.color = "red";
     isValid = false;
-  } else if (
+  }
+  
+  else if (
     !(
       inppass.match(/[0-9]/) &&
       inppass.match(/[!@#$%^&*()]/) &&
@@ -105,5 +107,3 @@ let sub = () => {
 
 };
 
-
-// cursor automatically insert in input field if the pass is wrong

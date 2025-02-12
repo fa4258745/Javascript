@@ -36,8 +36,6 @@ let delAll =()=> {
     let show=document.querySelector("#display")
     show.innerHTML="0";
     show.style.backgroundColor=""; 
-
-  
 }
 
 

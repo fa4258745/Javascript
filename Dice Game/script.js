@@ -81,8 +81,8 @@ function dice() {
     div9.style.opacity = "1";
 
     document.querySelector(".hell").innerHTML = "Congratulations You Won";
-    
- document.querySelector("body").style.backgroundImage="./imag/15292686_5563149.jpg";
+  // document.querySelector("body").style.backgroundColor="aqua";
+
  
   }
 }
@@ -109,3 +109,5 @@ function reset() {
   div9.style.opacity = "0";
   hell.innerHTML = "Roll the Dice";
 }
+
+

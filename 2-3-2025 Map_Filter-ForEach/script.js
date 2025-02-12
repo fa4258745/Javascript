@@ -17,8 +17,8 @@ let arrOf = [
 ];
 
 // console.log(arrOf);
-// console.log(arrOf.length)
-// console.log(arrOf[0].name)
+// console.log(arrOf.length);
+// console.log(arrOf[0].name);
 // console.log(arrOf[1].age)
 
 // <---------Map Filter ForEach----------------->
@@ -38,11 +38,11 @@ let arrOf = [
 // console.log(ans1);
 
 // useful when one liner of less code is used to filter elements
-// let arr22 = [1, 2, 3, 4, 5];
-// let ans2 = arr22.map((e) => {
-//    return e <2
-// });
-// console.log(ans2);
+let arr22 = [1, 2, 3, 4, 5];
+let ans2 = arr22.map((e) => {
+   return e <1
+});
+console.log(ans2);
 
 // <------------FILTER METHOD--------------->
 // .filter() method creates a new array containing only the elements that satisfy a given condition.
@@ -63,6 +63,8 @@ let arrOf = [
 // });
 // console.log(fil);
 
+
+
 // <------------FOR EACH---------------->
 // .forEach() method is used to iterate over an array and execute a function for each element. However, unlike .map() or .filter(), 
 // it does not return a new array—it just executes the callback function on each item.
@@ -74,8 +76,8 @@ let arrOf = [
 // });
 
 // const users = [
-//   { name: "Alice", age: 25 },
-//   { name: "Bob", age: 30 }
+//   { name: "Zainab", age: 25 },
+//   { name: "Sana", age: 30 }
 // ];
 
 // users.forEach(user => {
@@ -103,7 +105,7 @@ let arrOf = [
 
 let students = [
   {
-    name: "Siddharth",
+    name: "Sandhya",
     age: 25,
     city: "bhopal",
     grade: "A",
@@ -111,27 +113,27 @@ let students = [
     address: "201 avenue Street",
   },
   {
-    name: "Faraz",
+    name: "Priyanshu",
     age: 25,
     city: "indore",
+    grade: "A",
+    marks: 99,
+    address: "201 avenue Street",
+  },
+  {
+    name: "Zainab",
+    age: 20,
+    city: "bhopal",
     grade: "A",
     marks: 100,
     address: "201 avenue Street",
   },
   {
-    name: "SId",
-    age: 30,
-    city: "bhopal",
-    grade: "C",
-    marks: 40,
-    address: "201 avenue Street",
-  },
-  {
-    name: "John",
+    name: "Rishita",
     age: 45,
     city: "bhopal",
     grade: "B",
-    marks: 60,
+    marks: 80,
     address: "201 avenue Street",
   },
   {
@@ -181,13 +183,3 @@ students.map((e)=> {
 
 
 
-// students.map((e) => {
-//   display.innerHTML += `<table>
-//   <td id="design">${e.name}  </td> 
-//   <td id="design"> ${e.age}</td>
-//   <td id="design">  ${e.city}</td>
-//   <td id="design" > ${e.grade} </td>
-//   <td id="design">  ${e.marks} </td>
-//   <td id="design">  ${e.address} </td>
-//   </table>`;
-// });
