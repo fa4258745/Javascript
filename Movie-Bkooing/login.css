@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #232224;
+  }
+  
+  @font-face {
+      font-family:"yusei" ;
+      src: url(./FOnt/YuseiMagic-Regular.ttf);
+  }
+  .container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-container {
+      background-color: #933ea4;
+      background-color: #313131;
+      background-color: #5a3a8b;
+    width: 400px;
+    border-radius:20px;
+    margin-top: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #933ea4;
+    box-shadow: inset 0px 0px 15px #232224, inset 0px 0px 15px #232224;
+    /* box-shadow:  0px 0px 15px #5a3a8b,inset  90px 50px 15px #242127; */
+  
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  }
+  .box {
+  }
+  
+  .login-container h1 {
+    color: #933ea4;
+    color: #eaeaea;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "yusei"; 
+    letter-spacing: 4px;
+  }
+  
+  .sign {
+      color: #fff;
+      font-size: 20px;
+  }
+  
+  input[type="text"] {
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+    background-color: #0a27a9;
+  }
+  input[type="text"]:focus {
+      padding: 17px;
+      background-color: rgb(0, 7, 21);
+  }
+  
+  .box-1 {
+      display: flex;
+      padding: 0px 20px;
+      gap: 10px;
+      color: #eaeaea;
+      font-size: 18px;
+      font-family: sans-serif;
+  
+  
+  }
+  
+  .container-forget {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px 20px;
+   
+       
+  }
+  
+  .container-forget .div {
+      padding: 0px 20px;
+      color: #eaeaea;
+      font-size: 18px;
+      font-family: sans-serif;
+  }
+  
+  

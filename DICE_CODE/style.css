@@ -134,3 +134,12 @@ body {
   color: antiquewhite;
   background-color: rgb(120, 24, 147);
 }
+
+
+
+@media screen and (max-width:425px) {
+    #box1, #box2, #box3, #box4, #box5, #box6 {
+        width: 285px;
+        height: 285px;
+    }
+}

@@ -1,12 +1,40 @@
 let roll = () => {
   let dice = Math.floor(Math.random() * 6 + 1);
   console.log(dice);
+
+
+  let boxes = ["#box1", "#box2", "#box3", "#box4", "#box5", "#box6"];
+  let colors = ["red", "#0052D5", "#45a049", "#4B0082", "#029a84", "#e62780"];
+  
+  // Rotate dice button
+  let diceBox = document.querySelector("#myboxes");
+  
+  // Ensure continuous rotation
+  diceBox.style.transition = "transform 0.5s ease-in-out";
+  
+  diceBox.style.transform = `rotate(${(Math.random() * 360) + 360}deg)`;
+  
+  // Hide all boxes first
+  boxes.forEach((box) => {
+    document.querySelector(box).style.opacity = "0";
+  });
+  
+  // Show the selected dice box
+  let selectedBox = document.querySelector(boxes[dice - 1]);
+  selectedBox.style.opacity = "1";
+  selectedBox.style.backgroundColor = colors[dice - 1];
+  selectedBox.style.boxShadow = `0px 0px 30px ${colors[dice - 1]}, 0px 0px 30px ${colors[dice - 1]}, 0px 0px 20px ${colors[dice - 1]}`;
+  
+  // Change button color
+
+
   let box1 = document.querySelector("#box1");
   let box2 = document.querySelector("#box2");
   let box3 = document.querySelector("#box3");
   let box4 = document.querySelector("#box4");
   let box5 = document.querySelector("#box5");
   let box6 = document.querySelector("#box6");
+  let text =document.querySelector(".print");
   if (dice == 1) {
     box1.style.opacity = "1";
     box2.style.opacity = "0";
@@ -18,7 +46,9 @@ let roll = () => {
     box1.style.boxShadow =
     "0px 0px 30px red, 0px 0px 30px red, 0px 0px 20px red";
     document.querySelector("#DICE").style.backgroundColor=" red";
-  } else if (dice == 2) {
+     
+  }
+     else if (dice == 2) {
     box1.style.opacity = "0";
     box2.style.opacity = "1";
     box3.style.opacity = "0";
@@ -75,3 +105,8 @@ let roll = () => {
       document.querySelector("#DICE").style.backgroundColor="#e62780";
   }
 };
+
+
+
+
+
