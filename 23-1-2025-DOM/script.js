@@ -9,7 +9,7 @@ function DOM() {
   show.style.fontSize = "30px";
   show.style.textTransform = "uppercase";
   
-
+v
   // QUERY SELECTOR -> target classes and id both
   let show2 = document.querySelector(".para"); // target the class
   show2.innerHTML = "Bye World";

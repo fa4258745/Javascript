@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Code</title>
+</head>
+<body>
+
+<h1 class="hell"></h1>
+<button onclick="startCountdown()">Start Countdown</button>
+<button onclick="stopCountdown()">Stop Countdown</button>
+<p class="textshow"></p>
+<input type="text" class="inp" placeholder="Enter countdown value">
+
+<script>
+    let inter; // Global variable for interval
+
+    function startCountdown() {
+        let myinp = parseInt(document.querySelector(".inp").value); // Convert input to number
+
+        if (isNaN(myinp) || myinp <= 0) { // Handle invalid input
+            alert("Please enter a valid number greater than 0.");
+            return;
+        }
+
+        clearInterval(inter); // Clear any existing interval before starting a new one
+
+        inter = setInterval(() => {
+            document.querySelector(".hell").innerHTML = myinp--;
+
+            if (myinp < 0) {
+                clearInterval(inter);
+            }
+        }, 1000);
+    }
+
+    function stopCountdown() {
+        clearInterval(inter);
+    }
+</script>
+
+</body>
+</html>
