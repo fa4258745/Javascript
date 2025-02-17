@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,56 +8,89 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="sign-up.css">
 </head>
+
 <body>
 
     <div class="main-container">
         <div class="container">
-    <div class="container-1">
-<!-- <img src="./Images/img2/image-1-removebg-preview.png" alt=""> -->
-<img src="./Images/img2/image-6.jpg" alt="">
-    </div>
-    <div class="container-2">
-        <div class="heading-cross">
-            <h1>Registration Form</h1>
-            <div class="icon">
-                <i class='bx bx-x'></i>
+            <div class="container-1">
+                <!-- <img src="./Images/img2/image-1-removebg-preview.png" alt=""> -->
+                <img src="./Images/img2/image-6.jpg" alt="">
             </div>
-
+            <div class="container-2">
+                <div class="heading-cross">
+                    <h1>Registration Form</h1>
+                    <div class="icon">
+                        <a href="./login.html">
+                            <i class='bx bx-x'></i>
+                        </a>
+                    </div>
+                </div>
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <input type="number" placeholder="Enter your number">
+                <input type="password" placeholder="Enter your Password">
+                <input type="password" placeholder="Confirm your Password">
+                <span class="btn">
+                    <button type="submit" class="sub">
+                        Sign Up</button>
+                </span>
+            </div>
         </div>
-       <input type="text" placeholder="Enter your name">
-       <input type="email" placeholder="Enter your email">
-       <input type="text" placeholder="Country">
-       <input type="number" placeholder="Enter your number">
-       <input type="password" placeholder="Enter your Password">
-<span class="btn">
-    <button type="submit" class="sub">
-
-        Sign Up</button>
-    </span>
-
     </div>
-       
-    
-        </div>
 
-    </div>
+
+   <!---- SCROLL REVEAL ---->
+   <script src="./scrollreveal.min.js"></script>
+    <!-- SCRIPT -->
+
 
     <script>
+        const btn = document.querySelector('.btn');
 
+        btn.addEventListener('mousemove', function (e) {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-const btn = document.querySelector('.btn');
+            btn.style.setProperty('--x', `${x}px`);
+            btn.style.setProperty('--y', `${y}px`);
+        });
 
-btn.addEventListener('mousemove', function(e) {
-    const rect = btn.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    btn.style.setProperty('--x', `${x}px`);
-    btn.style.setProperty('--y', `${y}px`);
-});
-
-
+        const sr = ScrollReveal({
+    distance: '200px',
+    duration: 2800,
+    reset:true,
+  });
+  
+  sr.reveal(`.scroll-left,.container-1`,
+    {
+      origin: 'left',
+      interval: 100,
+    }
+  );
+  
+  sr.reveal(`.scroll-right,.container-2`,
+    {
+      origin: 'right',
+      interval: 100,
+    }
+  );
+  sr.reveal(`.scroll-top,.container`,
+    {
+      origin: 'top',
+      interval: 100,
+    }
+  );
+  sr.reveal(`.scroll-bottom,.login-container`,
+    {
+      origin: 'bottom',
+      interval: 100,
+    }
+  );
+  
     </script>
 
 </body>
+
 </html>

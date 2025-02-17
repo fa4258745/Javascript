@@ -61,12 +61,13 @@ input[type="text"],
 input[type="password"] {
   padding: 10px 20px;
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 1px;
   outline: none;
   border: none;
 background-color: #e0393b;
 border-bottom:2px solid #eaeaea ;
 color: #eaeaea ;
+
 
 }
 input[type="text"]:focus,
@@ -74,9 +75,11 @@ input[type="password"]:focus {
   background-color: #232224;
   color: #e0393b;
   padding: 10px 50px;
+  border-radius: 10px;
   transition: 0.2s ease-in;
   background-color: #fff;
-  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.177), 10px 10px 0px rgba(255, 0, 0, 0.328);
+  box-shadow: inset 0px 0px 10px rgba(233, 201, 201, 0.63),
+    10px 10px 0px rgba(234, 220, 220, 0.569);
   /* background-color: rgb(0, 7, 21); */
 }
 
@@ -104,3 +107,7 @@ input[type="password"]:focus {
   font-family: sans-serif;
 }
 
+input::placeholder {
+  color: #232224;
+
+}
