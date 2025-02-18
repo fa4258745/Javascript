@@ -12,12 +12,7 @@ body {
 
     background-repeat: no-repeat;
     
-    background-color:"black";
-    background-image: url('https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-image: url(./wallpaperflare.com_wallpaper\ \(3\).jpg);
-    background-image: url(./wallpaperflare.com_wallpaper\ \(7\).jpg);
-    background-image: url(./wallpaperflare.com_wallpaper\ \(9\).jpg);
-    
+  
     
     background-image: contain;
     background-image: url(./img-try/movie-background-1.jpg);
@@ -27,6 +22,14 @@ body {
     background-image: url(./img-try/movie-background-7.jpg);
     background-image: url(./img-try/movie-background-8.jpg);
     background-image: url(./12953559_Scene-24.jpg);
+
+
+    background-color:"black";
+    background-image: url(./wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background-image: url(./wallpaperflare.com_wallpaper\ \(9\).jpg);
+    background-image: url('https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url(./wallpaperflare.com_wallpaper\ \(7\).jpg);
+    
 }
 
 @font-face {

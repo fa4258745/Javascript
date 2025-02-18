@@ -25,12 +25,14 @@ body {
   background-color: #e0393b;
   background-color: #3e5cfc;
   background-color: #eaeaea;
+  background-color: #ffffff;
   width: 1000px;
   border-radius: 20px;
   margin-top: 20px;
   height: 550px;
   display: flex;
   justify-content: center;
+
   /* box-shadow: inset 0px 0px 15px #232224, inset 0px 0px 15px #232224; */
   /* box-shadow:  0px 0px 0px, 90px 50px 10px #620d0d4b */
   box-shadow: 0px 0px 20px, 90px 50px 10px #620d0d7e;
@@ -40,6 +42,8 @@ body {
 
 .container-1 img {
   width: 340px;
+  height: 100%;
+  width: 270px;
   height: 100%;
   border-radius: 20px;
 }
@@ -71,6 +75,14 @@ input[type="email"] {
   color: #eaeaea;
 }
 
+input[type="checkbox"] {
+/* width: 30px; */
+/* height: 30px; */
+
+background-color: #e0393b;
+    margin: 10px;
+}
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -82,11 +94,11 @@ input[type="number"]:focus {
   background-color: #fff;
   /* box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.177),
     10px 10px 0px rgba(255, 0, 0, 0.328); */
-   
+
   box-shadow: inset 0px 0px 10px rgba(233, 201, 201, 0.63),
     10px 10px 0px rgba(234, 220, 220, 0.569);
-   
-    border-radius: 10px;
+
+  border-radius: 10px;
 }
 
 .btn {
@@ -173,7 +185,27 @@ input::placeholder {
   }
 }
 
-
-@media screen and() {
-  
+@media screen and (max-width: 900px) {
+  .container-1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .heading-cross h1 {
+    font-size: 20px;
+  }
+  .icon a i {
+    font-size: 22px;
+  }
+  .container-2 {
+    width: 80%;
+    box-shadow: 0px 0px 5px #e0393b, 0px 10px 5px #e0393b;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="email"] {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
 }
