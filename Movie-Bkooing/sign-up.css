@@ -26,12 +26,13 @@ body {
   background-color: #3e5cfc;
   background-color: #eaeaea;
   background-color: #ffffff;
-  width: 1000px;
+  width: 950px;
   border-radius: 20px;
   margin-top: 20px;
-  height: 550px;
+  /* height: 550px; */
   display: flex;
   justify-content: center;
+  justify-content:end;
 
   /* box-shadow: inset 0px 0px 15px #232224, inset 0px 0px 15px #232224; */
   /* box-shadow:  0px 0px 0px, 90px 50px 10px #620d0d4b */
@@ -49,7 +50,7 @@ body {
 }
 
 .container-2 {
-  padding: 20px;
+  padding: 10px;
   color: #eaeaea;
   font-family: "monster";
   display: flex;
@@ -57,7 +58,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   background-color: #e0393b;
   width: 50%;
 }
@@ -97,7 +98,7 @@ input[type="number"]:focus {
 
   box-shadow: inset 0px 0px 10px rgba(233, 201, 201, 0.63),
     10px 10px 0px rgba(234, 220, 220, 0.569);
-
+    letter-spacing: 1.8px;
   border-radius: 10px;
 }
 
@@ -189,6 +190,11 @@ input::placeholder {
   .container-1 {
     display: none;
   }
+  .container {
+    display: flex;align-items: center;
+    justify-content: center;
+   padding: 10px;
+  }
 }
 @media screen and (max-width: 520px) {
   .heading-cross h1 {
@@ -199,6 +205,8 @@ input::placeholder {
   }
   .container-2 {
     width: 80%;
+    display: flex;align-items: center;justify-content: center;
+
     box-shadow: 0px 0px 5px #e0393b, 0px 10px 5px #e0393b;
   }
   input[type="text"],
@@ -209,3 +217,5 @@ input::placeholder {
     padding: 10px 16px;
   }
 }
+
+

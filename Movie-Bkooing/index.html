@@ -10,16 +10,26 @@
 
 <body>
 
+
+
+ 
     <div class="container">
         <div class="login-container">
             <h1>LOGIN</h1>
 
+           
             <div class="input1">
-                <input type="text" name="" placeholder="Username" id="">
+                <p class="name-design "> Enter Name:</p>
+                <input type="text" name="" placeholder="Username" id="loginName">
             </div>
-
+            
             <div class="input2">
-                <input type="password" name="" placeholder="Password" id="">
+                <p class="name-design"> Enter Password:</p>
+                <input type="password" name="" placeholder="Password" id="loginPassword">
+            </div>
+            <div class="submit-design">
+                <input type="submit" value="login"  onclick="return login()" class="btn-design " >
+                <input type="submit" value="logout" onclick="return logout()" class="btn-design red-design" >
             </div>
 
             <div class="container-forget">
@@ -37,10 +47,10 @@
     </div>
 
     <!---- SCROLL REVEAL ---->
-    <script src="./scrollreveal.min.js"></script>
+    <!-- <script src="./scrollreveal.min.js"></script> -->
 
     <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+    <script src="./Local.js"></script>
 
 </body>
 
