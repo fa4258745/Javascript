@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="sign-up.css">
 </head>
 
-<body>
+<body onload="loadata()">
 
     <div class="main-container">
         <div class="container">
@@ -28,19 +28,19 @@
                     </div>
                 </div>
                 <p class="errName"></p>
-                <input type="text" placeholder="Enter your name" class="name" id="signName">
+                <input type="text" placeholder="Enter your name" class="name reveal1" id="signName">
 
                 <p class="errEmail"></p>
-                <input type="email" placeholder="Enter your email" id="signEmail" class="name">
+                <input type="email" placeholder="Enter your email" id="signEmail" class="name reveal2">
                 
                 <p class="errNumber"></p>
-                <input type="number" placeholder="Enter your number" id="signNumber" class="name">
+                <input type="number" placeholder="Enter your number" id="signNumber" class="name reveal3">
 
                 <p class="errPassword"></p>
-                <input type="password" placeholder="Enter your Password" id="signPassword" class="name">
+                <input type="password" placeholder="Enter your Password" id="signPassword" class="name reveal4">
 
                 <p class="errConfirmPassword"></p>
-                <input type="password" placeholder="Confirm your Password" id="signConfirmPassword" class="name">
+                <input type="password" placeholder="Confirm your Password" id="signConfirmPassword" class="name reveal5">
 
                 <span class="btn">
                     <input type="submit" class="sub" onclick="return sana()">
@@ -51,7 +51,8 @@
     </div>
 
 
-  
+    <script src="./scrollreveal.min.js"></script>
+
 <script src="./script.js"></script>
 </body>
 

@@ -32,7 +32,7 @@ body {
   /* height: 550px; */
   display: flex;
   justify-content: center;
-  justify-content:end;
+  justify-content: end;
 
   /* box-shadow: inset 0px 0px 15px #232224, inset 0px 0px 15px #232224; */
   /* box-shadow:  0px 0px 0px, 90px 50px 10px #620d0d4b */
@@ -58,7 +58,7 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
   background-color: #e0393b;
   width: 50%;
 }
@@ -77,11 +77,11 @@ input[type="email"] {
 }
 
 input[type="checkbox"] {
-/* width: 30px; */
-/* height: 30px; */
+  /* width: 30px; */
+  /* height: 30px; */
 
-background-color: #e0393b;
-    margin: 10px;
+  background-color: #e0393b;
+  margin: 10px;
 }
 
 input[type="text"]:focus,
@@ -98,7 +98,7 @@ input[type="number"]:focus {
 
   box-shadow: inset 0px 0px 10px rgba(233, 201, 201, 0.63),
     10px 10px 0px rgba(234, 220, 220, 0.569);
-    letter-spacing: 1.8px;
+  letter-spacing: 1.8px;
   border-radius: 10px;
 }
 
@@ -169,12 +169,21 @@ input::placeholder {
   border: 1px solid #eaeaea;
   text-decoration: none;
 }
+.icon a:hover {
+  background-color: #eaeaee;
+  color: #000;
+  box-shadow: inset 0px 0px 15px #000, inset 0px 0px 15px #000;
+  transition: all 0.2s ease-in;
+}
 
 .icon a i {
-  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: rotate;
+  animation-duration: 3s;
+}
+.icon a i:hover {
+  animation-duration: 0.7s;
 }
 
 @keyframes rotate {
@@ -191,9 +200,10 @@ input::placeholder {
     display: none;
   }
   .container {
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-   padding: 10px;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -203,12 +213,21 @@ input::placeholder {
   .icon a i {
     font-size: 22px;
   }
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .container-2 {
     width: 80%;
-    display: flex;align-items: center;justify-content: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0px 0px 5px #e0393b, 0px 10px 5px #e0393b;
   }
+
   input[type="text"],
   input[type="number"],
   input[type="password"],
@@ -217,5 +236,3 @@ input::placeholder {
     padding: 10px 16px;
   }
 }
-
-

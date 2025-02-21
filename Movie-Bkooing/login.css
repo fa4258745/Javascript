@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+
+
+
+
+
 body {
   background-color: #232224;
   background-image: url(./Images/img2/movie-background-2.jpg);
@@ -153,10 +158,8 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-@media screen and(max-width:500px) {
+@media screen and (max-width:500px) {
   .login-container {
     width: 400px;
-
-
   }
 }

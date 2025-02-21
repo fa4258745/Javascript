@@ -101,3 +101,41 @@ let sana = () => {
 
   // return true;
 };
+
+
+// <---------------------- SCROLL REVEAL ---------------->
+
+
+const sr = ScrollReveal({
+  distance: '250px',
+  duration: 3000,
+  reset:true,
+  });
+  
+  sr.reveal(`.scroll-left,.reveal1,.reveal3,.reveal5`,
+  {
+    origin: 'left',
+    interval: 100,
+  }
+  );
+  
+  sr.reveal(`.scroll-right,.reveal2,.reveal4`,
+  {
+    origin: 'right',
+    interval: 100,
+  }
+  );
+  sr.reveal(`.scroll-top,.container,`,
+  {
+    origin: 'top',
+    interval: 100,
+  }
+  );
+  sr.reveal(`.scroll-bottom`,
+  {
+    origin: 'bottom',
+    interval: 100,
+    
+  }
+  );
+  
