@@ -18,8 +18,12 @@ body {
 }
 
 @font-face {
-  font-family: "yusei";
+  font-family: "faraz";
   src: url(./FOnt/YuseiMagic-Regular.ttf);
+}
+@font-face {
+  font-family: ;
+  src: url();
 }
 .container {
   height: 100vh;
@@ -124,6 +128,7 @@ input[type="checkbox"] {
   color: #eaeaea;
   font-family: sans-serif;
   font-size: 20px;
+
 }
 
 .btn-design {
@@ -163,3 +168,13 @@ input[type="checkbox"] {
     width: 400px;
   }
 }
+
+
+
+
+
+
+
+
+
+

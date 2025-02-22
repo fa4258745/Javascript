@@ -32,7 +32,7 @@ sr.reveal(`.scroll-bottom,.login-container`,
 );
 
 
-
+ScrollReveal().reveal('.scroll-left', { delay: 500 });
 
 
 
