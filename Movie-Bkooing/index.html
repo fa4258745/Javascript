@@ -15,12 +15,8 @@
 
     <div class="container">
         
-        <div class="login-container">
-
-
-
-
-            <h1>LOGIN</h1>
+        <div class="login-container" data-tilt>
+            <h1 class="headingmain">LOGIN</h1>
 
             <div class="input1">
                 <p class="name-design "> Enter Name:</p>
@@ -56,12 +52,34 @@
     <!---- SCROLL REVEAL ---->
     <script src="./scrollreveal.min.js"></script>
 
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+      <!-- TILT > JS -->
+      <script src="tilt.jquery.js"></script>
+      
+
+
     <!-- JAVASCRIPT -->
-   
+    <!-- <script>
+        $(document).ready(function () {
+            $(".login-container").tilt({
+                maxTilt: 20, // Adjust tilt angle
+                perspective: 1000, // Depth effect
+                speed: 400, // Animation speed
+                glare: true, // Enables glare effect
+                maxGlare: 0.5, // Maximum glare opacity
+            });
+        });
+    </script> -->
+    
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
     <script src="./Local.js"></script>
-
+  
 </body>
 
 </html>

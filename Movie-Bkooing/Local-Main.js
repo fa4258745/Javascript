@@ -1,23 +1,3 @@
-// let heading = document.querySelector(".heading");
-// function log() {
-//   let localName = localStorage.getItem("Name");
-//   heading.innerHTML = `Welcome ${localName}`;
-//   location.href = "localhome.html";
-//   return true;
-// }
-// log();
-
-// function logout() {
-//   setTimeout(() => {
-//     alert("You are logged out!");
-//     localStorage.clear();
-//     location.href = "index.html";
-//     heading.innerHTML = "";
-//     return true;
-//   }, 5000);
-// }
-
-// logout();
 
 
 
@@ -27,24 +7,6 @@
 
 
 
-// <----------------------------------------------------->
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-    //     let heading = document.querySelector(".heading");
-
-    //     function log() {
-//         let localName = localStorage.getItem("Name") || "Guest"; // Fallback to "Guest" if Name is not in localStorage
-//         heading.innerHTML = `Welcome ${localName}`;
-
-//         // Show the message for 3 seconds, then hide it
-//         setTimeout(() => {
-    //             heading.innerHTML = "";  // Clear the heading
-    //         }, 3000);
-    //     }
-
-    //     log(); // Call the log function to display the welcome message
-    // });
 
     
     
@@ -101,75 +63,41 @@
 
 
 
-// <--------------ANIMATION------------------>
 
 
-// window.onload = function () {
-//     VANTA.BIRDS({
-//       el: "#birds",
-//       mouseControls: true,
-//       touchControls: true,
-//       gyroControls: false,
-//       minHeight: 200.00,
-//       minWidth: 200.00,
-//       scale: 1.00,
-//       scaleMobile: 1.00,
-//       backgroundColor: 0xe0393b,
-//       color1: 0xf4f0f0,
-//       color2: 0xf2f2f2,
-//       wingSpan: 39.00,
-//       separation: 39.00,
-//       alignment: 25.00,
-//       cohesion: 34.00
-//     });
-//   };
 
-// <--------------RED NET------------>
-// window.onload = function () {
-//   VANTA.NET({
-//     el: "#birds",
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: 200.00,
-//     minWidth: 200.00,
-//     scale: 1.00,
-//     scaleMobile: 1.00,
-//     color: 0xff0000,
-//     backgroundColor: 0x0,
-//     points: 12.00
-//   })
-// }
-
-// <--------------BLACK & WHITE NET------------>
 VANTA.NET({
   el: "#birds",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
+  minHeight: 100.00,
+  minWidth: 100.00,
   scale: 1.00,
   scaleMobile: 1.00,
   color: 0xffffff,
   backgroundColor: 0x0,
-  points: 12.00
+  points: 13.00,
+  maxDistance: 10.00,
+  spacing: 16.00
 })
-  
+
+
+
 // <-------------------------------->
 
-// let loaddata=()=>{
-//   let username=localStorage.getItem("Name")
+let loaddata=()=>{
+  let username=localStorage.getItem("Name")
 
-//   if(username==null){
-//  document.querySelector("#show").innerHTML="Firstly, Login to Crafted Journeys.......";
-//   }
-//   else{
-//    document.querySelector("#show").innerHTML=`Welcome Back....${username}`;
-//   }
-//   return false;
+  if(username==null){
+ document.querySelector("#show").innerHTML="Firstly, Login to Crafted Journeys.......";
+  }
+  else{
+   document.querySelector("#show").innerHTML=`Welcome Back....${username}`;
+  }
+  return false;
 
-// }
+}
 
 
 // <--------------------SWIPER JAVASCRIPT-------------------->
@@ -250,5 +178,44 @@ VANTA.BIRDS({
   scale: 1.00,
   scaleMobile: 1.00,
   backgroundColor: 0x0,
-  color1: 0xffffff
+  color1: 0xffcfcf,
+  color2: 0xffffff,
+  wingSpan: 32.00,
+  speedLimit: 3.00,
+  separation: 42.00,
+  alignment: 44.00,
+  cohesion: 49.00,
+  quantity: 3.00
+})
+
+const sidebar = () => {
+  let side = document.querySelector(".sidebar");
+  
+  if (side) {
+    side.style.display = side.style.display === "none" ? "block" : "none";
+  } else {
+    console.error("Sidebar element not found");
+  }
+};
+
+// Ensure the function is globally accessible
+window.sidebar = sidebar;
+
+
+
+
+VANTA.WAVES({
+  el: "#wave",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x0,
+  shininess: 64.00,
+  waveHeight: 10.50,
+  waveSpeed: 0.70,
+  zoom: 1.01
 })
