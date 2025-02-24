@@ -1,0 +1,34 @@
+{
+
+"movie": 
+
+     
+        
+     [
+
+        {"name":"faraz",
+        "age":25,
+        "genre":"Action",
+        "director":"John Doe"
+      },
+
+    {
+
+         "name":"ali",
+         "age":28,
+         "genre":"Drama",
+         "director":"Jane Doe"
+      },
+
+    {
+
+         "name":"ahmed",
+         "age":30,
+         "genre":"Comedy",
+         "director":"John Doe"
+      }
+
+     ]
+
+
+}
