@@ -176,8 +176,6 @@ students.map((e)=> {
   <td id="design">${e.address}</td>
   </tr>
   </table>`
- 
-
 
 })
 

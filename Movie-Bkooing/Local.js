@@ -1,43 +1,36 @@
-    const sr = ScrollReveal({
-distance: '200px',
-duration: 2800,
-reset:true,
+gsap.to(".text span", {
+  opacity: 1,
+  rotateX: 0,
+  duration: 4,
+  stagger: 0.2,
+  ease: "power2.out",
 });
 
-sr.reveal(`.scroll-left,.container-1`,
-{
-  origin: 'left',
+const sr = ScrollReveal({
+  distance: "200px",
+  duration: 2800,
+  reset: true,
+});
+
+sr.reveal(`.scroll-left,.container-1`, {
+  origin: "left",
   interval: 100,
-}
-);
+});
 
-sr.reveal(`.scroll-right,.container-2`,
-{
-  origin: 'right',
+sr.reveal(`.scroll-right,.container-2`, {
+  origin: "right",
   interval: 100,
-}
-);
-sr.reveal(`.scroll-top,.container`,
-{
-  origin: 'top',
+});
+sr.reveal(`.scroll-top,.container`, {
+  origin: "top",
   interval: 100,
-}
-);
-sr.reveal(`.scroll-bottom,.login-container`,
-{
-  origin: 'bottom',
+});
+sr.reveal(`.scroll-bottom,.login-container`, {
+  origin: "bottom",
   interval: 100,
-  
-}
-);
+});
 
-
-ScrollReveal().reveal('.scroll-left', { delay: 500 });
-
-
-
-
-
+ScrollReveal().reveal(".scroll-left", { delay: 500 });
 
 // VANTA.BIRDS({
 //   el: "#birds",
@@ -49,7 +42,7 @@ ScrollReveal().reveal('.scroll-left', { delay: 500 });
 //   scale: 1.00,
 //   scaleMobile: 1.00,
 //   backgroundColor: 0x6c88ab
-  
+
 // })
 
 let login = () => {
@@ -61,8 +54,7 @@ let login = () => {
 
   if (loginName === localName && loginPassword === localPassword) {
     location.href = "localhome.html";
-  } 
-  else {
+  } else {
     alert("Invalid Username or password");
   }
   return false;
@@ -72,3 +64,11 @@ let logout = () => {
   localStorage.clear();
   location.href = "index.html";
 };
+
+// ANIMATED TEXT
+gsap.to(".text span", {
+  opacity: 1,
+  duration: 0.1,
+  stagger: 0.15,
+  ease: "power2.out"
+});

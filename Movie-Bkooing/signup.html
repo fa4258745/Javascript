@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <!-- AOS ANIM -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <!-- MAIN CSS -->
     <link rel="stylesheet" href="sign-up.css">
 </head>
 
@@ -20,7 +25,8 @@
             </div>
             <div class="container-2">
                 <div class="heading-cross">
-                    <h1>Registration Form</h1>
+                    <h1 data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">Registration Form</h1>
                     <div class="icon">
                         <a href="./index.html">
                             <i class='bx bx-x'></i>
@@ -49,11 +55,18 @@
             </div>
         </div>
     </div>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<!-- SCROLL REVEAL -->
+<script src="./scrollreveal.min.js"></script>
 
-    <script src="./scrollreveal.min.js"></script>
-
+<!-- MAIN JS -->
 <script src="./script.js"></script>
+
+<script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

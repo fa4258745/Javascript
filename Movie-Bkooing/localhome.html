@@ -8,6 +8,9 @@
     <!-- BOC ICON-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="local-home.css">
 
@@ -22,6 +25,155 @@
 </head>
 
 <body>
+    <div class="sidebar ">
+        <div class="sidebar-container ">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <h2>Hey! </h2>
+                    <p>Edit your profile</p>
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="close-sidebar" onclick="sidebarClose()">
+                    <i class="fa-solid fa-times"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <div class="dot">
+                        <p>Get ticket on Whatsapp/SMS </p>
+                        <p>Add mobile Number</p>
+                    </div>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="dot">
+                        <p>Notifications </p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="dot">
+                        <p>Yours Orders</p>
+                        <p>View all your bookings & purchases</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="dot">
+                        <p>Stream Library</p>
+                        <p>rented & Purchased Movies</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+
+                    <i class="fa-brands fa-paypal"></i>
+                    <div class="dot">
+                        <p>Play Credit Card</p>
+                        <p>View your Play Credit Card detials</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-message"></i>
+                    <div class="dot">
+                        <p>Help & SUpport</p>
+                        <p>View commonly asked queries and Chat</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="dot">
+                        <p>Account & Settings</p>
+                        <p>Location,Payments,Permission & More</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-gift"></i>
+                    <div class="dot">
+                        <p>Rewards</p>
+                        <p>View Your Rewards & unlock new ones</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-brands fa-octopus-deploy"></i>
+                    <div class="dot">
+                        <p>BookaChange</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div> -->
+        <div class="padding-singout">
+            <input type="submit" value="signout" class="singOut" onclick="logout()">
+        </div>
+    </div>
 
     <div class="main-div">
 
@@ -30,165 +182,6 @@
 
     <div id="birds" style="height: 100%; width: 100%; ">
 
-        <div class="sidebar show">
-            <div class="sidebar-container show">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <h2>Hey! </h2>
-                        <p>Edit your profile</p>
-                        <div class="icon">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                    </div>
-                    <div class="close-sidebar" onclick="sidebarClose()">
-                        <i class="fa-solid fa-times"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-circle-exclamation"></i>
-                        <div class="dot">
-                            <p>Get ticket on Whatsapp/SMS </p>
-                            <p>Add mobile Number</p>
-                        </div>
-                    </div>
-
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-bell"></i>
-                        <div class="dot">
-                            <p>Notifications </p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <div class="dot">
-                            <p>Yours Orders</p>
-                            <p>View all your bookings & purchases</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-
-                        <i class="fa-solid fa-tv"></i>
-                        <div class="dot">
-                            <p>Stream Library</p>
-                            <p>rented & Purchased Movies</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-
-                        <i class="fa-brands fa-paypal"></i>
-                        <div class="dot">
-                            <p>Play Credit Card</p>
-                            <p>View your Play Credit Card detials and offers</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-message"></i>
-                        <div class="dot">
-                            <p>Help & SUpport</p>
-                            <p>View commonly asked queries and Chat</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-gear"></i>
-                        <div class="dot">
-                            <p>Account & Settings</p>
-                            <p>Location,Payments,Permission & More</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-solid fa-gift"></i>
-                        <div class="dot">
-                            <p>Rewards</p>
-                            <p>View Your Rewards & unlock new ones</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-container">
-                <div class="siderbar-container-content">
-                    <div class="container-p">
-                        <i class="fa-brands fa-octopus-deploy"></i>
-                        <div class="dot">
-                            <p>BookaChange</p>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="padding-singout">
-                <input type="submit" value="signout" class="singOut">
-
-            </div>
-
-
-
-
-
-
-
-
-
-        </div>
 
         <section class="home">
             <!-- NAVBAR START -->
@@ -228,22 +221,23 @@
             <!-- Swiper -->
             <div class="swiper mySwiper swiperFirst">
                 <div class="swiper-wrapper">
-
+                    
                     <div class="swiper-slide">
-                        <h1 class="swiper-slide-img" data-aos="fade-up" data-aos-duration="3000">
+                        <h1 class="swiper-slide-img text-2" data-aos="fade-up" data-aos-duration="3000">
                             DEADPOOL
+                            
                         </h1>
                         <img src="./Images/Swiper-Images/deadpool.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <h1 class="swiper-slide-img" data-aos="fade-up" data-aos-duration="3000">
+                        <h1 class="swiper-slide-img " data-aos="fade-up" data-aos-duration="3000">
                             300:Rise of an Empire
                         </h1>
                         <img src="./Images/Swiper-Images/300_rise_of_an_empire_2014-wallpaper-2880x900.jpg" alt="">
                     </div>
 
                     <div class="swiper-slide">
-                        <h1 class="swiper-slide-img" data-aos="fade-up" data-aos-duration="3000">
+                        <h1 class="swiper-slide-img " data-aos="fade-up" data-aos-duration="3000">
                             Avatar 2
                         </h1>
                         <img src="./Images/Swiper-Images/avatar_2_movie_2021-wallpaper-2560x1080.jpg" alt="">
@@ -293,13 +287,8 @@
                         </h1>ong
                         <img src="./Images/Swiper-Images/game_of_thrones_season_7-wallpaper-2560x1080.jpg" alt="">
                     </div>
-
-
-
-
-
-
                 </div>
+
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
@@ -312,10 +301,31 @@
             </div>
         </section>
 
+        <!-- SEC-2  -->
         <section class="sec-2">
+            <div class="heading-container text" >
+                     <span>R</span>
+                     <span>e</span>
+                     <span>c</span>
+                     <span>o</span>
+                     <span>m</span>
+                     <span>m</span>
+                     <span>e</span>
+                     <span>n</span>
+                     <span>d</span>
+                     <span>e</span>
+                     <span>d </span>
+                     <span>M</span>
+                     <span>o</span>
+                     <span>v</span>
+                     <span>i</span>
+                     <span>e</span>
+                     <span>s</span>
 
-            <div class="heading-container">
-                <h1>Recommended Movies</h1>
+
+
+
+
             </div>
             
             <!-- SWIPER -->
@@ -413,6 +423,7 @@
 
         <div class="swiper-pagination"></div>
 
+        <!-- SECTION-3 -->
         <section class="sec-3">
             <!-- SWIPER -->
             <div class="birds-div">
@@ -462,8 +473,26 @@
 
 
     <div class="card-container-img">
-        <div class="heading-1">
-            <h1>The Best of live events</h1>
+        <div class="heading-1 text">
+        <span>T</span>
+        <span>h</span>
+        <span>e </span>
+        <span>B</span>
+        <span>e</span>
+        <span>s</span>
+        <span>t </span>
+        <span>o</span>
+        <span>f </span>
+        <span>L</span>
+        <span>i</span>
+        <span>v</span>
+        <span>e </span>
+        <span>E</span>
+        <span>v</span>
+        <span>e</span>
+        <span>n</span>
+        <span>t</span>
+        <span>s</span>
             <div class="image-flex" data-aos="fade-up" data-aos-duration="3000">
                 <img src="./Images/ad/arts-crafts-collection-202211140440.avif" alt="">
                 <img src="./Images/ad/bmshp-desktop-kids-collection-202404190106.avif" alt="">
@@ -478,7 +507,7 @@
     </section>
 
 
-
+<!-- SECTION-4 -->
     <section class="sec-4">
         <div class="container-sec-4" id="wave">
             <div class="main-div-sec-4">
@@ -572,6 +601,7 @@
         </div>
     </section>
 
+    <!-- SECTION-5 -->
     <div class="heading-search" >
         <h1 data-aos="fade-up"
         data-aos-anchor-placement="bottom-center">Trending Searches Right Now</h1>
@@ -692,19 +722,13 @@
             </div>
         </div>
 
-
-
-
-
-
-
     </div>
 
     </div>
 
 
 
-
+<!-- SECTION-6 -->
     <section class="section-5">
         <div class="background-1">
             <div class="background-2">
@@ -720,15 +744,15 @@
                     </div>
                     <div class="footercontainer-2">
                         <div class="footer-container-2">
-                            <div class="footer-container-2-content"    >
+                            <div class="footer-container-2-content"  data-aos="fade-up"    >
                                 <i class='bx bxs-user-voice'   ></i>
                                 <p>24/7customer care</p>
                             </div>
-                            <div class="footer-container-2-content">
+                            <div class="footer-container-2-content" data-aos="fade-up">
                                 <i class="fa-solid fa-ticket"></i>
                                 <p>resend booking confirmation</p>
                             </div>
-                            <div class="footer-container-2-content">
+                            <div class="footer-container-2-content" data-aos="fade-up" >
                                 <i class="fa-solid fa-envelope"></i>
                                 <p>subscribe to the newsletter</p>
                             </div>
@@ -737,24 +761,39 @@
 
                         <div class="footercontainer-3">
                             <div class="container-movies-curr">
-                                <p class="big-text" >movies showing in bhopal</p>
-                                <p class="small-text" >Chhava | mere husband ki biwi | sanam teri kasam | captain
+                                <p class="big-text" data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine" >movies showing in bhopal</p>
+                                <p class="small-text"  data-aos="fade-left"
+                                data-aos-anchor="#example-anchor"
+                                data-aos-offset="500"
+                                data-aos-duration="1000" >Chhava | mere husband ki biwi | sanam teri kasam | captain
                                     america:brave new world | officer on duty | dragon icc mens champions trophy 2025
                                     (india vs pakistan) | nilavuku enmel ennadi kobam </p>
 
-                                <p class="big-text" > UPCOMING MOVIES IN BHOPAL
+                                <p class="big-text" data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine" > UPCOMING MOVIES IN BHOPAL
                                 </p>
-                                <p class="small-text" >
+                                <p class="small-text"  data-aos="fade-left"
+                                data-aos-anchor="#example-anchor"
+                                data-aos-offset="500"
+                                data-aos-duration="1000" >
                                     Shiva Shambho | Moti Sethani | Mazaka | Machaneta Malakha | Takita Tadimi Tandana |
                                     Life is Beautiful (Kannada) | Gauri Shankar | Tarka | Mobile Suit Gundam QQuuuuuX -
                                     Beginning | Agathiy
                                 </p>
 
-                                <p class="big-text" >
+                                <p class="big-text" data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
                                     MOVIES BY GENRE
 
                                 </p>
-                                <p class="small-text" > Drama Movies | Romantic Movies | Comedy Movies | Thriller Movies
+                                <p class="small-text" data-aos="fade-left"
+                                data-aos-anchor="#example-anchor"
+                                data-aos-offset="500"
+                                data-aos-duration="1000" > Drama Movies | Romantic Movies | Comedy Movies | Thriller Movies
                                     | Action Movies | Classic Movies | Mystery Movies | Political Movies | Supernatural
                                     Movies | Sports Movies
                                 </p>
@@ -856,6 +895,11 @@
         </div>
     </section>  -->
     <!-- titlt.js -->
+
+    <!-- LOCOMOTIVE FOR SMOOTH SCROLL -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+
     <!-- BOX ICONS -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 

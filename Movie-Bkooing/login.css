@@ -12,6 +12,8 @@ body {
   background-size: cover;
   overflow: hidden;
   overflow-y: hidden;
+  perspective: 1000px;
+  
 }
 
 @font-face {
@@ -60,6 +62,10 @@ body {
 } */
 
 .headingmain {
+  
+}
+
+.text span {
   color: #eaeaea;
   font-family: sans-serif;
   font-weight: bold;
@@ -67,7 +73,10 @@ body {
   font-family: "yusei";
   letter-spacing: 4px;
   font-family: sans-serif;
-
+  display: inline-block;
+  opacity: 1; /* Initially hidden */
+  transform-origin: center;
+  transform: rotateX(90deg); /* Initial rotated state */
 }
 
 .sign {

@@ -1,34 +1,8 @@
 {
-
-"movie": 
-
-     
-        
-     [
-
-        {"name":"faraz",
-        "age":25,
-        "genre":"Action",
-        "director":"John Doe"
-      },
-
-    {
-
-         "name":"ali",
-         "age":28,
-         "genre":"Drama",
-         "director":"Jane Doe"
-      },
-
-    {
-
-         "name":"ahmed",
-         "age":30,
-         "genre":"Comedy",
-         "director":"John Doe"
-      }
-
-     ]
-
-
+  "movie": [
+    { "name": "Faraz", "age": 25, "genre": "Action", "director": "John Doe" },
+    { "name": "Zainab", "age": 25, "genre": "Comedy", "director": "Jane Doe" },
+    { "name": "Sana", "age": 25, "genre": "Drama", "director": "John Doe" }
+  ]
 }
+

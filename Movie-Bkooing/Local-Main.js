@@ -195,4 +195,30 @@ let sidebarClose = () => {
 };
 sidebar();
 sidebarClose();
+// <---------------------- FOR LOGUT THE PAGE----------------------->
+
+let logout = () => {
+  localStorage.clear();
+  location.href = "index.html";
+};
+
+// <----------------------SMOOTH SCROLLING WIHT LOCOMOTIVE----------------------->
+
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.main-div'),
+  smooth: true
+});
+
+
+
+gsap.to(".text span", {
+  opacity: 1,
+  duration: 0.1,
+  stagger: 0.15,
+  ease: "power2.out"
+});
+
+
+
 
