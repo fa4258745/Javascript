@@ -1,7 +1,7 @@
 gsap.to(".text span", {
   opacity: 1,
   rotateX: 0,
-  duration: 4,
+  duration: 7,
   stagger: 0.2,
   ease: "power2.out",
 });
