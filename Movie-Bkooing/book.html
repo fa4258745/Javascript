@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="book.css">
+
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- FOT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar ">
+        <div class="sidebar-container ">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <h2>Hey! </h2>
+                    <p>Edit your profile</p>
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="close-sidebar" onclick="sidebarClose()">
+                    <i class="fa-solid fa-times"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <div class="dot">
+                        <p>Get ticket on Whatsapp/SMS </p>
+                        <p>Add mobile Number</p>
+                    </div>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="dot">
+                        <p>Notifications </p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="dot">
+                        <p>Yours Orders</p>
+                        <p>View all your bookings & purchases</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="dot">
+                        <p>Stream Library</p>
+                        <p>rented & Purchased Movies</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+
+                    <i class="fa-brands fa-paypal"></i>
+                    <div class="dot">
+                        <p>Play Credit Card</p>
+                        <p>View your Play Credit Card detials</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-message"></i>
+                    <div class="dot">
+                        <p>Help & SUpport</p>
+                        <p>View commonly asked queries and Chat</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="dot">
+                        <p>Account & Settings</p>
+                        <p>Location,Payments,Permission & More</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="siderbar-container-content">
+                <div class="container-p">
+                    <i class="fa-solid fa-gift"></i>
+                    <div class="dot">
+                        <p>Rewards</p>
+                        <p>View Your Rewards & unlock new ones</p>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="padding-singout">
+            <input type="submit" value="signout" class="singOut" onclick="logout()">
+        </div>
+    </div>
+
+
+
+
+        <nav class="navbar">
+            <div class="main-nav-div">
+                <div class="nav-div-1">
+                    <img src="./Images/Book-Images/theater-ticket-svgrepo-com (4).png" alt=""   data-aos="fade-right" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
+                    <input type="text" class="main-placeholder" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="500"
+                        placeholder="Search for Movies,Events,Plays,Sports and Activities">
+                </div>
+                <div class="nav-div-2">
+                    <p      data-aos="fade-up"
+                    >Pune</p>
+                    <i class="fa-solid fa-arrow-down" data-aos="fade-up"></i>
+                    <button data-aos="fade-up">Sign in</button>
+                    <i class="fa-solid fa-bars" onclick="sidebar()" data-aos="fade-up"></i>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="div-nav2">
+            <div class="div-nav-1" data-aos="fade-up" data-aos-duration="1200"> 
+                <p>Movies</p>
+                <p>Stream</p>
+                <p>Events</p>
+                <p>Plays</p>
+                <p>Sports</p>
+                <p>Activities</p>
+            </div>
+            <div class="div-nav-2"data-aos="fade-up" data-aos-duration="1200">
+                <p>ListYourSHow</p>
+                <p>Corporate</p>
+                <p>Offers</p>
+                <p>Gift Cards</p>
+            </div>
+        </div>
+<div class="main-home-container">
+    <div class="bg-container">
+        <div class="bg-container-img">
+<div class="container">
+<div class="container-1">
+    <div class="container-content">
+        <img src="./Images/Book-Images/poster-img-1.avif" alt="" data-aos="flip-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2200" >
+     <p 
+  
+     >In cinemas</p>
+    </div>
+    <div class="container--content-2 " >
+
+          <h1 class="text">
+           <span>C</span> 
+           <span>h</span> 
+           <span>h</span> 
+           <span>a</span> 
+           <span>a</span> 
+           <span>v</span> 
+           <span>a</span> 
+        </h1>
+
+
+          <div class="container-div" data-aos="fade-up" data-aos-duration="800">
+            <div class="container-flex" >
+                <span class="fa fa-star checked"></span>
+                <p>9.3/10</p>
+                <p>(200k.4k votes)></p>
+            </div>
+            <button>Rate Now</button>
+          </div>
+          <div class="box-container-btn">
+            <div class="div-box" data-aos="fade-up">
+                <p >2D,ICE,4DX,IMAX 2D</p>
+              </div>
+              <div class="div-box" data-aos="fade-up" data-aos-duration="1600">
+                <p>Hindi</p>
+              </div>
+          </div>
+          <div class="para-home"  data-aos="fade-up" data-aos-duration="2200">
+            <p>2h 41m . Action, Drama Historical . UA16+ .14Feb,2025 </p>
+
+          </div>
+       
+          <button data-aos="fade-up" data-aos-duration="2800">Book tickets</button>
+    </div>
+</div>
+<div class="btn-flex">
+    <i class="fa-solid fa-share-nodes"></i>
+    <p>Share</p>
+</div>
+</div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+    </section>
+
+<!-- 
+<section class="sec-2">
+
+<h1>About the movie</h1>
+
+<p>After Chhatrapati Shivaji Maharaj`s death, the Mughals aim to expand into the Deccan, only to face his fearless son, Chhatrapati Sambhaji Maharaj. Chhaava, inspired by Shivaji Sawant`s novel, chronicles Chhatrapati Sambhaji Maharaj`s unwavering resistance against Aurangzeb, marked by courage, strategy, and betrayal.</p>
+
+<h1>Cast</h1>
+<div class="container-sec-2">
+    <div class="container-sec-1">
+        
+    </div>
+    <div class="container-sec-1">
+
+    </div>
+    <div class="container-sec-1">
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</section> -->
+
+
+
+
+<!-- *****--- AOS **** -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- MAIN JS -->
+<script src="book.js"></script>
+<!-- AOS  -->
+<script>
+    AOS.init();
+</script>
+</body>
+
+</html>
