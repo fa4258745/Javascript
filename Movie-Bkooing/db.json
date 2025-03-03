@@ -1,0 +1,26 @@
+{
+    "movie": [
+      {
+        "id": "ca0f",
+        "name": "Faraz",
+        "seat":2,
+        "Totalprice": "99999",
+        "person": "1",
+        "time":"2AM",
+        "date": "2025-03-01",
+        "price": 5000,
+        "language": "HINDI"
+
+    },
+    {
+        "id": "8477",
+        "name": "Sana",
+        "contact": "97552894",
+        "seat":2,
+        "time":"2AM",
+        "totalPrice": "4",
+        "date": "2025-03-15",
+        "price": 5000
+      }
+    ]
+  }

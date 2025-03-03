@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="json.css">
+    <title>JSON</title>
+</head>
+<body onload="fetchData()">
+
+
+
+ <!---------------SIDEBAR STARTS---------------->
+ <div class="sidebar ">
+    <div class="sidebar-container ">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <h2>Hey! </h2>
+                <p>Edit your profile</p>
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div class="close-sidebar" onclick="sidebarClose()">
+                <i class="fa-solid fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <div class="dot">
+                    <p>Get ticket on Whatsapp/SMS </p>
+                    <p>Add mobile Number</p>
+                </div>
+            </div>
+
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-bell"></i>
+                <div class="dot">
+                    <p>Notifications </p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="dot">
+                    <p>Yours Orders</p>
+                    <p>View all your bookings & purchases</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+
+                <i class="fa-solid fa-tv"></i>
+                <div class="dot">
+                    <p>Stream Library</p>
+                    <p>rented & Purchased Movies</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+
+                <i class="fa-brands fa-paypal"></i>
+                <div class="dot">
+                    <p>Play Credit Card</p>
+                    <p>View your Play Credit Card detials</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-message"></i>
+                <div class="dot">
+                    <p>Help & SUpport</p>
+                    <p>View commonly asked queries and Chat</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-gear"></i>
+                <div class="dot">
+                    <p>Account & Settings</p>
+                    <p>Location,Payments,Permission & More</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-container">
+        <div class="siderbar-container-content">
+            <div class="container-p">
+                <i class="fa-solid fa-gift"></i>
+                <div class="dot">
+                    <p>Rewards</p>
+                    <p>View Your Rewards & unlock new ones</p>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="padding-singout">
+        <input type="submit" value="signout" class="singOut" onclick="logout()">
+    </div>
+</div>
+<!---------------SIDEBAR ENDS---------------->
+<!---------------SIDEBAR ENDS---------------->
+
+
+
+
+
+<nav class="navbar">
+    <div class="main-nav-div">
+        <div class="nav-div-1">
+            <img src="./Images/Book-Images/theater-ticket-svgrepo-com (4).png" alt="" width="100px"
+                data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <input type="text" class="main-placeholder" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                data-aos-offset="500" data-aos-duration="500"
+                placeholder="Search for Movies,Events,Plays,Sports and Activities">
+        </div>
+        <div class="nav-div-2">
+            <p data-aos="fade-up">Pune</p>
+            <i class="fa-solid fa-arrow-down" data-aos="fade-up"></i>
+            <button data-aos="fade-up">Sign in</button>
+            <i class="fa-solid fa-bars" onclick="sidebar()" data-aos="fade-up"></i>
+        </div>
+    </div>
+</nav>
+
+
+<div class="div-nav2">
+    <div class="div-nav-1" data-aos="fade-up" data-aos-duration="1200">
+        <p>Movies</p>
+        <p>Stream</p>
+        <p>Events</p>
+        <p>Plays</p>
+        <p>Sports</p>
+        <p>Activities</p>
+    </div>
+    <div class="div-nav-2" data-aos="fade-up" data-aos-duration="1200">
+        <p>ListYourSHow</p>
+        <p>Corporate</p>
+        <p>Offers</p>
+        <p>Gift Cards</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <table id="display" border="1px solid black" cellSpacing="15px" cellPadding="15px">
+        <thead>
+            <tr>
+               <th>Language</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Price</th>
+                <th>Seats</th>
+                <th>Total Price</th>
+                <th onclick="formfill('${e.id}')">Update</th>
+            </tr>
+        </thead>
+        <tbody id="dataDisplay">
+           <tr></tr>
+        </tbody>
+    </table>
+    <div id="show">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="json.js"></script>
+</body>
+</html>

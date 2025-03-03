@@ -6,6 +6,7 @@
 body {
   background-color: #040303df;
   color: #eaeaea;
+  /* overflow: hidden; */
 }
 .main-sec {
   height: 100%;
@@ -274,18 +275,22 @@ input[type="text"]:focus {
 }
 .sidebar {
   z-index: 1000;
-  display: none;
+  opacity: 0;
   overflow-y: auto;
   height: 100vh;
   width: 380px;
   padding: 5px 5px 5px 0px;
   position: fixed;
+  position: absolute;
   box-shadow: 0px 0px 5px #000, 0px 0px 5px #000;
   background-color: #eaeaea;
   background-color: #9ba9d8;
+  transition: 0.9s;
+ 
+  /* top: 0;
+  left: 0; */
+  left: -380px;
 
-  top: 0;
-  left: 0;
 }
 
 .siderbar-container-content {
@@ -389,6 +394,67 @@ input[type="text"]:focus {
   }
   
 
+  .book-ticket-container-card {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    z-index: 999;
+    transition: all 0.5s ease-in;
+  }
+
+
+  .book-ticket-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    font-size: 25px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #000, 0px 0px 5px #000;
+    transition: all 0.4s ease-in-out;
+   
+}
+  .book-ticket-container .div-flexing {
+display: flex;
+align-items:center;
+justify-content: space-between;
+width: 100%;
+  /* gap: 20px; */
+}
+
+.btn-container button {
+  border: 2px solid #eaeaea;
+}
+
+.book-ticket-container h3 {
+  font-size: 20px;
+}
+.book-ticket-container h4 {
+  font-size: 20px;
+}
+
+
+
+
 /* <***********---------MEDIA QUERY-------***********> */
 
 /* navbar */
@@ -429,4 +495,17 @@ input[type="text"]:focus {
  .div-nav2 {
   flex-direction: column;
  } 
+}
+
+@media screen and (max-width:450px){
+  .nav-div-2 p {
+    display: none;
+  }
+.container-div {
+  width: 60%;
+
+}
+.para-home p {
+  font-size: 14px;
+}
 }

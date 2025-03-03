@@ -9,12 +9,14 @@
 
 </head>
 <style>
+
  body {
     background-color: rgba(0, 0, 0, 0.958);
    color: #eaeaea;
    font-family: sans-serif;
    font-size: 25px;
  }
+
  .container {
     width: 100%;
     height: 100%;
@@ -23,16 +25,13 @@
  }
   
 </style>
-
 <body onload="">
     <div class="container">
-
-  
     <table border="1px" id="show" cellpadding="10px" cellspacing="10px">
         <tr>
             <th>NAME:</th>
             <th>AGE:</th>
-            <th>Genre:</th>
+            <th>City:</th>
             <th>Addhaar No.</th>
             <th>Price</th>
             <th>Person</th>
@@ -47,6 +46,7 @@
         Enter Addhaar no: <input type="text" id="adhaar"> <br> <br>
         Enter Mobile: <input type="text" id="number"> <br> <br>
         Enter Date: <input type="date" id="date"> <br> <br>
+        Enter Update: <input type="" id="" > <br> <br>
      Person: <select name="" id="person">
      <option value="1">1</option>
      <option value="2">2</option>
@@ -57,6 +57,10 @@
      <br>
      <input type="submit" value="Book" onclick="return insert()">
          </form>
+
+
+         <div id="show"></div>
+
         </div>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -67,80 +71,3 @@
 
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking System</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-
-<style>
- body {
-    background-color: rgba(0, 0, 0, 0.958);
-    color: #eaeaea;
-    font-family: sans-serif;
-    font-size: 25px;
- }
- .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
- }
-</style>
-
-<body>
-    <div class="container">
-        <table border="1px" id="show" cellpadding="10px" cellspacing="10px">
-            <tr>
-                <th>NAME:</th>
-                <th>AGE:</th>
-                <th>Genre:</th>
-                <th>Addhaar No.</th>
-                <th>Price</th>
-                <th>Person</th>
-                <th>Total</th>
-                <th>Cancel</th>
-            </tr>
-        </table>
-
-        <form onsubmit="return insert()">
-            Enter name: <input type="text" id="name" required> <br><br>
-            Enter age: <input type="text" id="age" required> <br><br>
-            Enter City: <input type="text" id="city" required> <br><br>
-            Enter Addhaar no: <input type="text" id="adhaar" required> <br><br>
-            Enter Mobile: <input type="text" id="number" required> <br><br>
-            Enter Date: <input type="date" id="date" required> <br><br>
-            Person: 
-            <select id="person">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <br><br>
-            <input type="submit" value="Book">
-        </form>
-    </div>
-
-    <script src="./script.js"></script> 
-</body>
-</html> -->

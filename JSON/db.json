@@ -1,3 +1,33 @@
 {
-  "movie": []
+  "movie": [
+    {
+      "name": "Faraz",
+      "age": 25,
+      "city": "sehore",
+      "director": "John Doe",
+      "person": 2,
+      "adhaar": "999882772772",
+      "price": 2000,
+      "id": "4446"
+    },
+    {
+      "name": "Zainab",
+      "age": 25,
+      "adhaar": "999882772772",
+      "city": "bhopal",
+      "person": 3,
+      "price": 2000,
+      "id": "1759"
+    },
+    {
+      "name": "Sana",
+      "age": 25,
+      "city": "bhopal",
+      "director": "Jane Doe",
+      "person": 3,
+      "adhaar": "999882772772",
+      "price": 2000,
+      "id": "1759"
+    }
+  ]
 }

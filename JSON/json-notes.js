@@ -3,7 +3,7 @@
 //  to the fetch function
 // fetch() is used to retrieve data from a server.
 // await ensures we wait for the response before moving forward.
-// res.json() converts raw data into a JavaScript-friendly format.
+// res.json() converts raw data into a JavaScript-friendly format7\.
 // The final data variable holds an array of movie objects.
 
 // Step	Code Action
