@@ -36,22 +36,6 @@ let sidebar = () => {
   
 
 
-  VANTA.NET({
-    el: "#birds",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 100.0,
-    minWidth: 100.0,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    color: 0xffffff,
-    backgroundColor: 0x0,
-    points: 13.0,
-    maxDistance: 10.0,
-    spacing: 16.0,
-  });
-  
 
 
 

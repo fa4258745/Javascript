@@ -29,6 +29,4 @@ function Cardshow() {
   let modal = document.querySelector(".book-ticket-container-card ");
   modal.style.opacity = "1";
   modal.style.visibility = "visible";
-
-
 }

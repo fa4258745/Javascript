@@ -207,6 +207,7 @@
 <div class="background">
     <div class="background-2">
 
+
     <div class="div-boxing">
         <h1>Chhava-Hindi</h1>
         <div class="div-container">
@@ -221,11 +222,11 @@
             </div>
         </div>
     </div>
-
+    
     <div class="card-container">
         <div class="box">
             <div class="div">
-                <form action="">
+                <!-- <form action="" onsubmit="return userInput()">
                 <h1>Book Ticket</h1>
             </div>
               <div class="box-01">
@@ -239,10 +240,10 @@
 
             </div>
             <div class="box-01">
-                Choose Time: <input type="datetime" name="" id="time" placeholder="Enter time">
+                Choose Time: <input type="datetime-local" name="" id="time" placeholder="Enter time">
             </div>
 <div class="box-01">
-   <label for=""> Choose Price : </label>  <select name="" id="Price">
+   <label for=""> Choose Price : </label>  <select name="" id="price">
         <option value="50">Rs. 0-100</option>
         <option value="150">Rs. 101-200</option>
         <option value="250">Rs. 201-300</option>
@@ -266,31 +267,110 @@
     </select>
 
 </div>
-<div class="box-01">
- Enter Price :  <input type="text" placeholder="Enter Price" class="price" >
 
-</div>
 <h2>Total amount:</h2>
-            <input type="submit" onclick="return userInput()">
+<input type="submit" onclick="return userInput();   event.preventDefault();"     ">
+</div>
+</form> -->
+<div class="container-ticket-flex">
+
+<form onsubmit="return userInput(event)">
+    <h1>Book Ticket</h1>
+    <div class="box-01">
+        Select Language:
+        <select id="lan">
+                <option value="hindi" selected>Hindi</option>
+                <option value="english">English</option>
+            </select>
+        </div>  
+        <div class="box-01">
+            Choose Date:
+            <input type="date" id="date">
         </div>
+        <div class="box-01">
+            Choose Time:
+            <input type="datetime-local" id="time">
+        </div>
+        <div class="box-01">
+            <label>Choose Price:</label>
+            <select id="price">
+                <option value="50">Rs. 0-100</option>
+                <option value="150">Rs. 101-200</option>
+                <option value="250">Rs. 201-300</option>
+                <option value="350">Rs. 301-400</option>
+                <option value="450">Rs. 401-500</option>
+            </select>
+        </div>
+        <div class="box-01">
+            Choose Seats:
+            <select id="seat">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <h2>Total amount:</h2>
+        <input type="submit" value="Book Ticket">
     </form>
     <div class="img-container">
         <img src="./Images/Book-Images/poster-img-1.avif" alt="">
     </div>
-    </div>
+    
+</div>
+
+    
+
+
+    <!-- <div id="show"></div> -->
+    
+    
+    
+    
+    <!-- <table id="display" border="1" cellspacing="15" cellpadding="15">
+        <thead>
+            <tr>
+                <th>Language</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Price</th>
+                <th>Seats</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="dataDisplay"></tbody>
+    </table>
+     -->
+    
+    
+    
+    
+    
+    
+    
+</div>
 </div>
 </div>
 
 <!-- BIRDS VANTA -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script> -->
 <!-- NET VANTA -->
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script> -->
 
     <!-- *****--- AOS **** -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- MAIN JS -->
     <script src="book-fill-form.js"> </script>
     <!-- <script src="book.js"></script> -->
+
+    <script src="./json.js"></script>
     <!-- AOS  -->
     <script>
         AOS.init();

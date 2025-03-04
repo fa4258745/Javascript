@@ -154,11 +154,26 @@ VANTA.BIRDS({
 
 
 
+// let sidebar = () => {
+//   document.querySelector(".sidebar").style.display = "block";
+// };
+// let sidebarClose = () => {
+//   document.querySelector(".sidebar").style.display = "none";
+// };
+// sidebar();
+// sidebarClose();
+
+
 let sidebar = () => {
-  document.querySelector(".sidebar").style.display = "block";
+  // document.querySelector(".sidebar").style.display = "block";
+  document.querySelector(".sidebar").style.opacity = 1;
+  document.querySelector(".sidebar").style.left = 0;
+  
 };
 let sidebarClose = () => {
-  document.querySelector(".sidebar").style.display = "none";
+  // document.querySelector(".sidebar").style.display = "none";
+  document.querySelector(".sidebar").style.opacity = 0;
+  document.querySelector(".sidebar").style.left = -380;
 };
 sidebar();
 sidebarClose();

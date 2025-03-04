@@ -1,26 +1,21 @@
 {
-    "movie": [
-      {
-        "id": "ca0f",
-        "name": "Faraz",
-        "seat":2,
-        "Totalprice": "99999",
-        "person": "1",
-        "time":"2AM",
-        "date": "2025-03-01",
-        "price": 5000,
-        "language": "HINDI"
-
+  "movie": [
+    {
+      "seat": "3",
+      "date": "2025-03-06",
+      "time": "2025-03-13T11:38",
+      "price": "450",
+      "language": "hindi",
+      "id": "1"
     },
     {
-        "id": "8477",
-        "name": "Sana",
-        "contact": "97552894",
-        "seat":2,
-        "time":"2AM",
-        "totalPrice": "4",
-        "date": "2025-03-15",
-        "price": 5000
-      }
-    ]
-  }
+      "seat": "2",
+      "date": "2025-04-09",
+      "time": "2025-03-13T11:38",
+      "price": "350",
+      "language": "hindi",
+      "id": "1"
+    }
+
+  ]
+}

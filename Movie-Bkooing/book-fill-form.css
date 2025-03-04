@@ -416,6 +416,11 @@ body {
     width: 30px !important;
 
   }
+  .container-ticket-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .card-container {
     width: 100%;
@@ -426,10 +431,10 @@ body {
     padding-top: 30px;
   }
   .card-container .box {
-    border: 10px solid #eaeaea ;
-    width: 600px;
+    /* border: 10px solid #eaeaea ; */
+    width: 800px;
     align-items: flex-start;
-display: flex;
+/* display: flex; */
 justify-content: flex-start;
 border-radius: 30px;
 gap: 20px;
@@ -437,14 +442,27 @@ gap: 20px;
      height: 100%;
      font-size: 20px;
      font-family: sans-serif;
-     flex-direction: column;
+     flex-direction: row;
      padding: 20px;
      margin: 20px;
+     background: rgba( 255, 255, 255, 0.25 );
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     backdrop-filter: blur( 4px );
+     -webkit-backdrop-filter: blur( 4px );
+     border-radius: 10px;
+     border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
     }
     .card-container .box-1 {
     background-color: #e0393b;
     width: 600px;
     height: 400px;
+
+
+
+
+
    }
 
    select option {
@@ -453,8 +471,24 @@ gap: 20px;
     color: #eaeaea;
     letter-spacing: 2px;
     font-family: sans-serif;
-
+    
   }
+  input[type="datetime-local"] {
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 150px;
+  
+    border:3px solid #4642ca;
+    border-radius: 2px;
+    padding: 10px ;
+    height: 30px;
+    box-shadow: 0px 0px 5px #eaeaea,
+    0px 0px 5px #eaeaea
+    ;
+    
+  }
+  
   
   select {
     letter-spacing: 1px;
@@ -468,8 +502,7 @@ gap: 20px;
     height: 44px;
     box-shadow: 0px 0px 5px #eaeaea,
     0px 0px 5px #eaeaea
-    ;
-
+    
    }
 
    input[type="submit"],
@@ -507,15 +540,62 @@ gap: 20px;
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 10px;
 }
 .background-2 {
   background-color: #00000078;
 }
 
 .img-container img{
-  width: 350px;
+  width: 280px;
   border-radius: 10px;
 }
 #birds {
   background-color: #000;
 }
+
+@media screen and (max-width:426px) {
+
+  .nav-div-2 p {
+    display: none;
+  }
+  .container-div {
+  width: 60%;
+  
+  }
+  .para-home p {
+  font-size: 14px;
+  }
+  .div-boxing h1 {
+    font-size: 26px;
+  }
+    .div-boxing  .div-container{
+    padding: 10px 25px;
+  }
+
+   form h1 {
+    font-size: 30px;
+   }
+   
+  
+}
+
+@media screen and (max-width:790px){
+  /* .container-p {
+   flex-direction: column;
+  } */
+  .div-nav2 {
+   flex-direction: column;
+  } 
+  .main-placeholder {
+    display: none;
+  }
+  .container-ticket-flex {
+    display: flex;
+    gap: 20px;flex-direction: column-reverse;
+  }
+ }
+
+
+
+
