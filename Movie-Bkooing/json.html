@@ -6,28 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    
-        <link rel="stylesheet" href="json.css">
-    
-    <style>
-      
-   
-    </style>
-
-
-
-
-
-
-
+    <link rel="stylesheet" href="json.css">
     <title>JSON</title>
 </head>
-
 <body onload="fetchData()">
-
-
-
     <!---------------SIDEBAR STARTS---------------->
     <div class="sidebar ">
         <div class="sidebar-container ">
@@ -210,6 +192,7 @@
 
     <div class="container-flex-table">
         <div class="container-table">
+            <!-- Search: <input type="text" name="" id="searchinp" oninput="FIND()"> -->
             <table id="display" border="1px solid black" cellSpacing="15px" cellPadding="15px" align="center">
                 <thead>
                     <tr>
@@ -219,7 +202,8 @@
                         <th>Price</th>
                         <th>Seats</th>
                         <th>Total Price</th>
-                        <th onclick="formfill('${e.id}')">Update</th>
+                        <th>Delete</th>
+                        <!-- <th onclick="formfill('${e.id}')">Update</th> -->
                     </tr>
                 </thead>
                 <tbody id="dataDisplay">
@@ -229,7 +213,7 @@
         </div>
     </div>
 
-    <div id="show">   </div>
+    <div id="show"> </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="json.js"></script>
