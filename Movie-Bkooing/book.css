@@ -266,30 +266,18 @@ input[type="text"]:focus {
 
 /* <-----------------SIDEBAR-----------------> */
 
-.sidebar {
-  /* position: fixed !important;
-  top:0;
-  left: 0;
-  width: 380px;
-  transition: all 0.5s ease-in; */
-}
-.sidebar {
-  z-index: 1000;
-  opacity: 0;
+
+ .sidebar {
+  z-index:800;
   overflow-y: auto;
   height: 100vh;
   width: 380px;
   padding: 5px 5px 5px 0px;
   position: fixed;
-  position: absolute;
   box-shadow: 0px 0px 5px #000, 0px 0px 5px #000;
-  background-color: #eaeaea;
   background-color: #9ba9d8;
+  background-color: #eaeaea;
   transition: 0.9s;
- 
-  /* top: 0;
-  left: 0; */
-  left: -380px;
 
 }
 
@@ -314,7 +302,6 @@ input[type="text"]:focus {
   background-color: #000;
   background-color: #4a474784;
   background-color: #49398575;
-  /* color: #fff; */
   box-shadow: inset 0px 0px 5px #000;
 }
 .sidebar-container {
@@ -366,7 +353,7 @@ input[type="text"]:focus {
   box-shadow: inset 0px 0px 5px #000;
   letter-spacing: 1.1px;
   color: #eaeaea;
-}
+} 
 
 .icon i {
   font-size: 20px;
@@ -394,10 +381,11 @@ input[type="text"]:focus {
   }
   
 
+  /* position: absolute; */
+  /* opacity: 0; */
+
   .book-ticket-container-card {
-    /* position: absolute; */
-    position: fixed;
-    /* opacity: 0; */
+    /* position: fixed;
     visibility: hidden;
     width: 100%;
     height: 100vh;
@@ -406,16 +394,16 @@ input[type="text"]:focus {
     display: flex;align-items: center;
     justify-content: center;
     flex-direction: column;
-  
     z-index: 999;
-    transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; */
   }
-
-
+  
+  
   .book-ticket-container {
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 999;
     transform: translate(-50%, -50%);
     height: 300px;
     width: 400px;
@@ -432,8 +420,12 @@ input[type="text"]:focus {
     border-radius: 10px;
     box-shadow: 0px 0px 5px #000, 0px 0px 5px #000;
     transition: all 0.4s ease-in-out;
+    /* opacity: 0; */
+    /* visibility: hidden; */
    
 }
+
+
   .book-ticket-container .div-flexing {
 display: flex;
 align-items:center;
@@ -451,6 +443,18 @@ width: 100%;
 }
 .book-ticket-container h4 {
   font-size: 20px;
+}
+.btn-container button:hover {
+  background-color: #421f65;
+}
+.high-ind {
+  color: #421f65;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  background-color: yellow;
+
 }
 
 
@@ -548,7 +552,6 @@ font-size: 15px;
 .book-ticket-container h4 {
 font-size: 15px;
 }
-
 
 
 

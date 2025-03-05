@@ -179,6 +179,12 @@ sidebar();
 sidebarClose();
 // <---------------------- FOR LOGUT THE PAGE----------------------->
 
+let booknow=()=>{
+        
+  alert("Booknow")
+
+}
+
 let logout = () => {
   localStorage.clear();
   location.href = "index.html";
