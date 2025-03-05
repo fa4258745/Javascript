@@ -154,14 +154,7 @@ VANTA.BIRDS({
 
 
 
-// let sidebar = () => {
-//   document.querySelector(".sidebar").style.display = "block";
-// };
-// let sidebarClose = () => {
-//   document.querySelector(".sidebar").style.display = "none";
-// };
-// sidebar();
-// sidebarClose();
+
 
 
 let sidebar = () => {
@@ -183,11 +176,40 @@ let booknow=()=>{
         
   alert("Booknow")
 
+
 }
 
-let logout = () => {
-  localStorage.clear();
-  location.href = "index.html";
+// let logout = (id) => {
+//         location.href = "index.html";
+//         localStorage.clear();
+// }
+
+
+let logout = (id) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You will be logged out!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, logout!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.clear();
+      Swal.fire({
+        title: "Logged Out!",
+        text: "You have been successfully logged out.",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1500
+      });
+
+      setTimeout(() => {
+        location.href = "index.html";
+      }, 1500);
+    }
+  });
 };
 
 // <----------------------SMOOTH SCROLLING WIHT LOCOMOTIVE----------------------->
@@ -208,5 +230,15 @@ gsap.to(".text span", {
 });
 
 
+function cardCity()  {
+let cardCity = document.querySelector(".card-city");
+cardCity.style.visibility="visible";
+cardCity.style.opacity="1";
+}
 
+function closecard() {
+  let cardCity = document.querySelector(".card-city");
+  cardCity.style.visibility="hidden";
+  cardCity.style.opacity="0";
+}
 

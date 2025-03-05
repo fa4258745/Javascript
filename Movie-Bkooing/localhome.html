@@ -7,6 +7,7 @@
     <title>Document</title>
     <!-- BOC ICON-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -199,7 +200,7 @@
 
 
 
-
+                     
 
 
 
@@ -230,8 +231,16 @@
                 <div class="card-city">
 
                     <div class="inp-flex">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="city" class="brd-radis" placeholder="Enter City Name">
+                        <div class="container-flexingi">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+      
+                            <input type="text" id="city" class="brd-radis" placeholder="Enter City Name">
+
+                        </div>
+
+                        <div class="container">
+                            <i class="fa-solid fa-xmark" onclick="closecard()"></i>
+                        </div>
                     </div>
                     <div class="location">
                         <i class="fa-solid fa-location-crosshairs"></i>
@@ -241,8 +250,53 @@
                     <div class="par">
                         <p>Popular Cities</p>
                     </div>
+                  <div class="container-img-p">
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/pune-selected.png" alt="" width="70px">
+                        <p>Pune</p>
+                    </div>
 
-
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/ahd.avif" alt="" width="70px">
+                        <p>Ahmdabad</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/bang.png" alt="" width="70px">
+                        <p>Banglore</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/chd.avif" alt="" width="70px">
+                        <p>Chandigarh</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/chen.avif" alt="" width="70px">
+                        <p>Chennai</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/hyd.png" alt="" width="70px">
+                        <p>Hyderabad</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO//koch.avif" alt="" width="70px">
+                        <p>Kochi</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/kolk.avif" alt="" width="70px">
+                        <p>Kolkata</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO/mumbai.avif" alt="" width="70px">
+                        <p>Mumbai</p>
+                    </div>
+                    <div class="container-img-1">
+                        <img src="./Images/LOGO//ncr.avif" alt="" width="70px">
+                        <p>Delhi</p>
+                    </div>
+                  
+                  </div>
+     <div class="p-container">
+        <p>View All Cities</p>
+     </div>
 
 
 
@@ -356,28 +410,7 @@
                 <!-- SWIPER -->
                 <div class="swiper mySwiper swiperSecond">
                     <div class="swiper-wrapper" data-aos="fade-up" data-aos-duration="3000">
-                        <div class="swiper-slide slide2">
-                            <img src="./Images/Poster-1/airforce.avif" alt="">
-                            <div class="box">
-                                <div class="content">
-                                    <h2>Airforce</h2>
-                                    <p>Comedy/Romantic</p>
-                                    <!-- <a href="./book.html"> -->
-                                        <button class="hover" id="hoverr" onclick="booknow()">Book N</button>
-                                    <!-- </a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide slide2">
-                            <img src="./Images/Poster-1/poster-img-1.avif" alt="">
-                            <div class="content">
-                                <h2>Chhava</h2>
-                                <p>Action/Drama/historical</p>
-                                <a href="./book.html">
-                                    <button>Book Now</button>
-                                </a>
-                            </div>
-                        </div>
+                       
                         <div class="swiper-slide slide2">
                             <img src="./Images/Poster-1/poster-img-3.avif" alt="">
                             <div class="content">
@@ -385,7 +418,34 @@
                                 <p>Action/Adventure/Sci-Fi</p>
                                 <button>Book Now</button>
                             </div>
+                        </div>
+                       
+                       
+                        <div class="swiper-slide slide2">
+                            <img src="./Images/Poster-1/airforce.avif" alt="">
+                            <div class="box">
+                                <div class="content">
+                                    <h2>Airforce</h2>
+                                    <p>Comedy/Romantic</p>
+                                    <!-- <a href="./book.html"> -->
+                                        <button class="hover" id="hoverr" >Book Now</button>
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="swiper-slide slide2">
+                      
 
+                            <img src="./Images/Poster-1/poster-img-1.avif" alt="">
+                            <div class="content">
+                                <h2>Chhava</h2>
+                                <p>Action/Drama/historical</p>
+                                <a href="./book.html">
+                                    <button>Book Now</button>
+                                </a>
+
+                        </div>
                         </div>
                         <div class="swiper-slide slide2">
                             <img src="./Images/Poster-1/poster-img-4.avif" alt="">
@@ -912,6 +972,7 @@
     <!-- WAVES -->
     <!-- <script src="vanta.waves.min.js"></script> -->
     <!-- <script src="three.r134.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <script src="Local-Main.js"></script>

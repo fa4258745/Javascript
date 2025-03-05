@@ -1,4 +1,4 @@
-let sana = () => {
+let sana = (id) => {
   let signname = document.querySelector("#signName").value;
   let signemail = document.querySelector("#signEmail").value;
   let signNumber = document.querySelector("#signNumber").value;
@@ -11,7 +11,6 @@ let sana = () => {
   let errPassword = document.querySelector(".errPassword");
   let errConfirmPassword = document.querySelector(".errConfirmPassword");
 
-  
   // console.log("Saving to Local Storage:", signname, signPassword);
 
   // ✅ Clear all previous error messages
@@ -79,63 +78,79 @@ let sana = () => {
   if (confirmPassword == "") {
     errConfirmPassword.innerHTML = "Enter your confirm password";
     errConfirmPassword.style.color = "white";
-    document.querySelector("#signConfirmPassword").style.border = "1px solid #fff";
+    document.querySelector("#signConfirmPassword").style.border =
+      "1px solid #fff";
     return false;
   }
 
   if (signPassword != confirmPassword) {
     errConfirmPassword.innerHTML = "Passwords do not match";
     errConfirmPassword.style.color = "white";
-    document.querySelector("#signConfirmPassword").style.border = "1px solid #fff";
+    document.querySelector("#signConfirmPassword").style.border =
+      "1px solid #fff";
     document.querySelector("#signConfirmPassword").focus();
     return false;
   }
 
-  localStorage.setItem("Name",signname)
-  localStorage.setItem("Number",signNumber)
-  localStorage.setItem("Email",signemail)
-  localStorage.setItem("Password",signPassword)
+  localStorage.setItem("Name", signname);
+  localStorage.setItem("Number", signNumber);
+  localStorage.setItem("Email", signemail);
+  localStorage.setItem("Password", signPassword);
 
-  location.href="localhome.html";
- return false;
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You are about to register!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, register me!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.setItem("Name", signname);
+      localStorage.setItem("Number", signNumber);
+      localStorage.setItem("Email", signemail);
+      localStorage.setItem("Password", signPassword);
 
-  // return true;
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Registration Successful!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
+      setTimeout(() => {
+        location.href = "localhome.html";
+      }, 1500);
+    }
+  });
+
+  return false;
 };
-
 
 // <---------------------- SCROLL REVEAL ---------------->
 
-
 const sr = ScrollReveal({
-  distance: '250px',
+  distance: "250px",
   duration: 3000,
-  reset:true,
-  });
-  
-  sr.reveal(`.scroll-left,.reveal1,.reveal3,.reveal5`,
-  {
-    origin: 'left',
-    interval: 100,
-  }
-  );
-  
-  sr.reveal(`.scroll-right,.reveal2,.reveal4`,
-  {
-    origin: 'right',
-    interval: 100,
-  }
-  );
-  sr.reveal(`.scroll-top,.container,`,
-  {
-    origin: 'top',
-    interval: 100,
-  }
-  );
-  sr.reveal(`.scroll-bottom`,
-  {
-    origin: 'bottom',
-    interval: 100,
-    
-  }
-  );
-  
+  reset: true,
+});
+
+sr.reveal(`.scroll-left,.reveal1,.reveal3,.reveal5`, {
+  origin: "left",
+  interval: 100,
+});
+
+sr.reveal(`.scroll-right,.reveal2,.reveal4`, {
+  origin: "right",
+  interval: 100,
+});
+sr.reveal(`.scroll-top,.container,`, {
+  origin: "top",
+  interval: 100,
+});
+sr.reveal(`.scroll-bottom`, {
+  origin: "bottom",
+  interval: 100,
+});
