@@ -13,29 +13,21 @@
 
 
 const fetchData = async () => {
-    try {
         let url = "http://localhost:3000/movie";
         let res = await fetch(url);
         let data = await res.json();
         datashow(data)
         paginationData(data); // Now correctly passing data
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
+  
 };
-
-
-
-
-
 
 let paginationData = (data) => {
     $('#pages').pagination({
         dataSource:data,
-        pageSize: 2,
+        pageSize: 4,
         showGoInput: true,
         showGoButton: true,
-        callback: function(data) {
+        callback: function(data,pagination) {
             datashow(data)
         }
       })
@@ -57,6 +49,8 @@ let datashow = (data) => {
               <td>${e.seat}</td>
               <td>${e.price * e.seat}</td>
               <td onclick="confirmDelete('${e.id}')" style="cursor:pointer; color:red;">Delete</td>
+             <td onclick="formfill('${e.id}')" style="cursor:pointer; color:blue;">Update</td>
+
           </tr>
           `;
   });
@@ -88,57 +82,41 @@ const deleteTicket = async (id) => {
   }
 };
 
-// const FIND = async () => {
-//   let searchinp = document.querySelector("#searchinp").value;
-//   let url = "http://localhost:3000/movie";
-  
-//   try {
-//       let res = await fetch(url);
-//       let data = await res.json();
-//       let filteredData = data.filter((e) =>
-//           e.language.toLowerCase().includes(searchinp.toLowerCase())
-//       );
-//       datashow(filteredData);
-//   } catch (error) {
-//       console.error("Error filtering data:", error);
-//   }
-// };
-
-
-
 const FIND = async () => {
-    let searchinp = document.querySelector("#searchinp").value;
-    let url = "http://localhost:3000/movie";
-
-    try {
-        let res = await fetch(url);
-        let data = await res.json();
-        let filteredData = data.filter((e) =>
-            e.language.toLowerCase().includes(searchinp.toLowerCase())
-        );
-
-        // Clear previous pagination before applying new one
-        $('#pages').empty(); // This removes previous pagination instead of destroy()
-
-        if (filteredData.length === 0) {
-            document.querySelector("#dataDisplay").innerHTML = "<tr><td colspan='7'>No data found</td></tr>";
-            return;
-        }
-
-        $('#pages').pagination({
-            dataSource: filteredData,
-            pageSize: 2,
-            showGoInput: true,
-            showGoButton: true,
-            callback: function(data) {
-                datashow(data);
-            }
-        });
-
-    } catch (error) {
-        console.error("Error filtering data:", error);
-    }
+  let searchinp = document.querySelector("#searchinp").value;
+  let url = "http://localhost:3000/movie";
+  
+  try {
+      let res = await fetch(url);
+      let data = await res.json();
+      let filteredData = data.filter((e) =>
+          e.language.toLowerCase().includes(searchinp.toLowerCase())
+      );
+      datashow(filteredData);
+  } catch (error) {
+      console.error("Error filtering data:", error);
+  }
 };
+
+
+
+// const FIND = async () => {
+//     let searchinp = document.querySelector("#searchinp").value;
+//     let url = "http://localhost:3000/movie";
+
+   
+//     let paginationData=(data)=>{
+//         $('#pages').pagination({
+//           dataSource:data,
+//           pageSize: 2,
+//           showGoInput: data,
+//           showGoButton: true,
+//           callback: function(data, pagination) {
+//               datashow(data)
+//           }
+//         })
+//       }
+// };
 
 
 
@@ -173,51 +151,60 @@ const userInput = async (event) => {
 
 const formfill = async (id) => {
   let url = `http://localhost:3000/movie/${id}`;
-  
-  try {
-      let res = await fetch(url);
-      let data = await res.json();
-
-      document.querySelector("#show").innerHTML = `
-          <form onsubmit="return finalUpdate(event, '${id}')">
-              <h1>Update Ticket</h1>
-              <div>
-                  Select Language:
-                  <select id="uplan">
-                      <option value="hindi" ${data.language === "hindi" ? "selected" : ""}>Hindi</option>
-                      <option value="english" ${data.language === "english" ? "selected" : ""}>English</option>
-                  </select>
-              </div>
-              <div>
-                  Choose Date: <input type="date" id="update" value="${data.date}">
-              </div>
-              <div>
-                  Choose Time: <input type="datetime-local" id="uptime" value="${data.time}">
-              </div>
-              <div>
-                  Choose Price:
-                  <select id="upPrice">
-                      <option value="50">Rs. 0-100</option>
-                      <option value="150">Rs. 101-200</option>
-                      <option value="250" ${data.price == "250" ? "selected" : ""}>Rs. 201-300</option>
-                      <option value="350">Rs. 301-400</option>
-                      <option value="450">Rs. 401-500</option>
-                  </select>
-              </div>
-              <div>
-                  Choose Seats:
-                  <select id="upseat">
-                      ${[...Array(10).keys()].map(i => `<option value="${i+1}" ${data.seat == (i+1) ? "selected" : ""}>${i+1}</option>`).join("")}
-                  </select>
-              </div>
-              <input type="submit" value="Update Ticket">
-          </form>
-      `;
-  } catch (error) {
-      console.error("Error fetching update data:", error);
-  }
-};
-
+  let res=await fetch(url,{method:"PUT"})
+  let data=await res.json()
+    console.log(data)
+  let formdata = `
+  <div class="container-ticket-flex">
+<form onsubmit="return userInput(event)">
+    <h1>Book Ticket</h1>
+    <div class="box-01">
+        Select Language:
+        <select id="lan">
+                <option value="${data.language}" selected>Hindi</option>
+                <option value="${data.language}">English</option>
+            </select>
+        </div>  
+        <div class="box-01">
+            Choose Date:
+            <input type="date" id="date" value="${data.date}">
+        </div>
+        <div class="box-01">
+            Choose Time:
+            <input type="datetime-local" id="time" value="${data.time} ">
+        </div>
+        <div class="box-01">
+            <label>Choose Price:</label>
+            <select id="price" value="${data.price}">
+                <option value="50">Rs. 0-100</option>
+                <option value="150">Rs. 101-200</option>
+                <option value="250">Rs. 201-300</option>
+                <option value="350">Rs. 301-400</option>
+                <option value="450">Rs. 401-500</option>
+            </select>
+        </div>
+        <div class="box-01">
+            Choose Seats:
+            <select id="seat" value="${data.seat}">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <h2>Total amount:</h2>
+        <input type="submit" value="Update" onclick="return finalupdate ('${data.id}')">
+    </form> 
+</div>
+  `
+  document.querySelector("#show").innerHTML=formdata
+}
 const finalUpdate = async (event, id) => {
   event.preventDefault();
 

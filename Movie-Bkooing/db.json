@@ -7,6 +7,22 @@
       "time": "2025-03-21T23:55",
       "price": "150",
       "language": "english"
+    },
+    {
+      "id": "4b41",
+      "seat": "7",
+      "date": "2025-03-14",
+      "time": "2025-03-21T23:55",
+      "price": "150",
+      "language": "French"
+    },
+    {
+      "id": "4b41",
+      "seat": "7",
+      "date": "2025-03-14",
+      "time": "2025-03-21T23:55",
+      "price": "150",
+      "language": "hindi"
     }
   ]
 }

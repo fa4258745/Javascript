@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.css" integrity="sha512-TH+vnrhByFI2RzNvaHSqt6EwoJ9Bp+yGAGTWp84qTuTx315ebnypxtyGHpli55Rm4N4J+N/0W9xAL2b5RZ2ZSA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="json.css">
     <title>JSON</title>
 </head>
+
 <body onload="fetchData()">
     <!---------------SIDEBAR STARTS---------------->
     <div class="sidebar ">
@@ -144,7 +147,7 @@
             </div>
         </div>
         <div class="padding-singout">
-            <input type="submit" value="signout" class="singOut" onclick="logout()">
+            <input type="submit" value="SIGNOUT" class="singOut" onclick="logout()">
         </div>
     </div>
     <!---------------SIDEBAR ENDS---------------->
@@ -202,25 +205,27 @@
                         <th>Price</th>
                         <th>Seats</th>
                         <th>Total Price</th>
-                        <th>Delete</th>
+                        <th >Delete</th>
+                        <th onclick="formfill('${e.id}')">Update</th>
                     </tr>
                 </thead>
                 <tbody id="dataDisplay">
                     <!-- Data will be dynamically inserted here -->
                 </tbody>
             </table>
-            
-            <div id="pages" ></div>
+  
+            <div class="center-pag">
+        <div id="pages"></div>
+    </div>
         </div>
     </div>
-    
-    
-    <div id="show">  </div>
 
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
-    
+    <div id="show"> </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="json.js"></script>
 

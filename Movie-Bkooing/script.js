@@ -97,35 +97,7 @@ let sana = (id) => {
   localStorage.setItem("Email", signemail);
   localStorage.setItem("Password", signPassword);
 
-  Swal.fire({
-    title: "Are you sure?",
-    text: "You are about to register!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, register me!",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      localStorage.setItem("Name", signname);
-      localStorage.setItem("Number", signNumber);
-      localStorage.setItem("Email", signemail);
-      localStorage.setItem("Password", signPassword);
-
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Registration Successful!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-
-      setTimeout(() => {
-        location.href = "localhome.html";
-      }, 1500);
-    }
-  });
-
+  location.href="localhome.html";
   return false;
 };
 
