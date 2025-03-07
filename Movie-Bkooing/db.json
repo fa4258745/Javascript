@@ -1,20 +1,12 @@
 {
   "movie": [
     {
-      "id": "cf77",
-      "seat": "5",
-      "date": "2025-03-01",
-      "time": "2025-03-21T15:35",
-      "price": "350",
-      "language": "hindi"
-    },
-    {
-      "id": "22c9",
-      "seat": "1",
-      "date": "",
-      "time": "",
-      "price": "50",
-      "language": "hindi"
+      "id": "4b41",
+      "seat": "7",
+      "date": "2025-03-14",
+      "time": "2025-03-21T23:55",
+      "price": "150",
+      "language": "english"
     }
   ]
 }

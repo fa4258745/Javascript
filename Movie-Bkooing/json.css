@@ -248,7 +248,42 @@ body {
   }
 
   
-  
+  #pages {
+    display: flex; 
+    justify-content: center; /* Center align pagination */
+    margin-top: 20px; 
+    gap: 10px; /* Add space between buttons */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.paginationjs {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+}
+
+.paginationjs .paginationjs-page,
+.paginationjs .paginationjs-prev,
+.paginationjs .paginationjs-next {
+    padding: 10px 15px;
+    background-color: #3085d6; 
+    color: #fff; 
+    border-radius: 5px; 
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.paginationjs .paginationjs-page:hover,
+.paginationjs .paginationjs-prev:hover,
+.paginationjs .paginationjs-next:hover {
+    background-color: #1f72b6; 
+}
+
+.paginationjs .paginationjs-page.active {
+    background-color: #d33; 
+}
 
 
   

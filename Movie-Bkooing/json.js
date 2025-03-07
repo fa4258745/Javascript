@@ -1,13 +1,47 @@
+// const fetchData = async () => {
+//   try {
+//       let url = "http://localhost:3000/movie";
+//       let res = await fetch(url,{method:"GET"});
+//       let data = await res.json();
+//       datashow(data); // Display fetched data
+//      paginationData(data);
+//   } catch (error) {
+//       console.error("Error fetching data:", error);
+//   };
+// };
+
+
+
 const fetchData = async () => {
-  try {
-      let url = "http://localhost:3000/movie";
-      let res = await fetch(url);
-      let data = await res.json();
-      datashow(data); // Display fetched data
-  } catch (error) {
-      console.error("Error fetching data:", error);
-  }
+    try {
+        let url = "http://localhost:3000/movie";
+        let res = await fetch(url);
+        let data = await res.json();
+        datashow(data)
+        paginationData(data); // Now correctly passing data
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
 };
+
+
+
+
+
+
+let paginationData = (data) => {
+    $('#pages').pagination({
+        dataSource:data,
+        pageSize: 2,
+        showGoInput: true,
+        showGoButton: true,
+        callback: function(data) {
+            datashow(data)
+        }
+      })
+};
+
+
 
 let datashow = (data) => {
   let show = document.querySelector("#dataDisplay");
@@ -24,7 +58,7 @@ let datashow = (data) => {
               <td>${e.price * e.seat}</td>
               <td onclick="confirmDelete('${e.id}')" style="cursor:pointer; color:red;">Delete</td>
           </tr>
-      `;
+          `;
   });
 };
 
@@ -54,21 +88,59 @@ const deleteTicket = async (id) => {
   }
 };
 
-const FIND = async () => {
-  let searchinp = document.querySelector("#searchinp").value;
-  let url = "http://localhost:3000/movie";
+// const FIND = async () => {
+//   let searchinp = document.querySelector("#searchinp").value;
+//   let url = "http://localhost:3000/movie";
   
-  try {
-      let res = await fetch(url);
-      let data = await res.json();
-      let filteredData = data.filter((e) =>
-          e.language.toLowerCase().includes(searchinp.toLowerCase())
-      );
-      datashow(filteredData);
-  } catch (error) {
-      console.error("Error filtering data:", error);
-  }
+//   try {
+//       let res = await fetch(url);
+//       let data = await res.json();
+//       let filteredData = data.filter((e) =>
+//           e.language.toLowerCase().includes(searchinp.toLowerCase())
+//       );
+//       datashow(filteredData);
+//   } catch (error) {
+//       console.error("Error filtering data:", error);
+//   }
+// };
+
+
+
+const FIND = async () => {
+    let searchinp = document.querySelector("#searchinp").value;
+    let url = "http://localhost:3000/movie";
+
+    try {
+        let res = await fetch(url);
+        let data = await res.json();
+        let filteredData = data.filter((e) =>
+            e.language.toLowerCase().includes(searchinp.toLowerCase())
+        );
+
+        // Clear previous pagination before applying new one
+        $('#pages').empty(); // This removes previous pagination instead of destroy()
+
+        if (filteredData.length === 0) {
+            document.querySelector("#dataDisplay").innerHTML = "<tr><td colspan='7'>No data found</td></tr>";
+            return;
+        }
+
+        $('#pages').pagination({
+            dataSource: filteredData,
+            pageSize: 2,
+            showGoInput: true,
+            showGoButton: true,
+            callback: function(data) {
+                datashow(data);
+            }
+        });
+
+    } catch (error) {
+        console.error("Error filtering data:", error);
+    }
 };
+
+
 
 const userInput = async (event) => {
   event.preventDefault(); // Prevent form submission
@@ -177,4 +249,6 @@ const finalUpdate = async (event, id) => {
 };
 
 // Fetch data when the page loads
+
 fetchData();
+

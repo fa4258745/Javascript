@@ -25,10 +25,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="checklogin()">
+    <!-- <a href="./signup.html"></a>
+    <button onclick="singup()">sign up</button>
+    <button onclick="login()">login</button> -->
 
-
-    <div class="sidebar ">
+    <div class="sidebar">
         <div class="sidebar-container ">
             <div class="siderbar-container-content">
                 <div class="container-p">
@@ -165,7 +167,13 @@
 
 
         <div class="padding-singout">
-            <input type="submit" value="signout" class="singOut" onclick="logout()">
+            <!-- <input type="submit" value="signout" class="singOut">
+            <input type="submit" value="signin" class="singOut signIn" > -->
+
+            <input type="submit" value="" class="signOut sign-design" onclick="logout()">
+            <input type="submit" value="SIGN IN" class="signIn sign-design ">
+
+
         </div>
     </div>
 
@@ -176,10 +184,9 @@
         <!-- <h1 class="heading"></h1> -->
 
         <div id="birds" style="height: 100%; width: 100%; ">
-
-
             <section class="home">
                 <!-- NAVBAR START -->
+
                 <nav class="navbar">
                     <div class="logo-img">
                         <img src="./Images/Main page-images/theater-ticket-svgrepo-com (4).png" width="100px"
@@ -194,27 +201,12 @@
                         <p class="param">Bhopal</p>
                         <i class="fa-solid fa-arrow-down" onclick="cardCity()"></i>
 
-
-
-
-
-
-
-                     
-
-
-
-
-
-
-
-
                         <div class="logo-human">
                             <i class="fa-solid fa-user"></i>
                         </div>
+
                         <p class="param">Hi,Guest</p>
                         <i class="fa-solid fa-bars   sidebarOpen" onclick="sidebar()"></i>
-
                     </div>
 
 
@@ -233,7 +225,7 @@
                     <div class="inp-flex">
                         <div class="container-flexingi">
                             <i class="fa-solid fa-magnifying-glass"></i>
-      
+
                             <input type="text" id="city" class="brd-radis" placeholder="Enter City Name">
 
                         </div>
@@ -250,53 +242,53 @@
                     <div class="par">
                         <p>Popular Cities</p>
                     </div>
-                  <div class="container-img-p">
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/pune-selected.png" alt="" width="70px">
-                        <p>Pune</p>
-                    </div>
+                    <div class="container-img-p">
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/pune-selected.png" alt="" width="70px">
+                            <p>Pune</p>
+                        </div>
 
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/ahd.avif" alt="" width="70px">
-                        <p>Ahmdabad</p>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/ahd.avif" alt="" width="70px">
+                            <p>Ahmdabad</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/bang.png" alt="" width="70px">
+                            <p>Banglore</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/chd.avif" alt="" width="70px">
+                            <p>Chandigarh</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/chen.avif" alt="" width="70px">
+                            <p>Chennai</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/hyd.png" alt="" width="70px">
+                            <p>Hyderabad</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO//koch.avif" alt="" width="70px">
+                            <p>Kochi</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/kolk.avif" alt="" width="70px">
+                            <p>Kolkata</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO/mumbai.avif" alt="" width="70px">
+                            <p>Mumbai</p>
+                        </div>
+                        <div class="container-img-1">
+                            <img src="./Images/LOGO//ncr.avif" alt="" width="70px">
+                            <p>Delhi</p>
+                        </div>
+
                     </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/bang.png" alt="" width="70px">
-                        <p>Banglore</p>
+                    <div class="p-container">
+                        <p>View All Cities</p>
                     </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/chd.avif" alt="" width="70px">
-                        <p>Chandigarh</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/chen.avif" alt="" width="70px">
-                        <p>Chennai</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/hyd.png" alt="" width="70px">
-                        <p>Hyderabad</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO//koch.avif" alt="" width="70px">
-                        <p>Kochi</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/kolk.avif" alt="" width="70px">
-                        <p>Kolkata</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO/mumbai.avif" alt="" width="70px">
-                        <p>Mumbai</p>
-                    </div>
-                    <div class="container-img-1">
-                        <img src="./Images/LOGO//ncr.avif" alt="" width="70px">
-                        <p>Delhi</p>
-                    </div>
-                  
-                  </div>
-     <div class="p-container">
-        <p>View All Cities</p>
-     </div>
 
 
 
@@ -410,7 +402,7 @@
                 <!-- SWIPER -->
                 <div class="swiper mySwiper swiperSecond">
                     <div class="swiper-wrapper" data-aos="fade-up" data-aos-duration="3000">
-                       
+
                         <div class="swiper-slide slide2">
                             <img src="./Images/Poster-1/poster-img-3.avif" alt="">
                             <div class="content">
@@ -419,8 +411,8 @@
                                 <button>Book Now</button>
                             </div>
                         </div>
-                       
-                       
+
+
                         <div class="swiper-slide slide2">
                             <img src="./Images/Poster-1/airforce.avif" alt="">
                             <div class="box">
@@ -428,24 +420,25 @@
                                     <h2>Airforce</h2>
                                     <p>Comedy/Romantic</p>
                                     <!-- <a href="./book.html"> -->
-                                        <button class="hover" id="hoverr" >Book Now</button>
+                                    <button class="hover" id="hoverr">Book Now</button>
                                     <!-- </a> -->
                                 </div>
                             </div>
                         </div>
-                     
+
                         <div class="swiper-slide slide2">
-                      
+
 
                             <img src="./Images/Poster-1/poster-img-1.avif" alt="">
                             <div class="content">
                                 <h2>Chhava</h2>
                                 <p>Action/Drama/historical</p>
-                                <a href="./book.html">
+                                <!-- <a href="./book.html">
                                     <button>Book Now</button>
-                                </a>
+                                </a> -->
+                                <button onclick="booknow()">book now</button>
 
-                        </div>
+                            </div>
                         </div>
                         <div class="swiper-slide slide2">
                             <img src="./Images/Poster-1/poster-img-4.avif" alt="">
@@ -895,26 +888,26 @@
                             </div>
                             <div class="Icon-Design" data-aos="fade-up" data-aos-duration="1500">
                                 <i class='bx bxl-facebook'></i>
-
                             </div>
+
                             <div class="Icon-Design" data-aos="fade-up" data-aos-duration="1800">
                                 <i class='bx bxl-twitter'></i>
-
                             </div>
+
                             <div class="Icon-Design" data-aos="fade-up" data-aos-duration="2200">
                                 <i class='bx bxl-instagram'></i>
-
                             </div>
+
                             <div class="Icon-Design" data-aos="fade-up" data-aos-duration="2600">
                                 <i class='bx bxl-youtube'></i>
-
                             </div>
+
                             <div class="Icon-Design" data-aos="fade-up" data-aos-duration="3000">
                                 <i class='bx bxl-linkedin'></i>
-
                             </div>
                         </div>
                     </div>
+
                     <div class="end-container">
                         <p data-aos="fade-right" data-aos-duration="1000">Privacy Policy | Terms of Use | Terms &
                             Conditions | FAQs | Sitemap | Contact Us | Rss

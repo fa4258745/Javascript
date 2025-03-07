@@ -404,7 +404,7 @@ input[type="text"]:focus {
 .padding-singout {
   padding: 13px 10px;
 }
-.singOut {
+.sign-design {
   padding: 14px;
   width: 100%;
   font-size: 20px;
@@ -413,7 +413,7 @@ input[type="text"]:focus {
   border: 2px solid #e0393b;
   transition: all 0.2s ease-in;
 }
-.singOut:hover {
+.sign-design:hover {
   transition: all 0.2s ease-in;
   background-color: #a4a2ac75;
   background-color: red;

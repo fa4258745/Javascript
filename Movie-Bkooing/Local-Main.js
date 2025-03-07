@@ -1,46 +1,3 @@
-// <----------------------------------------------------->
-
-// let heading = document.querySelector(".heading");
-
-// function log() {
-//   let localName = localStorage.getItem("Name") || "Guest"; // Default to "Guest"
-//   heading.innerHTML = `Welcome ${localName}`;
-
-//   // Hide the heading after 3 seconds
-//   setTimeout(() => {
-//     heading.innerHTML = "";
-//   }, 3000);
-// }
-
-// log(); // Call the function immediately
-// <----------------------------------------------------->
-
-//     let heading = document.querySelector(".heading");
-
-// function log() {
-//   let localName = localStorage.getItem("Name") ;
-//   heading.innerHTML = `Welcome ${localName}`;
-
-//   setTimeout(() => {
-//     location.href = "localhome.html";
-//   }, 3000);
-
-//   return true;
-// }
-
-// log();
-
-// function logout() {
-//   setTimeout(() => {
-//     alert("You are logged out!");
-//     localStorage.clear();
-//     heading.innerHTML = "";
-//     location.href = "index.html";
-//     return true;
-//   }, 5000);
-// }
-
-// logout();
 
 VANTA.NET({
   el: "#birds",
@@ -152,19 +109,11 @@ VANTA.BIRDS({
   quantity: 3.0,
 });
 
-
-
-
-
-
 let sidebar = () => {
-  // document.querySelector(".sidebar").style.display = "block";
   document.querySelector(".sidebar").style.opacity = 1;
   document.querySelector(".sidebar").style.left = 0;
-  
 };
 let sidebarClose = () => {
-  // document.querySelector(".sidebar").style.display = "none";
   document.querySelector(".sidebar").style.opacity = 0;
   document.querySelector(".sidebar").style.left = -380;
 };
@@ -172,20 +121,54 @@ sidebar();
 sidebarClose();
 // <---------------------- FOR LOGUT THE PAGE----------------------->
 
-let booknow=()=>{
-        
-  alert("Booknow")
 
 
-}
+let booknow = () => {
+  if (localStorage.getItem("Name")) {
+    location.href = "book.html";
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please Login First!",
+      footer: '<a href="#">Why do I have this issue?</a>'
+    });
+  }
+};
 
-// let logout = (id) => {
-//         location.href = "index.html";
+// let checklogin = () => {
+//   if (localStorage.getItem("Name")) {
+//     document.querySelector(".singOut").style.display = "none";
+//             location.href = "index.html";
 //         localStorage.clear();
-// }
+//   } else {
+//     document.querySelector("#singIn").style.display = "none";
+//     document.querySelector("#singOut").style.display = "block";
+//   }
+// };
 
 
-let logout = (id) => {
+let checkLogin = () => {
+  const signInBtn = document.querySelector(".signIn");
+  const signOutBtn = document.querySelector(".signOut");
+  
+  if (localStorage.getItem("Name")) {
+    // User is signed in
+    signInBtn.style.display = "none";
+    signOutBtn.style.display = "block";
+  } else {
+    // User is not signed in
+    signInBtn.style.display = "block";
+    signOutBtn.style.display = "none";
+  }
+};
+
+document.addEventListener("DOMContentLoaded", checkLogin);
+
+
+
+
+let logout = () => {
   Swal.fire({
     title: "Are you sure?",
     text: "You will be logged out!",
@@ -193,7 +176,7 @@ let logout = (id) => {
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, logout!"
+    confirmButtonText: "Yes, logout!",
   }).then((result) => {
     if (result.isConfirmed) {
       localStorage.clear();
@@ -202,9 +185,9 @@ let logout = (id) => {
         text: "You have been successfully logged out.",
         icon: "success",
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
       });
-
+      
       setTimeout(() => {
         location.href = "index.html";
       }, 1500);
@@ -212,33 +195,29 @@ let logout = (id) => {
   });
 };
 
+
 // <----------------------SMOOTH SCROLLING WIHT LOCOMOTIVE----------------------->
 
-
 const scroll = new LocomotiveScroll({
-  el: document.querySelector('.main-div'),
-  smooth: true
+  el: document.querySelector(".main-div"),
+  smooth: true,
 });
-
-
 
 gsap.to(".text span", {
   opacity: 1,
   duration: 0.1,
   stagger: 0.15,
-  ease: "power2.out"
+  ease: "power2.out",
 });
 
-
-function cardCity()  {
-let cardCity = document.querySelector(".card-city");
-cardCity.style.visibility="visible";
-cardCity.style.opacity="1";
+function cardCity() {
+  let cardCity = document.querySelector(".card-city");
+  cardCity.style.visibility = "visible";
+  cardCity.style.opacity = "1";
 }
 
 function closecard() {
   let cardCity = document.querySelector(".card-city");
-  cardCity.style.visibility="hidden";
-  cardCity.style.opacity="0";
+  cardCity.style.visibility = "hidden";
+  cardCity.style.opacity = "0";
 }
-
