@@ -13,149 +13,9 @@
 </head>
 
 <body onload="fetchData()">
-    <!---------------SIDEBAR STARTS---------------->
-    <div class="sidebar ">
-        <div class="sidebar-container ">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <h2>Hey! </h2>
-                    <p>Edit your profile</p>
-                    <div class="icon">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                </div>
-                <div class="close-sidebar" onclick="sidebarClose()">
-                    <i class="fa-solid fa-times"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <div class="dot">
-                        <p>Get ticket on Whatsapp/SMS </p>
-                        <p>Add mobile Number</p>
-                    </div>
-                </div>
-
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-bell"></i>
-                    <div class="dot">
-                        <p>Notifications </p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <div class="dot">
-                        <p>Yours Orders</p>
-                        <p>View all your bookings & purchases</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-
-                    <i class="fa-solid fa-tv"></i>
-                    <div class="dot">
-                        <p>Stream Library</p>
-                        <p>rented & Purchased Movies</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-
-                    <i class="fa-brands fa-paypal"></i>
-                    <div class="dot">
-                        <p>Play Credit Card</p>
-                        <p>View your Play Credit Card detials</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-message"></i>
-                    <div class="dot">
-                        <p>Help & SUpport</p>
-                        <p>View commonly asked queries and Chat</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-gear"></i>
-                    <div class="dot">
-                        <p>Account & Settings</p>
-                        <p>Location,Payments,Permission & More</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-container">
-            <div class="siderbar-container-content">
-                <div class="container-p">
-                    <i class="fa-solid fa-gift"></i>
-                    <div class="dot">
-                        <p>Rewards</p>
-                        <p>View Your Rewards & unlock new ones</p>
-                    </div>
-                </div>
-                <div class="icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="padding-singout">
-            <input type="submit" value="SIGNOUT" class="singOut" onclick="logout()">
-        </div>
-    </div>
+ 
     <!---------------SIDEBAR ENDS---------------->
     <!---------------SIDEBAR ENDS---------------->
-
-
-
-
 
     <nav class="navbar">
         <div class="main-nav-div">
@@ -206,7 +66,8 @@
                         <th>Seats</th>
                         <th>Total Price</th>
                         <th >Delete</th>
-                        <th onclick="formfill('${e.id}')">Update</th>
+                        <th onclick="formfill('${data.id}')">Update</th>
+
                     </tr>
                 </thead>
                 <tbody id="dataDisplay">
@@ -228,6 +89,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="json.js"></script>
+    <script src="JSONM.js"></script>
 
 
 </body>

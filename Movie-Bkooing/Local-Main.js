@@ -221,3 +221,54 @@ function closecard() {
   cardCity.style.visibility = "hidden";
   cardCity.style.opacity = "0";
 }
+
+
+
+
+
+
+
+
+// <-----------------LOADER--------------------->
+window.addEventListener("load", function () {
+  setTimeout(() => {
+      document.getElementById("loader").style.transform = "translateY(-100%)";
+      document.getElementById("loader").style.transform = "translateX(-100%)";
+      setTimeout(() => {
+          document.getElementById("loader").style.display = "none"; 
+          document.getElementById("mainContent").style.display = "block";
+      }, 1000); 
+  }, 3760); 
+});
+
+
+
+
+
+
+
+console.log(ScrollTrigger);
+
+
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.to(".text", {
+//     scale: 1,
+//     opacity: 1,
+//     duration: 1.5,
+//     ease: "power2.out",
+//     scrollTrigger: {
+//         trigger: ".text",
+//         start: "top 75%",
+//         end: "top 50%",
+//         scrub: true
+//     }
+// });
+
+
+
+
+
+
+gsap.to(".box", { x: 200, duration: 2, repeat: -1, yoyo: true });
+Draggable.create(".box");

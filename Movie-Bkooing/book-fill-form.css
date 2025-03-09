@@ -446,8 +446,10 @@ gap: 20px;
      padding: 20px;
      margin: 20px;
      background: rgba( 255, 255, 255, 0.25 );
+     background: linear-gradient(#076653,#0C342C);
+     background: #152630;
      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-     backdrop-filter: blur( 4px );
+     backdrop-filter: blur( 1px );
      -webkit-backdrop-filter: blur( 4px );
      border-radius: 10px;
      border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -525,9 +527,6 @@ gap: 20px;
 }
 
 .background {
-  background: url(./Images/bakground-website/background-1.jpg);
-  background: url(./Images/bakground-website/movie-background-4.jpg);
-  background: url(./Images/bakground-website/17861093_5924758.jpg);
   background: url(./Images/bakground-website/movie-background-6.jpg);
   height: 100%;
   background-position: center;

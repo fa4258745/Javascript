@@ -8,10 +8,10 @@
   font-family: "yesei";
   src: url(./FOnt/yesei/YuseiMagic-Regular.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "robot";
   src: url(./FOnt/Roboto-VariableFont_wdth\wght.ttf);
-}
+} */
 
 html,
 body {
@@ -876,6 +876,48 @@ margin-top: 20px;
   font-family: sans-serif;
   font-size: 16px;
 }
+
+.text-section {
+  height: 100vh;
+  background-color: #050209;
+  /* color: #eaeaea; */
+  color: #fff;
+  z-index: 9999;
+}
+
+/* ------------------------------------ */
+.spacer { height: 80vh; }
+.textm { font-size: 3rem; transform: scale(0.5); opacity: 0; 
+
+
+color: #fff;
+
+
+
+}
+
+
+
+/* .div-container .div-box-1 h1 {
+  font-size: 5rem;
+  font-family: sans-serif;
+  letter-spacing: 10px;
+  font-weight: 200;
+}
+
+.div-container .div-box-1 {
+  padding: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 900px) {
   .flex-container {
     flex-wrap: wrap;
@@ -963,6 +1005,14 @@ margin-top: 20px;
   .container-content-2 p {
     font-size: 10px;
   }
+  .texter .texting { 
+
+    font-size: 1.6rem;
+
+
+  }
+
+
 
   .footer-container-2-content i {
     font-size: 35px;
