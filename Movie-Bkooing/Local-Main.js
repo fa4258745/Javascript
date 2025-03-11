@@ -109,16 +109,25 @@ VANTA.BIRDS({
   quantity: 3.0,
 });
 
+// let sidebar = () => {
+//   document.querySelector(".sidebar").style.opacity = 1;
+//   document.querySelector(".sidebar").style.left = 0;
+// };
+// let sidebarClose = () => {
+//   document.querySelector(".sidebar").style.opacity = 0;
+//   document.querySelector(".sidebar").style.left = -380;
+// };
+// sidebar();
+// sidebarClose();
+
 let sidebar = () => {
-  document.querySelector(".sidebar").style.opacity = 1;
-  document.querySelector(".sidebar").style.left = 0;
+  document.querySelector(".sidebar").style.left = "0";
 };
+
 let sidebarClose = () => {
-  document.querySelector(".sidebar").style.opacity = 0;
-  document.querySelector(".sidebar").style.left = -380;
+  document.querySelector(".sidebar").style.left = "-380px";
 };
-sidebar();
-sidebarClose();
+
 // <---------------------- FOR LOGUT THE PAGE----------------------->
 
 
@@ -210,16 +219,33 @@ gsap.to(".text span", {
   ease: "power2.out",
 });
 
+
+// function cardCity() {
+//   let cardCity = document.querySelector(".card-city");
+//   cardCity.style.visibility = "visible";
+//   cardCity.style.opacity = "1";
+// }
+
+// function closecard() {
+//   let cardCity = document.querySelector(".card-city");
+//   cardCity.style.visibility = "hidden";
+//   cardCity.style.opacity = "0";
+
+// }
 function cardCity() {
   let cardCity = document.querySelector(".card-city");
   cardCity.style.visibility = "visible";
   cardCity.style.opacity = "1";
+  cardCity.style.transform = "translate(-50%, 0)"; // Move it down smoothly
 }
 
 function closecard() {
   let cardCity = document.querySelector(".card-city");
-  cardCity.style.visibility = "hidden";
   cardCity.style.opacity = "0";
+  cardCity.style.transform = "translate(-50%, -20px)"; // Move it back up
+  setTimeout(() => {
+    cardCity.style.visibility = "hidden"; // Hide it after animation ends
+  }, 400);
 }
 
 
@@ -244,31 +270,21 @@ window.addEventListener("load", function () {
 
 
 
-
+gsap.to(".texter .texting", {
+  opacity: 1,
+  duration: 45,
+  stagger: 0.15,
+  ease: "power2.out"
+});
 
 
 console.log(ScrollTrigger);
 
 
 
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.to(".text", {
-//     scale: 1,
-//     opacity: 1,
-//     duration: 1.5,
-//     ease: "power2.out",
-//     scrollTrigger: {
-//         trigger: ".text",
-//         start: "top 75%",
-//         end: "top 50%",
-//         scrub: true
-//     }
-// });
 
 
 
 
 
 
-gsap.to(".box", { x: 200, duration: 2, repeat: -1, yoyo: true });
-Draggable.create(".box");

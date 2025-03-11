@@ -22,7 +22,9 @@ body {
   background-color: #000;
   height: 100%;
 }
-
+body {
+  font-family: sans-serif !important;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -185,6 +187,7 @@ input[type="text"]:focus {
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+
 /* <-------------SCETION_2------------------------> */
 
 .sec-2 {
@@ -331,21 +334,36 @@ input[type="text"]:focus {
 }
 /* <-----------------SIDEBAR-----------------> */
 
-.sidebar {
+/* .sidebar {
   position: fixed !important;
   top: 0;
   left: 0;
+  left: -100%;
   overflow-y: auto;
   height: 100vh;
   width: 380px;
   background-color: #eaeaea;
-  /* display: none; */
   z-index: 1000;
   padding: 5px 5px 5px 0px;
   box-shadow: 0px 0px 5px #eaeeea98;
-  transition: all 0.5s ease-in;
-  opacity: 0;
+  transition: all 0.3s ease-in;
+
+} */
+
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: -380px; 
+  overflow-y: auto;
+  height: 100vh;
+  width: 380px;
+  background-color: #eaeaea;
+  z-index: 1000;
+  padding: 5px 5px 5px 0px;
+  box-shadow: 0px 0px 5px #eaeeea98;
+  transition: left 0.5s ease-in-out;
 }
+
 
 .siderbar-container-content {
   color: #000;
@@ -804,12 +822,11 @@ margin-top: 20px;
 .footercontainer-3 {
   background-color: #421f65;
 }
-.card-city {
+/* .card-city {
   padding: 10px;
   position: fixed;
   top: 6.8%;
   width: 80%;
-  /* height: 10%; */
   background-color: #fff;
   z-index: 100;
   transform: translate(-50%, -50%);
@@ -818,7 +835,23 @@ margin-top: 20px;
   opacity: 0;
   visibility: hidden;
   transition: 0.2s ease-in;
+} */
+
+.card-city {
+  padding: 10px;
+  position: fixed;
+  top: 3%;
+  width: 80%;
+  background-color: #fff;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, -20px); /* Move it slightly up initially */
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
+
 .inp-flex {
   display: flex;
   font-size: 20px;

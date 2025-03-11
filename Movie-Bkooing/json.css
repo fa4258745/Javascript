@@ -38,7 +38,6 @@ body {
   background: linear-gradient(to right, #182848, #4b6cb7);  
   background: rgba(255, 255, 255, 0.121);
 
-  
     /* <******--------BACKGROUND-2------*****> */
     /* background: #24C6DC; 
   background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  
@@ -64,8 +63,14 @@ body {
   .nav-div-1 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     gap: 40px;
+  }
+
+  .main-nav-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
   .nav-div-2 {
     display: flex;
@@ -80,11 +85,11 @@ body {
   
   input[type="text"] {
     border: none;
-    padding: 10px 200px 10px 40px;
+    /* padding: 10px 200px 10px 40px; */
     font-size: 16px;
     outline: none;
     border-radius: 5px;
-    width: 100%;
+    /* width: 100%; */
     box-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
     transition: all 0.3s ease-in;
     background-color: #eaeaea;
@@ -361,7 +366,10 @@ width: 280px;
 border-radius: 10px;
 }
 
-
+input[type="text"] {
+  padding: 10px 20px;
+  width: 400px;
+}
 
 
 
