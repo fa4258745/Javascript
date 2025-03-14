@@ -2,11 +2,11 @@
 
 let hell =document.querySelector(".hell")
 
-// // function sana() {
-// //     setTimeout(()=> {
-// //         hell.innerHTML="faraz";
-// //         },3000)
-// // };
+// function sana() {
+//     setTimeout(()=> {
+//         hell.innerHTML="faraz";
+//         },3000)
+// };
 
 //     let count=0;
 //     let clam;
@@ -23,26 +23,26 @@ let hell =document.querySelector(".hell")
 
 // }
 
-// let inpStop = document.querySelector(".inp").value();
-// let show = document.querySelector("textshow");
-// let stopWatch = () => {
-//   let count = 0;
-//   let sana = () => {
-//     let clam = setInterval(() => {
-//       hell.innerHTML = count++;
-//       console.log(count++);
+let inpStop = document.querySelector(".inp").value();
+let show = document.querySelector("textshow");
+let stopWatch = () => {
+  let count = 0;
+  let sana = () => {
+    let clam = setInterval(() => {
+      hell.innerHTML = count++;
+      console.log(count++);
 
-//       if (inpStop == 10) {
-//       } else if ((inpStop = 0)) {
-//         let stop = () => {
-//           clearInterval(clam);
-//         };
-//         stop();
-//       }
-//       show.innerHTML = count;
-//     }, 2000);
+      if (inpStop == 10) {
+      } else if ((inpStop = 0)) {
+        let stop = () => {
+          clearInterval(clam);
+        };
+        stop();
+      }
+      show.innerHTML = count;
+    }, 2000);
 
-//   }};
+  }};
 
 
 

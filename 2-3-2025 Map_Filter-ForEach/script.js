@@ -1,9 +1,13 @@
 // The variable arrOf is an array of objects in JavaScript.
 
-// An array of objects is a data structure in JavaScript (and many other programming languages) where an array holds multiple objects. Each object can have properties (key-value pairs) and methods.
+// An array of objects is a data structure in JavaScript 
+// (and many other programming languages) where an array holds multiple 
+// objects. Each object can have properties (key-value pairs) and methods.
+
+
 let arrOf = [
   {
-    name: "Siddharth",
+    name: "SANA",
     age: 26,
   },
   {
@@ -38,14 +42,15 @@ let arrOf = [
 // console.log(ans1);
 
 // useful when one liner of less code is used to filter elements
-let arr22 = [1, 2, 3, 4, 5];
-let ans2 = arr22.map((e) => {
-   return e <1
-});
-console.log(ans2);
+// let arr22 = [1, 2, 3, 4, 5];
+// let ans2 = arr22.map((e) => {
+//    return e <1
+// });
+// console.log(ans2);
 
 // <------------FILTER METHOD--------------->
-// .filter() method creates a new array containing only the elements that satisfy a given condition.
+// .filter() method creates a new array containing only the 
+// elements that satisfy a given condition.
 // It does not modify the original array.
 // Used for removing unwanted elements based on conditions.
 
@@ -69,14 +74,13 @@ console.log(ans2);
 // .forEach() method is used to iterate over an array and execute a function for each element. However, unlike .map() or .filter(), 
 // it does not return a new array—it just executes the callback function on each item.
 // it does not return an array
-
 // let arr3 = [1, 2, 3, 4, 5];
 // arr3.forEach((e) => {
 //   console.log(e * 2);
 // });
 
 // const users = [
-//   { name: "Zainab", age: 25 },
+//   { name: "Faraz", age: 25 },
 //   { name: "Sana", age: 30 }
 // ];
 

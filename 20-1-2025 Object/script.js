@@ -10,12 +10,12 @@ let obj = {
   country: "India",
   hobbies: ["reading", "coding", "gaming"],
   greeting: function () {
-    console.log(` hello im ${this.name} and I'm ${this.age} years old`);
+    console.log(` hello im ${this.name} and I'm ${this.age} years old and my hobbies is ${this.hobbies} and I live in ${this.country}`);
   },
 };
 obj.greeting();
-// // It will override the age if it is written down the function call
 
+// // It will override the age if it is written down the function call
 // obj.age=25;
 
 // obj.hobbies = "dancing"; // to update the key
@@ -24,37 +24,40 @@ obj.greeting();
 
 // obj.name = "Siddharth";
 
-// delete obj.hobbies; // to delete the key
+delete obj.name; // to delete the key
 
 // console.log(obj.hobbies[0]);
 // <------------------DESTRUCTURING------------------->
 // Destructuring is a feature in JavaScript that allows you to extract values from arrays or objects and assign them to variables in a concise way.
+// if i die for Allah never let me die
+
 const student =  {
     name: "David",
     age: 25,
     country: "India",
     hobbies: ["reading", "coding", "gaming"],
-}
+};
+
+obj.hobbies
 
 function destruct() {
-  const {name,age} =student;
+  const {name,age} = student;
   console.log(name);
   console.log(age);
-
-}
+};
 
 
 
 
 // <--------------SPread------------>
 // The spread operator (...) is used to expand elements of an array or object into individual elements. It is commonly used for copying, merging, and passing values in functions.
-// function spr() {
-//   const student1 = { name: "David", age: 25 };
-//   const student2 = { city: "New york", country: "USA" };
+function spr() {
+  const student1 = { name: "David", age: 25 };
+  const student2 = { city: "New york", country: "USA" };
 
-//   const mergedStudent = { ...student1, ...student2 };
-//   console.log(mergedStudent);
-// }
+  const mergedStudent = { ...student1, ...student2 };
+  console.log(mergedStudent);
+}
 
 
 

@@ -177,7 +177,8 @@ function question15() {
   firstLink.style.color = "red";
 }
 
-// create an element with 3 children now change the color of the first and last element to red;
+// create an element with 3 children now change the color of the 
+// first and last element to red;
 
 function question16() {
     let parent = document.querySelector(".parent");

@@ -1,3 +1,4 @@
+
 function Faraz() {
   let a = "what's up buddy"; // STring
   let b = "hello world";
@@ -15,7 +16,7 @@ function Ahmed() {
   document.write(abc.replace(/Cybrom/gi, "Mpnagar"));
   let arr = [1, 3, "Hello", 8, 9]; //array
 }
-
+// slice is method is used on arrays and strings to extract some portion
 function Slice2() {
   let h = "javascriptissoeasy";
   document.write(h.slice(4, 12));

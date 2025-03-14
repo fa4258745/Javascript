@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggleTheme">Toggle Theme</button>
+<script>
+
+
+let button = document.getElementById("toggleTheme");
+
+// Check saved theme on page load
+if (localStorage.getItem("theme") === "dark") {
+  document.body.style.background = "black";
+  document.body.style.color = "white";
+}
+
+// Toggle theme and save it
+button.addEventListener("click", () => {
+  let currentTheme = document.body.style.background === "black" ? "light" : "dark";
+  localStorage.setItem("theme", currentTheme);
+
+  document.body.style.background = currentTheme === "dark" ? "black" : "white";
+  document.body.style.color = currentTheme === "dark" ? "white" : "black";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>

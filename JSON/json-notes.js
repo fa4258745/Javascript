@@ -1,9 +1,9 @@
 // by default its nature is to get the data from the server
 // if we want to post the data to the server we have to pass the second argument
-//  to the fetch function
+//  to the fetch function....
 // fetch() is used to retrieve data from a server.
 // await ensures we wait for the response before moving forward.
-// res.json() converts raw data into a JavaScript-friendly format7\.
+// res.json() converts raw data into a JavaScript-friendly format
 // The final data variable holds an array of movie objects.
 
 // Step	Code Action
@@ -20,7 +20,8 @@
 // Fetch works asynchronously and returns a promise
 
 // <------<-----***** AYSNC<=>AWAIT ****------>----->
-// Async/Await makes asynchronous code look like synchronous code for better readibility
+// Async/Await makes asynchronous code look like synchronous 
+// code for better readibility
 // <------<-----***** DB.JSON ****------>----->
 // i.Install JSON Server
 // npm install -g json server content

@@ -49,11 +49,12 @@ function access() {
 function spliceSlice() {
   let fruits=["Apple","Orange","Mango","banana","grapes","kiwi","Strawberry"];
   // last value don't count
-  document.write(fruits.slice(1,5));  //1,2
+  // document.write(fruits.slice(1,5));  //1,2
   
   // push pop spilce shift unshift 
   
-  // document.write(fruits.splice(1,1,"Papaya")); //from where to add,how many to delete, what to add
+  document.write(fruits.splice(2,2,"Papaya")); //from where to add,how many to delete, what to add
+document.write(fruits)
 }
 
 // <--------- REVERSE--------->

@@ -1,3 +1,37 @@
 {
-  "movie": []
+  "movie": [
+    {
+      "id": "d857",
+      "name": "Zainab",
+      "age": "22",
+      "city": "Bhopal",
+      "adhaar": "820062806802",
+      "number": "9977667222",
+      "person": "1",
+      "date": "2025-03-12",
+      "price": 3000
+    },
+    {
+      "name": "Sana",
+      "age": 25,
+      "city": "bhopal",
+      "director": "Jane Doe",
+      "person": 3,
+      "adhaar": "999882772772",
+      "price": 2000,
+      "id": "1759"
+    },
+    {
+      "id": "d857",
+      "name": "Faraz ahmed",
+      "age": "22",
+      "city": "Bhopal",
+      "adhaar": "820062806802",
+      "number": "9977667222",
+      "person": "1",
+      "date": "2025-03-12",
+      "price": 3000
+    }
+  
+  ]
 }
