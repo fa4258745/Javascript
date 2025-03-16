@@ -20,8 +20,40 @@
 // Fetch works asynchronously and returns a promise
 
 // <------<-----***** AYSNC<=>AWAIT ****------>----->
-// Async/Await makes asynchronous code look like synchronous 
-// code for better readibility
+// Async/Await makes asynchronous code look like synchronous improving readibility
+// It is a modern way to handle synchronous code
+// ASYNC=>declares a function as aynchronous
+// AWAIT=>pauses the function exection until the promise resolve or rejects
+
+
+// <------<-----***** PROMISES ****------>----->
+// A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation. It helps avoid callback hell and makes asynchronous code more readable and manageable.
+
+// States of a Promise
+// A Promise has three states:
+// 1. Pending – The initial state, before the operation completes.
+// 2. Fulfilled – The operation was successful.
+// 3. Rejected – The operation failed.
+
+// Creating a Promise
+// A Promise is created using the Promise constructor, which takes a 
+// function with two parameters: resolve and reject.
+
+const myPromise = new Promise((resolve, reject) => {
+    let success = true;
+    setTimeout(() => {
+      if (success) {
+        resolve("Operation Successful!"); // Fulfilled
+      } else {
+        reject("Operation Failed!"); // Rejected
+      }
+    }, 2000);
+  });
+  
+
+
+
+
 // <------<-----***** DB.JSON ****------>----->
 // i.Install JSON Server
 // npm install -g json server content
@@ -35,16 +67,8 @@
 //       "price": 5,
 //       "person": 1
 
-//     },
-
-//     {
-//       "name": "John Doe",
-//       "age": 25,
-//       "genre": "Action",
-//       "price": 10,
-//       "person": 2
 //     }
-//   ]
-// }
+
+
 // 3.start json server
 //
