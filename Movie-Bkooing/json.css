@@ -166,18 +166,18 @@ body {
 }
 
 .container-table {
-  width: 900px;
+  /* width: 900px; */
   background-color: antiquewhite;
   height: 300px;
   height: 100%;
   border-radius: 50px;
-  padding: 20px 10px;
+  padding: 20px 30px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.25);
+  background: #ffffff40;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -187,7 +187,7 @@ body {
   
   
 }
-.container-table input {
+/* .container-table input {
   width: 50%;
   padding: 10px;
   font-size: 16px;
@@ -199,7 +199,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-}
+} */
 
 
 table tr {
@@ -220,10 +220,7 @@ table tr {
 
  }
 
- table {
-  width: 100%;
-  border-collapse: collapse;
-}
+ 
 
 th, td {
   border: 1px solid #eaeaea;
@@ -255,7 +252,7 @@ th, td {
 justify-content: flex-start;
 border-radius: 30px;
 gap: 20px;
-   height: 400px;
+
    height: 100%;
    font-size: 20px;
    font-family: sans-serif;
@@ -385,6 +382,7 @@ input[type="text"] {
 @media screen and (max-width:426px) {
    .table, thead, tbody, th, td, tr {
       display: block;
+
   }
   table{
     border-color: transparent;
@@ -396,14 +394,14 @@ input[type="text"] {
   }
 
   /* Convert table rows into block elements */
-  tr {
+  /* tr {
       display: flex;
       flex-direction: column;
       border-bottom: 2px solid #ddd;
       padding: 10px;
       margin-bottom: 10px;
       background: #f9f9f9;
-  }
+  } */
 
   /* Style individual cells */
   td {
@@ -413,6 +411,7 @@ input[type="text"] {
       border: none;
       font-size: 14px;
       position: relative;
+
   }
 
   /* Add labels to each cell */
@@ -439,50 +438,12 @@ input[type="text"] {
 }
  .div-nav2 {
   flex-direction: column;
+
  }  
 }
 
 
-#show{
-  position: relative;
-  /* left: 50%; */
-  z-index: 99;
-
-
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border: 10px solid #eaeaea ; */
-  width: 800px;
-border-radius: 30px;
-gap: 20px;
-   height: 100%;
-   font-size: 20px;
-   font-family: sans-serif;
-   flex-direction: row;
-   padding: 20px;
-   margin: 20px;
-   background: linear-gradient(#076653,#0C342C);
-   background: #06071A;
-   background: linear-gradient(#33528A,#33A9A0);
-   background: rgba(34, 29, 29, 0.363);
-   box-shadow: 0 8px 32px 0 rgba(110, 111, 120, 0.37);
-   backdrop-filter: blur( 4px );
-   -webkit-backdrop-filter: blur( 4px );
-   border-radius: 10px;
-   border: 1px solid rgba(135, 122, 122, 0.211);
-  width: 50%;
-  height: 100%;
-  margin: 0px 25%;
-  margin-top: 20px;
-
-}
 
 
 
 
-
-.container-flexing {
-
-}

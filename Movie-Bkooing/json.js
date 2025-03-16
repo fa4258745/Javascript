@@ -317,7 +317,7 @@ const formfill = async (id) => {
                </div>
                 <div class="box-01">
                 Choose date : 
-          <input type="date" id="date" value="${data.date}">
+          <input type="date" id="update" value="${data.date}">
           </div>
           <div class="box-01">
           Choose time :
@@ -326,7 +326,7 @@ const formfill = async (id) => {
           
           <div class="box-01">
           <label>Choose Price:</label>
-          <select id="price" value="${data.price}">
+          <select id="upprice" value="${data.price}">
           <option value="50">Rs. 0-100</option>
           <option value="150">Rs. 101-200</option>              
           <option value="250">Rs. 201-300</option>
@@ -338,7 +338,7 @@ const formfill = async (id) => {
            <div class="box-01">
           
                    Choose Seats:
-                   <select id="seat" value="${data.seat}">
+                   <select id="upseat" value="${data.seat}">
                    <option value="1">1</option>
                    option value="2">2</option>
                  <option value="3">3</option>
@@ -371,8 +371,11 @@ const finalUpdate = async (event, id) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       language: document.querySelector("#uplan").value,
-      date: document.querySelector("#date").value,
+      date: document.querySelector("#update").value,
       time: document.querySelector("#uptime").value,
+      price: document.querySelector("#upprice").value,
+      seat: document.querySelector("#upseat").value,
+
     }),
   });
   fetchData();
