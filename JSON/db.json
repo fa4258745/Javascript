@@ -1,17 +1,6 @@
 {
   "movie": [
     {
-      "id": "d857",
-      "name": "Zainab",
-      "age": "22",
-      "city": "Bhopal",
-      "adhaar": "820062806802",
-      "number": "9977667222",
-      "person": "1",
-      "date": "2025-03-12",
-      "price": 3000
-    },
-    {
       "name": "Sana",
       "age": 25,
       "city": "bhopal",
@@ -32,6 +21,5 @@
       "date": "2025-03-12",
       "price": 3000
     }
-  
   ]
 }

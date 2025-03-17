@@ -208,7 +208,7 @@ const fetchData = async () => {
 let paginationData = (data) => {
   $("#pages").pagination({
     dataSource: data,
-    pageSize: 4,
+    pageSize: 3,
     showGoInput: true,
     showGoButton: true,
     callback: function (data) {
@@ -223,7 +223,8 @@ let datashow = (data) => {
   data.forEach((e) => {
     show.innerHTML += `
           <tr>
-              <td>${e.language}</td>
+          <td>${e.movie}</td>
+             <td>${e.language}</td>
               <td>${e.date}</td>
               <td>${e.time}</td>
               <td>${e.price}</td>
@@ -267,14 +268,18 @@ const FIND = async () => {
   let res = await fetch(url);
   let data = await res.json();
   let filteredData = data.filter((e) =>
-    e.language.toLowerCase().includes(searchinp.toLowerCase())
+    e.language.toLowerCase().includes(searchinp.toLowerCase()) ||
+    e.movie.toLowerCase().includes(searchinp.toLowerCase())
   );
   datashow(filteredData);
   paginationData(filteredData);
 };
 
+
+
 const userInput = async (event) => {
   event.preventDefault();
+  let inpmovie = document.querySelector("#movie").value;
   let inplanguage = document.querySelector("#lan").value;
   let inpdate = document.querySelector("#date").value;
   let inptime = document.querySelector("#time").value;
@@ -290,6 +295,7 @@ const userInput = async (event) => {
       date: inpdate,
       time: inptime,
       price: inpprice,
+      movie: inpmovie,
       language: inplanguage,
     }),
   });
@@ -304,6 +310,18 @@ const formfill = async (id) => {
   document.querySelector("#show").innerHTML = `
   <div class="container-ticket-flex">
       <form onsubmit="return finalUpdate(event, '${data.id}')">
+      <div class="box-01"> 
+      Choose Movie:
+         <select id="upmovie">
+                 <option value="Airforce" ${
+                   data.movie === "Airforce" ? "selected" : ""
+                 }>Airforce</option>
+                 <option value="Chhava" ${
+                   data.movie === "Chhava" ? "selected" : ""
+                 }>Chhava</option>
+             </select>
+   
+                  </div>
            <div class="box-01"> 
            Choose language :
       <select id="uplan">
@@ -314,7 +332,7 @@ const formfill = async (id) => {
                 data.language === "English" ? "selected" : ""
               }>English</option>
           </select>
-               </div>
+          </div>
                 <div class="box-01">
                 Choose date : 
           <input type="date" id="update" value="${data.date}">
@@ -371,6 +389,7 @@ const finalUpdate = async (event, id) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       language: document.querySelector("#uplan").value,
+      movie: document.querySelector("#upmovie").value,
       date: document.querySelector("#update").value,
       time: document.querySelector("#uptime").value,
       price: document.querySelector("#upprice").value,
