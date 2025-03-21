@@ -1,3 +1,10 @@
+// JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data. It is widely used in web development, especially for sending and receiving data between a server and a client.
+// Key Points About JSON
+// Format: JSON is a text-based format that follows JavaScript object syntax but is language-independent.
+// Structure: Data is stored as key-value pairs.
+// Uses: Commonly used for APIs, configuration files, and data exchange in web applications.
+
+// <------<-----***** FETCH METHOD ****------>----->
 // by default its nature is to get the data from the server
 // if we want to post the data to the server we have to pass the second argument
 //  to the fetch function....
@@ -50,10 +57,6 @@ const myPromise = new Promise((resolve, reject) => {
     }, 2000);
   });
   
-
-
-
-
 // <------<-----***** DB.JSON ****------>----->
 // i.Install JSON Server
 // npm install -g json server content
@@ -69,6 +72,3 @@ const myPromise = new Promise((resolve, reject) => {
 
 //     }
 
-
-// 3.start json server
-//

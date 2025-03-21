@@ -46,9 +46,6 @@ function destruct() {
   console.log(age);
 };
 
-
-
-
 // <--------------SPread------------>
 // The spread operator (...) is used to expand elements of an array or object into individual elements. It is commonly used for copying, merging, and passing values in functions.
 function spr() {
@@ -58,9 +55,6 @@ function spr() {
   const mergedStudent = { ...student1, ...student2 };
   console.log(mergedStudent);
 }
-
-
-
 
 
 // // Anonymouse fucntion

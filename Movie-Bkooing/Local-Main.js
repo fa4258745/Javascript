@@ -162,11 +162,9 @@ let checkLogin = () => {
   const signOutBtn = document.querySelector(".signOut");
   
   if (localStorage.getItem("Name")) {
-    // User is signed in
     signInBtn.style.display = "none";
     signOutBtn.style.display = "block";
   } else {
-    // User is not signed in
     signInBtn.style.display = "block";
     signOutBtn.style.display = "none";
   }
@@ -207,17 +205,11 @@ let logout = () => {
 
 // <----------------------SMOOTH SCROLLING WIHT LOCOMOTIVE----------------------->
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector(".main-div"),
-  smooth: true,
-});
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector(".main-div"),
+//   smooth: true,
+// });
 
-gsap.to(".text span", {
-  opacity: 1,
-  duration: 0.1,
-  stagger: 0.15,
-  ease: "power2.out",
-});
 
 
 // function cardCity() {
@@ -270,6 +262,8 @@ window.addEventListener("load", function () {
 
 
 
+
+
 gsap.to(".texter .texting", {
   opacity: 1,
   duration: 45,
@@ -278,7 +272,23 @@ gsap.to(".texter .texting", {
 });
 
 
-console.log(ScrollTrigger);
+
+
+
+
+
+
+
+
+
+gsap.to(".text span", {
+  opacity: 1,
+  duration: 0.1,
+  stagger: 0.15,
+  ease: "power2.out",
+});
+
+
 
 
 

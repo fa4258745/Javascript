@@ -1,0 +1,81 @@
+<!-- 📌 Step 1: Understand the Task
+A Stock Exchange Dashboard should display real-time stock data like:
+✔ Stock Name (e.g., Tesla, Apple, Microsoft)
+✔ Current Price
+✔ Price Change
+✔ Percentage Change
+
+We'll use a free API to fetch stock data and display it dynamically.
+
+📌 Step 2: Get a Free Stock Market API
+You need an API key to fetch stock data.
+
+⿡ Go to Alpha Vantage 👉 https://www.alphavantage.co
+⿢ Sign up for a free API key
+⿣ Copy your API key
+
+📌 Step 3: Set Up Your HTML File
+📄 Create an index.html file and copy this:
+
+html
+Copy
+Edit -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Exchange Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        .stock-table th, .stock-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .stock-table th {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📈 Stock Exchange Dashboard</h1>
+    
+    <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol (e.g. AAPL)">
+    <button onclick="getStockData()">Get Stock Data</button>
+
+    <div class="container">
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>% Change</th>
+                </tr>
+            </thead>
+            <tbody id="stockData">
+                <!-- Stock data will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script-api.js"></script>
+
+</body>
+</html>

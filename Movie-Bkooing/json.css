@@ -144,10 +144,10 @@ table {
   color: #fff;
   border-collapse: collapse;
   text-transform: capitalize;
+ 
 }
 
 .container-table {
-  /* width: 900px; */
   background-color: antiquewhite;
   height: 300px;
   height: 100%;
@@ -342,14 +342,13 @@ input[type="text"] {
   }
 
   /* Convert table rows into block elements */
-  /* tr {
+  tr {
       display: flex;
       flex-direction: column;
       border-bottom: 2px solid #ddd;
       padding: 10px;
       margin-bottom: 10px;
-      background: #f9f9f9;
-  } */
+  }
 
   /* Style individual cells */
   td {

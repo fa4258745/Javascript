@@ -117,7 +117,7 @@ let students = [
     address: "201 avenue Street",
   },
   {
-    name: "Priyanshu",
+    name: "Priyanshi",
     age: 25,
     city: "indore",
     grade: "A",
@@ -133,7 +133,7 @@ let students = [
     address: "201 avenue Street",
   },
   {
-    name: "Rishita",
+    name: "Khuhsi",
     age: 45,
     city: "bhopal",
     grade: "B",

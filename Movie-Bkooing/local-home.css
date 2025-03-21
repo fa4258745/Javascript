@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: "yesei";
   src: url(./FOnt/yesei/YuseiMagic-Regular.ttf);
@@ -28,8 +29,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-/* .main-div {
+/* 
+.main-div {
   height: 100%;
 } */
 
@@ -353,7 +354,7 @@ input[type="text"]:focus {
 .sidebar {
   position: fixed !important;
   top: 0;
-  left: -380px; 
+  left: -380px ; 
   overflow-y: auto;
   height: 100vh;
   width: 380px;
@@ -839,7 +840,7 @@ margin-top: 20px;
 .card-city {
   padding: 10px;
   position: fixed;
-  top: 3%;
+  top: 20%;
   width: 80%;
   background-color: #fff;
   z-index: 100;
@@ -911,7 +912,7 @@ margin-top: 20px;
 }
 
 .text-section {
-  height: 100vh;
+  height: 100%;
   background-color: #050209;
   /* color: #eaeaea; */
   color: #fff;
@@ -919,7 +920,7 @@ margin-top: 20px;
 }
 
 /* ------------------------------------ */
-.spacer { height: 80vh; }
+/* .spacer { height: 80vh; }
 .textm { font-size: 3rem; transform: scale(0.5); opacity: 0; 
 
 
@@ -927,7 +928,7 @@ color: #fff;
 
 
 
-}
+} */
 
 
 
@@ -1018,6 +1019,7 @@ color: #fff;
 }
 
 @media screen and (max-width: 425px) {
+ 
   .logo-img .nav-input {
     display: none;
   }
@@ -1157,3 +1159,23 @@ color: #fff;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
