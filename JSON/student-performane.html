@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Monitoring</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Performance Monitoring</h2>
+        <input type="text" id="studentName" placeholder="Enter Student Name">
+        <input type="number" id="score" placeholder="Enter Score">
+        <button onclick="addPerformance()">Add Score</button>
+        <canvas id="performanceChart"></canvas>
+    </div>
+    <script>
+        let studentData = {};
+        function addPerformance() {
+            const name = document.getElementById("studentName").value;
+            const score = document.getElementById("score").value;
+            
+            if (!name || !score) {
+                alert("Please enter both student name and score");
+                return;
+            }
+            
+            if (!studentData[name]) {
+                studentData[name] = [];
+            }
+            
+            studentData[name].push(parseInt(score));
+            updateChart();
+        }
+        
+        function updateChart() {
+            const ctx = document.getElementById("performanceChart").getContext("2d");
+            if (window.performanceChartInstance) {
+                window.performanceChartInstance.destroy();
+            }
+            
+            const labels = Object.keys(studentData);
+            const scores = labels.map(name => studentData[name].reduce((a, b) => a + b, 0) / studentData[name].length);
+            
+            window.performanceChartInstance = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Average Score",
+                        data: scores,
+                        backgroundColor: "blue"
+                    }]
+                }
+            });
+        }
+    </script>
+</body>
+</html>

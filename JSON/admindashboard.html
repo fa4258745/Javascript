@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Exchange Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .dashboard {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Stock Exchange Dashboard</h2>
+        <input type="text" id="stockSymbol" placeholder="Enter Stock Symbol">
+        <button onclick="fetchStockData()">Get Data</button>
+        <canvas id="stockChart"></canvas>
+    </div>
+    <script>
+        async function fetchStockData() {
+            const symbol = document.getElementById("stockSymbol").value.toUpperCase();
+            const apiKey = "YOUR_API_KEY"; // Replace with your financial API key
+            const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`;
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const timeSeries = data["Time Series (Daily)"];
+                
+                if (!timeSeries) {
+                    alert("Invalid Stock Symbol or API Limit Reached");
+                    return;
+                }
+                
+                const labels = Object.keys(timeSeries).slice(0, 10).reverse();
+                const prices = labels.map(date => parseFloat(timeSeries[date]["4. close"]));
+                
+                updateChart(labels, prices, symbol);
+            } catch (error) {
+                alert("Error fetching stock data");
+            }
+        }
+        
+        function updateChart(labels, prices, symbol) {
+            const ctx = document.getElementById("stockChart").getContext("2d");
+            if (window.stockChartInstance) {
+                window.stockChartInstance.destroy();
+            }
+            window.stockChartInstance = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: `${symbol} Stock Prices`,
+                        data: prices,
+                        borderColor: "blue",
+                        fill: false
+                    }]
+                }
+            });
+        }
+    </script>
+</body>
+</html>

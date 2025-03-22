@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing CRM Monitoring System</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Marketing CRM Monitoring System</h2>
+        <input type="text" id="clientName" placeholder="Enter Client Name">
+        <input type="number" id="dealsClosed" placeholder="Enter Deals Closed">
+        <input type="number" id="revenue" placeholder="Enter Revenue ($)">
+        <button onclick="addClientData()">Add Client Data</button>
+        <canvas id="crmChart"></canvas>
+    </div>
+    <script>
+        let clientData = {};
+        function addClientData() {
+            const name = document.getElementById("clientName").value;
+            const deals = document.getElementById("dealsClosed").value;
+            const revenue = document.getElementById("revenue").value;
+            
+            if (!name || !deals || !revenue) {
+                alert("Please enter all client details");
+                return;
+            }
+            
+            if (!clientData[name]) {
+                clientData[name] = { deals: 0, revenue: 0 };
+            }
+            
+            clientData[name].deals += parseInt(deals);
+            clientData[name].revenue += parseInt(revenue);
+            updateChart();
+        }
+        
+        function updateChart() {
+            const ctx = document.getElementById("crmChart").getContext("2d");
+            if (window.crmChartInstance) {
+                window.crmChartInstance.destroy();
+            }
+            
+            const labels = Object.keys(clientData);
+            const dealsData = labels.map(name => clientData[name].deals);
+            const revenueData = labels.map(name => clientData[name].revenue);
+            
+            window.crmChartInstance = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: "Deals Closed",
+                            data: dealsData,
+                            backgroundColor: "blue"
+                        },
+                        {
+                            label: "Revenue ($)",
+                            data: revenueData,
+                            backgroundColor: "green"
+                        }
+                    ]
+                }
+            });
+        }
+    </script>
+</body>
+</html>

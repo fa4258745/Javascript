@@ -17,6 +17,78 @@
       "price": "150",
       "movie": "airforce",
       "language": "hindi"
+    },
+    {
+      "id": "1d00",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "3217",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "13a7",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "0a6d",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "8b3a",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "29f5",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "3c50",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "a31c",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
+    },
+    {
+      "id": "a9f9",
+      "seat": "4",
+      "date": "2025-02-27",
+      "time": "2025-03-27T16:02",
+      "price": "50",
+      "language": "hindi"
     }
   ]
 }
