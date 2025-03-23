@@ -1,0 +1,23 @@
+#preloader {
+    background: #fff url(./bece0c797cb134aefb2cb836578c9249.gif) no-repeat center center;
+    /* background: #001E31 url(./gif/26af26707d7d0da6d5bc930788cfc868.gif) no-repeat center center; */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: 3s ease-in;
+    top: 0;
+  
+  } 
+  
+* {
+    margin: 0;padding: 0;
+}  
+
+
+
+
+
+
+
+

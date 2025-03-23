@@ -1,30 +1,28 @@
-
-
 const fetchData = async () => {
   let url = "http://localhost:3000/movie";
   let res = await fetch(url);
   let data = await res.json();
   // datashow(data);
-  paginationData(data);
+  datashow(data);
 };
 
-let paginationData = (data) => {
-  $("#pages").pagination({
-    dataSource: data,
-    pageSize: 3,
-    showGoInput: true,
-    showGoButton: true,
-    callback: function (data) {
-      datashow(data);
-    },
-  });
-};
+// let paginationData = (data) => {
+//   $("#pages").pagination({
+//     dataSource: data,
+//     pageSize: 3,
+//     showGoInput: true,
+//     showGoButton: true,
+//     callback: function (data) {
+//       datashow(data);
+//     },
+//   });
+// };
 
 let datashow = (data) => {
   let show = document.querySelector("#dataDisplay");
-  show.innerHTML = "";
+  // show.innerHTML = "";
   data.forEach((e) => {
-    show.innerHTML += `
+    show.innerHTML+= `
           <tr>
           <td>${e.movie}</td>
              <td>${e.language}</td>
@@ -42,7 +40,6 @@ let datashow = (data) => {
           </tr>`;
   });
 };
-
 
 const confirmDelete = (id) => {
   Swal.fire({
@@ -71,12 +68,12 @@ const FIND = async () => {
   let url = "http://localhost:3000/movie";
   let res = await fetch(url);
   let data = await res.json();
-  let filteredData = data.filter((e) =>{
-    return e.language.toLowerCase().includes(searchinp.toLowerCase()) ||
-    e.movie.toLowerCase().includes(searchinp.toLowerCase())
-  
-
-});
+  let filteredData = data.filter((e) => {
+    return (
+      e.language.toLowerCase().includes(searchinp.toLowerCase()) ||
+      e.movie.toLowerCase().includes(searchinp.toLowerCase())
+    );
+  });
   // Destroy and re-initialize pagination with filtered data
   $("#pages").pagination("destroy");
   // datashow(filteredData);
@@ -105,7 +102,7 @@ const userInput = async (event) => {
       language: inplanguage,
     }),
   });
-w
+  w;
   fetchData();
 };
 
@@ -176,14 +173,10 @@ const formfill = async (id) => {
              </select>
             </div>
           <input type="submit" value="Update">
-        
                  </div>
-
       </form>
        </div>
-      
-      
-      
+
       `;
 };
 
@@ -200,7 +193,6 @@ const finalUpdate = async (event, id) => {
       time: document.querySelector("#uptime").value,
       price: document.querySelector("#upprice").value,
       seat: document.querySelector("#upseat").value,
-
     }),
   });
   fetchData();

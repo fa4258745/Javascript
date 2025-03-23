@@ -52,7 +52,40 @@
         </div>
     </div>
 
+    <!-- <div id="dataDisplay"></div> -->
+
+
+   
+    <div class="container-flex-table">
+        <div class="container-table">
+            Search: <input type="text" name="" placeholder="Search data" id="searchinp" oninput="FIND()">
+            <table id="display" border="1px solid black" cellSpacing="15px" cellPadding="15px" align="center">
+                <thead>
+                    <tr>
+                        <th>Movie</th>
+                        <th>Language</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Price</th>
+                        <th>Seats</th>
+                        <th>Total Price</th>
+                        <th >Delete</th>
+                        <th onclick="formfill('${data.id}')">Update</th>
+
+                    </tr>
+                </thead>
+                <tbody id="dataDisplay">
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
   
+            <div class="center-pag">
+        <div id="pages"></div>
+    </div>
+        </div>
+    </div>
+
+    <div id="show"> </div>
     
 
 
@@ -61,7 +94,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="json.js"></script>
-    <script src="JSONM.js"></script>
+    <!-- <script src="JSONM.js"></script> -->
 
 
 </body>
