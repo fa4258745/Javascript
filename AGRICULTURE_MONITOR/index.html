@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Monitoring App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agriculture Monitoring App</h1>
+
+    <div class="container1">
+        <div class="container">
+            <p class="font">Humidity</p>
+            <input type="number" class="humidity design" placeholder="Enter Humidity">
+
+            <p class="font">Temperature</p>
+            <input type="number" class="temperature design" placeholder="Enter Temperature">
+
+            <p class="font">Soil</p>
+            <input type="text" class="soil design" placeholder="Enter Soil Type">
+
+            <p class="font">Wind Speed</p>
+            <input type="number" class="wind design" placeholder="Enter Wind Speed">
+        </div>
+        
+        <div class="container">
+            <p class="font">Weather</p>
+            <input type="text" class="weather design" placeholder="Enter Weather">
+
+            <p class="font">Water Supply</p>
+            <input type="number" class="water-supply design" placeholder="Enter Water Supply">
+
+            <p class="font">Pesticides</p>
+            <input type="number" class="pesticides design" placeholder="Enter Pesticide Levels">
+
+            <p class="font">Wind Damage</p>
+            <input type="number" class="wind-destroy design" placeholder="Enter Wind Damage Level">
+        </div>
+    </div>
+
+    <button class="weather-show btn" onclick="agriculture()">Show Agriculture</button>
+
+    <div class="show-agriculture-data"></div>
+
+    <div class="weather-data"></div>
+
+    <script>
+        async function agriculture(id) {
+            let humidity = document.querySelector(".humidity").value;
+            let temperature = document.querySelector(".temperature").value;
+            let soil = document.querySelector(".soil").value;
+            let windSpeed = document.querySelector(".wind").value;
+            let weather = document.querySelector(".weather").value;
+            let waterSupply = document.querySelector(".water-supply").value;
+            let pesticides = document.querySelector(".pesticides").value;
+            let windDestroy = document.querySelector(".wind-destroy").value;
+            let dataShow = document.querySelector(".show-agriculture-data");
+
+            if (!humidity || !temperature || !soil || !windSpeed || !weather || !waterSupply || !pesticides || !windDestroy) {
+                dataShow.innerHTML = "<p style='color:red;'>Please fill all the fields.</p>";
+                return;
+            }
+
+            try {
+                let response = await fetch(`https://api.example.com/agriculture?soil=${soil}&humidity=${humidity}&temperature=${temperature}`);
+                let data = await response.json();
+
+                let soilCondition = data.soil_condition || "Unknown"; // API should return soil condition
+
+                dataShow.innerHTML = `
+                    <h3>Agriculture Data</h3>
+                    <p><strong>Temperature:</strong> ${temperature}°C</p>
+                    <p><strong>Humidity:</strong> ${humidity}%</p>
+                    <p><strong>Soil Condition:</strong> ${soilCondition}</p>
+                    <p><strong>Weather:</strong> ${weather}</p>
+                    <p><strong>Water Supply:</strong> ${waterSupply}</p>
+                    <p><strong>Pesticides Level:</strong> ${pesticides}</p>
+                    <p><strong>Wind Speed:</strong> ${windSpeed} km/h</p>
+                    <p><strong>Wind Damage Level:</strong> ${windDestroy}</p>
+                `;
+            } catch (error) {
+                dataShow.innerHTML = `<p style="color:red;">Error fetching data. Please try again.</p>`;
+                console.error("API Error:", error);
+            }
+        }
+
+        let agri= async()=> {
+            let weatherShow = document.querySelector(".weather-data");
+            let url ="https://my.meteoblue.com/packages/basic-1h_basic-day?apikey=a04VWOs7CiYXhZej&lat=23.2547&lon=77.4029&asl=523&format=json"
+            let res=await fetch(url)
+            console.log(res)
+            let data = await res.json();
+            console.log(data)
+            console.log(data.latitude)
+          weatherShow.innerHTML=
+          `
+          ${data.data_day.rainspot}
+          
+          
+          `
+        } 
+agri();
+
+   
+   
+    </script>
+
+</body>
+</html>
