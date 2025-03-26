@@ -22,12 +22,12 @@ function davidGoggins() {
   // let m="ABCcharacterCode";
   // document.write(m.charCodeAt(0));
 
-     <--------indexOf------>
-  finds the first occurence of a string
-  let n = "indexOf";
-  document.write(n.indexOf("O"));
+  //    <--------indexOf------>
+  // finds the first occurence of a string
+  // let n = "indexOf";
+  // document.write(n.indexOf("O"));
 }
 
-// replace split slice 
-// g global 
-// gi global insensitive 
+replace split slice 
+g global 
+gi global insensitive 
