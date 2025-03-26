@@ -28,6 +28,6 @@ function davidGoggins() {
   // document.write(n.indexOf("O"));
 }
 
-replace split slice 
-g global 
-gi global insensitive 
+// replace split slice 
+// g global 
+// gi global insensitive 
