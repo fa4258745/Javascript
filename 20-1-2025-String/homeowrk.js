@@ -17,15 +17,15 @@ function davidGoggins() {
   // let k ="splitting";
   // document.write(k.split(" "))
 
-     <--------CharCodeAt------>
-  returns unicode value of character at specified index
-  let m="ABCcharacterCode";
-  document.write(m.charCodeAt(0));
+  //    <--------CharCodeAt------>
+  // returns unicode value of character at specified index
+  // let m="ABCcharacterCode";
+  // document.write(m.charCodeAt(0));
 
-  //    <--------indexOf------>
-  // finds the first occurence of a string
-  // let n = "indexOf";
-  // document.write(n.indexOf("O"));
+     <--------indexOf------>
+  finds the first occurence of a string
+  let n = "indexOf";
+  document.write(n.indexOf("O"));
 }
 
 // replace split slice 
