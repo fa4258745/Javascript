@@ -1,13 +1,22 @@
 .design {
-    padding: 20px 30px;
-    background-color: rebeccapurple;
+    padding: 10px 70px;
     border-radius: 5px;
+    box-shadow: 5px 5px 15px #b8b8b8, inset -5px -5px 15px #ffffff;
+    background-color: rgba(192, 192, 192, 0.579);
+  margin: 20px;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+  font-size: 1rem;
 }
 * {
     margin: 0;padding: 0;
 }
 body {
     font-family: sans-serif;
+    background: #ecf0f3;
+    background: #c6d0d7;
+
 }
 
 .container {
@@ -20,12 +29,9 @@ body {
 }
 
 .btn {
-    background-color: rebeccapurple;
     border-radius: 5px;
     padding: 10px;
-    border: none;
-    margin-top: 20px;
-    outline: none;
+    margin-top: 10px;
 }
 
 .font {
@@ -36,16 +42,24 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
+margin-top: 10px;
 }
 
-input[type="text"] {
+/* input[type="text"] {
     border-radius: 5px;
     border: none;
     font-size: 1.4rem;
     outline: none;
-}
+} */
 
 .show-agriculture-data {
-    color: #fff;
+}
+
+.data-design {
+    padding: 20px 120px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #b8b8b8, inset -5px -5px 15px #ffffff;
+    background-color: rgba(192, 192, 192, 0.579);
+  margin: 0px 0px 20px;
 }

@@ -113,60 +113,6 @@
 // };
 
 // <-------------------------UNDERSTANDING---------------------------->
-// <---------------------PRACTICE----------------------------->
-
-//<-------Fetching and Displaying Movie Data------>
-let data = async () => {
-  let url = "http://localhost:3000/movie"; // API endpoint for fetching movie data
-  let res = await fetch(url);
-  console.log(res);
-  let movie = await res.json();
-
-  movie.map((e) => {
-    shown.innerHTML += `
-  <tr>
-  <td>${e.name}</td>
- <td onclick="deleted()">Delete</td>
-  </tr>
-  `;
-  });
-};
-
-let deleted = (id) => {
-  let url = `http://localhost:3000/movie/${id}`; // API endpoint for fetching movie data
-  fetch(url, { method: "DELETE" });
-  data();
-};
-
-let insertion = () => {
-  let inpname = document.querySelector("#name").value;
-  let url = "http://localhost:3000/movie"; // API endpoint for inserting data
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: inpname,
-    }),
-  });
-};
-
-let finalupdated = (id) => {
-  let inpname = document.querySelector("#name").value;
-};
-
-let formFill = async () => {
-  let url = `http://localhost:3000/movie/${id}`;
-  let res = await fetch(url);
-  let data=await res.json() ;
-    let formdata=`
-    ENter name : 
-    
-    `
-};
-
-// <---------------------PRACTICE----------------------------->
 
 let Data = async () => {
   let url = "http://localhost:3000/movie"; // API endpoint for fetching movie data
@@ -326,6 +272,85 @@ let formfill = async (id) => {
   `;
   document.querySelector("#show").innerHTML = formData; // Display form with pre-filled data
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <---------------------PRACTICE----------------------------->
+
+//<-------Fetching and Displaying Movie Data------>
+let data = async () => {
+  let url = "http://localhost:3000/movie"; // API endpoint for fetching movie data
+  let res = await fetch(url);
+  console.log(res);
+  let movie = await res.json();
+
+  movie.map((e) => {
+    shown.innerHTML += `
+  <tr>
+  <td>${e.name}</td>
+ <td onclick="deleted()">Delete</td>
+  </tr>
+  `;
+  });
+};
+
+let deleted = (id) => {
+  let url = `http://localhost:3000/movie/${id}`; // API endpoint for fetching movie data
+  fetch(url, { method: "DELETE" });
+  data();
+};
+
+let insertion = () => {
+  let inpname = document.querySelector("#name").value;
+  let url = "http://localhost:3000/movie"; // API endpoint for inserting data
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: inpname,
+    }),
+  });
+};
+
+let finalupdated = (id) => {
+  let inpname = document.querySelector("#name").value;
+};
+
+let formFill = async () => {
+  let url = `http://localhost:3000/movie/${id}`;
+  let res = await fetch(url);
+  let data=await res.json() ;
+    let formdata=`
+    ENter name : 
+    
+    `
+};
+
+// <---------------------PRACTICE----------------------------->
+
 
 // <-------------------->
 // <-------------------->

@@ -8,9 +8,9 @@ function davidGoggins() {
   document.write(i.charAt(5));
 
   //    <--------TRIM------>
-  // Remove the trailing white space  between the two index form the string
-  // let j="   ReactComponent    ";
-  // document.write(j.trim());
+  Remove the trailing white space  between the two index form the string
+  let j="   ReactComponent    ";
+  document.write(j.trim());
 
   //    <--------SPLIT------>
   // Split a string into an array

@@ -15,7 +15,6 @@ let fetchData=async()=>{
     let data=await res.json()
     let filterdata=data.filter((e)=>{
       return e.from.toLowerCase().includes(searchinp)
-      
     })
     datashow(filterdata)
   }

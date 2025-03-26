@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agriculture Monitoring App</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Agriculture Monitoring App</h1>
+
+  <div class="container1">
+    <div class="container">
+      <p class="font">Air Humidity</p>
+      <p>Range  (50-70)  (Below 50 or Above 70)</p>
+      <input type="number" class="air-humidity design" placeholder="Enter Humidity">
+
+      <p class="font">Temperature</p>
+      <p>Range  (15-30)  (Below 15 or Above 30)</p>
+      <input type="number" class="temperature design" placeholder="Enter Temperature">
+
+      <p class="font">Soil Moisture (%)</p>
+      <p>Range  (40-60)  (Below 40 or Above 60)</p>
+      <input type="number" class="soil-moisture design" placeholder="Enter Soil Moisture">
+
+      <p class="font">Wind Speed (km/h)</p>
+      <p>Range  (0-15)  (Above 40)</p>
+      <input type="number" class="wind-speed design" placeholder="Enter Wind Speed">
+    </div>
+
+    <div class="container">
+      <p class="font">Rainfall (mm)</p>
+      <p>Range  (500-1000)  (Below 500 or Above 1000)</p>
+      <input type="number" class="rainfall design" placeholder="Enter Rainfall">
+
+      <p class="font">Soil pH</p>
+      <p>Range  (6.0-7.5)  (Below 6.0 or Above 7.5)</p>
+      <input type="number" step="0.1" class="soilPH design" placeholder="Enter Soil pH">
+
+      <p class="font">Sunlight (hours/day)</p>
+      <p>Range  (6-8)  (Below 6 or Above 8)</p>
+      <input type="number" class="sunlight design" placeholder="Enter Sunlight Hours">
+
+      <p class="font">Organic Matter (%)</p>
+      <p>Range  (3-6)  (Below 3)</p>
+      <input type="number" class="organic-matter design" placeholder="Enter Organic Matter">
+    </div>
+  </div>
+
+  <button class="weather-show btn" onclick="agriculture()">Show Agriculture</button>
+  <div class="show-agriculture-data data-design"></div>
+
+  <script>
+    async function agriculture() {
+
+      let dataShow = document.querySelector(".show-agriculture-data");
+        dataShow.innerHTML = "";
+        
+      let airHumidity = (document.querySelector(".air-humidity").value);
+      let temperature = (document.querySelector(".temperature").value);
+      let soilMoisture = (document.querySelector(".soil-moisture").value);
+      let windSpeed = (document.querySelector(".wind-speed").value);
+      let rainfall = (document.querySelector(".rainfall").value);
+      let soilPH = (document.querySelector(".soilPH").value);
+      let organicMatter = (document.querySelector(".organic-matter").value);
+      let sunlight = (document.querySelector(".sunlight").value);
+
+      if (airHumidity >= 50 && airHumidity <= 70) {
+        dataShow.innerHTML += "😀 Air Humidity is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Air Humidity is not good.<br>";
+      }
+
+      if (temperature >= 15 && temperature <= 30) {
+        dataShow.innerHTML += "😀 Temperature is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Temperature is not good.<br>";
+      }
+
+      if (soilMoisture >= 40 && soilMoisture <= 60) {
+        dataShow.innerHTML += "😀 Soil Moisture is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Soil Moisture is not good.<br>";
+      }
+
+      if (windSpeed >= 0 && windSpeed <= 15) {
+        dataShow.innerHTML += "😀 Wind Speed is good.<br>";
+      } else if (windSpeed > 40) {
+        dataShow.innerHTML += "😭 Wind Speed is too high.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Wind Speed is not in the ideal range.<br>";
+      }
+
+      if (rainfall >= 500 && rainfall <= 1000) {
+        dataShow.innerHTML += "😀 Rainfall is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Rainfall is not good.<br>";
+      }
+
+      if (soilPH >= 6.0 && soilPH <= 7.5) {
+        dataShow.innerHTML += "😀 Soil pH is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Soil pH is not good.<br>";
+      }
+
+      if (organicMatter >= 3 && organicMatter <= 6) {
+        dataShow.innerHTML += "😀 Organic Matter is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Organic Matter is not good.<br>";
+      }
+
+      if (sunlight >= 6 && sunlight <= 8) {
+        dataShow.innerHTML += "😀 Sunlight is good.<br>";
+      } else {
+        dataShow.innerHTML += "😭 Sunlight is not good.<br>";
+      }
+
+    }
+  </script>
+</body>
+
+</html>
