@@ -4,18 +4,18 @@ function davidGoggins() {
 
   //    <--------CharAt------>
   // Returns character at a specified index
-  let i ="javascript world";
-  document.write(i.charAt(5));
+  // let i ="javascript world";
+  // document.write(i.charAt(5));
 
   //    <--------TRIM------>
-  Remove the trailing white space  between the two index form the string
-  let j="   ReactComponent    ";
-  document.write(j.trim());
+  // Remove the trailing white space  between the two index form the string
+  // let j="   ReactComponent    ";
+  // document.write(j.trim());
 
-  //    <--------SPLIT------>
-  // Split a string into an array
-  // let k ="splitting";
-  // document.write(k.split(" "))
+     <--------SPLIT------>
+  Split a string into an array
+  let k ="splitting";
+  document.write(k.split(" "))
 
   //    <--------CharCodeAt------>
   // returns unicode value of character at specified index
