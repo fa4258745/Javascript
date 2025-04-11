@@ -32,12 +32,12 @@ let sana = (id) => {
     return false;
   }
 
-  if (signemail == "") {
-    errEmail.innerHTML = "Enter your email address";
-    errEmail.style.color = "white";
-    document.querySelector("#signEmail").style.border = "1px solid #fff";
-    return false;
-  }
+  // if (signemail == "") {
+  //   errEmail.innerHTML = "Enter your email address";
+  //   errEmail.style.color = "white";
+  //   document.querySelector("#signEmail").style.border = "1px solid #fff";
+  //   return false;
+  // }
 
   if (signNumber == "") {
     errNumber.innerHTML = "Enter your phone number";
