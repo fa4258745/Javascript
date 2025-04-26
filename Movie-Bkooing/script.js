@@ -53,13 +53,13 @@ let sana = (id) => {
     return false;
   }
 
-  // // Password validation
-  // if (signPassword == "") {
-  //   errPassword.innerHTML = "Enter your password";
-  //   errPassword.style.color = "white";
-  //   document.querySelector("#signPassword").style.border = "1px solid #fff";
-  //   return false;
-  // }
+  // Password validation
+  if (signPassword == "") {
+    errPassword.innerHTML = "Enter your password";
+    errPassword.style.color = "white";
+    document.querySelector("#signPassword").style.border = "1px solid #fff";
+    return false;
+  }
 
   if (
     !(
@@ -118,11 +118,11 @@ sr.reveal(`.scroll-right,.reveal2,.reveal4`, {
   origin: "right",
   interval: 100,
 });
-sr.reveal(`.scroll-top,.container,`, {
-  origin: "top",
-  interval: 100,
-});
-sr.reveal(`.scroll-bottom`, {
-  origin: "bottom",
-  interval: 100,
-});
+// sr.reveal(`.scroll-top,.container,`, {
+//   origin: "top",
+//   interval: 100,
+// });
+// sr.reveal(`.scroll-bottom`, {
+//   origin: "bottom",
+//   interval: 100,
+// });
