@@ -118,11 +118,11 @@ sr.reveal(`.scroll-right,.reveal2,.reveal4`, {
   origin: "right",
   interval: 100,
 });
-// sr.reveal(`.scroll-top,.container,`, {
-//   origin: "top",
-//   interval: 100,
-// });
-// sr.reveal(`.scroll-bottom`, {
-//   origin: "bottom",
-//   interval: 100,
-// });
+sr.reveal(`.scroll-top,.container,`, {
+  origin: "top",
+  interval: 100,
+});
+sr.reveal(`.scroll-bottom`, {
+  origin: "bottom",
+  interval: 100,
+});
