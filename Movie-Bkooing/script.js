@@ -114,10 +114,10 @@ sr.reveal(`.scroll-left,.reveal1,.reveal3,.reveal5`, {
   interval: 100,
 });
 
-sr.reveal(`.scroll-right,.reveal2,.reveal4`, {
-  origin: "right",
-  interval: 100,
-});
+// sr.reveal(`.scroll-right,.reveal2,.reveal4`, {
+//   origin: "right",
+//   interval: 100,
+// });
 sr.reveal(`.scroll-top,.container,`, {
   origin: "top",
   interval: 100,
